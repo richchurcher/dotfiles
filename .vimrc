@@ -1,6 +1,5 @@
-" Rich 2012
-" Refer:
-" https://github.com/spf13/spf13-vim 
+" Refer: https://github.com/spf13/spf13-vim , among others
+
 " Essentials
 set nocompatible
 call pathogen#infect()
@@ -10,11 +9,6 @@ call pathogen#helptags()
 " Directories
 set nobackup
 set noswapfile
-if has('persistent_undo')
-	set undofile
-	set undolevels=1000
-	set undoreload=10000
-endif
 
 " UI 
 set history=1000
