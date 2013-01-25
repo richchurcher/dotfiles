@@ -4,9 +4,6 @@
 set nocompatible
 call pathogen#infect()
 call pathogen#helptags()
-
-
-" Directories
 set nobackup
 set noswapfile
 
@@ -25,6 +22,16 @@ set whichwrap=b,s,h,l,<,>,[,]
 set scrolljump=5
 set scrolloff=3
 set nolist
+if has('gui_running')
+	set go-=T
+	set go-=r
+	set go-=R
+	set go-=m
+	set go-=l
+	set go-=L
+	set go-=b
+	colorscheme pacific
+endif
 
 " Formatting 
 filetype plugin indent on
@@ -41,26 +48,34 @@ set statusline=\ %t\ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %
 " Colours
 set background=dark
 set t_Co=256
-colorscheme ir_black
+colorscheme pacific
 highlight VertSplit cterm=NONE ctermbg=NONE
-highlight StatusLine cterm=NONE ctermfg=Yellow ctermbg=DarkRed
-highlight StatusLineNC cterm=NONE ctermfg=Black ctermbg=DarkGrey
+highlight StatusLine cterm=NONE ctermfg=Black ctermbg=DarkRed
+highlight StatusLineNC cterm=NONE ctermfg=White ctermbg=DarkGrey
+highlight Comment ctermfg=Cyan
 
 " Keys
 let mapleader = ','
 nmap <leader>ev :e $MYVIMRC<CR>
 nmap <leader>sv :so $MYVIMRC<CR>
 map <Leader>p <C-^>
+map <Leader>n :bn<CR>
 map <Leader>w :w<CR>
 map <Leader>q :q<CR>
 map <Leader>wq :wq<CR>
-imap jj <Esc> 
-
+inoremap jj <Esc> 
+imap <C-T> :r! "+%Y-%m-%d %H:%M:%S"
 " Move between windows
 map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
 map <C-L> <C-W>l<C-W>_
 map <C-H> <C-W>h<C-W>_
+" Resize windows
+map <A-,> <C-W><
+map <A-.> <C-W>>
+map <A-+> <C-W>+
+map <A--> <C-W>-
+map <A-=> <C-W>=
 
 " Move within a wrapped line 
 nnoremap j gj
@@ -83,16 +98,15 @@ let Tlist_Ctags_Cmd = "/usr/bin/ctags"
 let Tlist_WinWidth = 50
 map <Leader>t :TlistToggle<cr>
 map <Leader>j <C-]>
+let g:easytags_dynamic_files = 1
 
 " SnipMate 
 let g:snips_author = 'Rich Churcher <rich.churcher@gmail.com>'
 
 " NerdTree 
-map <leader>n :NERDTreeToggle<CR>
-nmap <leader>nt :NERDTreeFind<CR>
-
+nmap <leader>nt :NERDTreeToggle<CR>
 let NERDTreeShowBookmarks=1
-let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
+let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.hg', '\.svn', '\.bzr']
 let NERDTreeShowHidden=1
 let NERDTreeDirArrows=0
 
