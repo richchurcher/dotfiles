@@ -63,7 +63,7 @@ map <Leader>n :bn<CR>
 map <Leader>w :w<CR>
 map <Leader>q :q<CR>
 map <Leader>wq :wq<CR>
-imap jj <Esc> 
+inoremap jj <Esc> 
 " Datestamp
 nmap <F3> a<C-R>=strftime("%Y-%m-%d %H:%M")<CR><Esc>
 imap <F3> <C-R>=strftime("%Y-%m-%d %H:%M")<CR>
