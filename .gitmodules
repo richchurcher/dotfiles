@@ -28,3 +28,6 @@
 [submodule ".vim/bundle/vim-easytags"]
 	path = .vim/bundle/vim-easytags
 	url = git://github.com/xolox/vim-easytags.git
+[submodule ".vim/bundle/ultisnips"]
+	path = .vim/bundle/ultisnips
+	url = git://github.com/guns/ultisnips.git
