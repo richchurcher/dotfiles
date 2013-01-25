@@ -30,7 +30,7 @@ if has('gui_running')
 	set go-=l
 	set go-=L
 	set go-=b
-	colorscheme pacific
+	colorscheme solarized
 endif
 
 " Formatting 
@@ -48,7 +48,7 @@ set statusline=\ %t\ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %
 " Colours
 set background=dark
 set t_Co=256
-colorscheme pacific
+colorscheme solarized
 highlight VertSplit cterm=NONE ctermbg=NONE
 highlight StatusLine cterm=NONE ctermfg=Black ctermbg=DarkRed
 highlight StatusLineNC cterm=NONE ctermfg=White ctermbg=DarkGrey
@@ -63,8 +63,10 @@ map <Leader>n :bn<CR>
 map <Leader>w :w<CR>
 map <Leader>q :q<CR>
 map <Leader>wq :wq<CR>
-inoremap jj <Esc> 
-imap <C-T> :r! "+%Y-%m-%d %H:%M:%S"
+imap jj <Esc> 
+" Datestamp
+nmap <F3> a<C-R>=strftime("%Y-%m-%d %H:%M")<CR><Esc>
+imap <F3> <C-R>=strftime("%Y-%m-%d %H:%M")<CR>
 " Move between windows
 map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
