@@ -7,21 +7,22 @@ call pathogen#helptags()
 set nobackup
 set noswapfile
 
-" UI 
+" UI
 set history=1000
 set hidden " switch buffers without saving
 set backspace=indent,eol,start
 set showmatch
 set incsearch
-set hlsearch 
+set hlsearch
 set ignorecase
-set smartcase 
-set wildmenu 
+set smartcase
+set wildmenu
 set wildmode=list:longest,full
 set whichwrap=b,s,h,l,<,>,[,]
 set scrolljump=5
 set scrolloff=3
 set nolist
+set winheight=999
 if has('gui_running')
 	set go-=T
 	set go-=r
@@ -30,17 +31,17 @@ if has('gui_running')
 	set go-=l
 	set go-=L
 	set go-=b
-	colorscheme solarized
+	colorscheme zenburn
 endif
 
-" Formatting 
+" Formatting
 filetype plugin indent on
-syntax on               
+syntax on
 set nowrap
 set textwidth=0 " required to avoid wrapping, apparently
 set autoindent
 set shiftwidth=4
-set tabstop=4  
+set tabstop=4
 set softtabstop=4
 set fillchars=vert:\ ,stl:\ ,stlnc:\ , " note: trailling comma required
 set statusline=\ %t\ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
@@ -48,11 +49,13 @@ set statusline=\ %t\ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %
 " Colours
 set background=dark
 set t_Co=256
-colorscheme solarized
+colorscheme zenburn
 highlight VertSplit cterm=NONE ctermbg=NONE
 highlight StatusLine cterm=NONE ctermfg=Black ctermbg=DarkRed
 highlight StatusLineNC cterm=NONE ctermfg=White ctermbg=DarkGrey
 highlight Comment ctermfg=Cyan
+highlight Badspace ctermfg=red ctermbg=red
+match Badspace /\s\+$/
 
 " Keys
 let mapleader = ','
@@ -63,7 +66,7 @@ map <Leader>n :bn<CR>
 map <Leader>w :w<CR>
 map <Leader>q :q<CR>
 map <Leader>wq :wq<CR>
-inoremap jj <Esc> 
+inoremap jj <Esc>
 " Datestamp
 nmap <F3> a<C-R>=strftime("%Y-%m-%d %H:%M")<CR><Esc>
 imap <F3> <C-R>=strftime("%Y-%m-%d %H:%M")<CR>
@@ -79,7 +82,7 @@ map <A-+> <C-W>+
 map <A--> <C-W>-
 map <A-=> <C-W>=
 
-" Move within a wrapped line 
+" Move within a wrapped line
 nnoremap j gj
 nnoremap k gk
 
@@ -94,7 +97,7 @@ vnoremap > >gv
 " Even out window size
 map <Leader>= <C-w>=
 
-" Ctags 
+" Ctags
 set tags=./tags;/,~/.vimtags
 let Tlist_Ctags_Cmd = "/usr/bin/ctags"
 let Tlist_WinWidth = 50
@@ -102,17 +105,17 @@ map <Leader>t :TlistToggle<cr>
 map <Leader>j <C-]>
 let g:easytags_dynamic_files = 1
 
-" SnipMate 
+" SnipMate
 let g:snips_author = 'Rich Churcher <rich.churcher@gmail.com>'
 
-" NerdTree 
+" NerdTree
 nmap <leader>nt :NERDTreeToggle<CR>
 let NERDTreeShowBookmarks=1
 let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.hg', '\.svn', '\.bzr']
 let NERDTreeShowHidden=1
 let NERDTreeDirArrows=0
 
-" Fugitive 
+" Fugitive
 nnoremap <silent> <leader>gs :Gstatus<CR>
 nnoremap <silent> <leader>gd :Gdiff<CR>
 nnoremap <silent> <leader>gc :Gcommit<CR>
