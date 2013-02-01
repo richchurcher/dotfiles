@@ -105,11 +105,8 @@ map <Leader>t :TlistToggle<cr>
 map <Leader>j <C-]>
 let g:easytags_dynamic_files = 1
 
-" SnipMate
-let g:snips_author = 'Rich Churcher <rich.churcher@gmail.com>'
-
 " NerdTree
-nmap <leader>nt :NERDTreeToggle<CR>
+nmap <leader>nt :NERDTreeToggle work<CR>
 let NERDTreeShowBookmarks=1
 let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.hg', '\.svn', '\.bzr']
 let NERDTreeShowHidden=1
