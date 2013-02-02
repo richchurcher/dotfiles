@@ -1,5 +1,3 @@
-" Refer: https://github.com/spf13/spf13-vim , among others
-
 " Essentials
 set nocompatible
 call pathogen#infect()
