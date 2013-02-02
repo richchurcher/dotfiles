@@ -58,15 +58,14 @@ highlight Badspace ctermfg=red ctermbg=red
 match Badspace /\s\+$/
 
 " Keys
+inoremap jj <Esc>
 let mapleader = ','
 nmap <leader>ev :e $MYVIMRC<CR>
 nmap <leader>sv :so $MYVIMRC<CR>
 map <Leader>p <C-^>
-map <Leader>n :bn<CR>
+map <Leader>. :bn<CR>
 map <Leader>w :w<CR>
 map <Leader>q :q<CR>
-map <Leader>wq :wq<CR>
-inoremap jj <Esc>
 " Datestamp
 nmap <F3> a<C-R>=strftime("%Y-%m-%d %H:%M")<CR><Esc>
 imap <F3> <C-R>=strftime("%Y-%m-%d %H:%M")<CR>
@@ -106,7 +105,7 @@ map <Leader>j <C-]>
 let g:easytags_dynamic_files = 1
 
 " NerdTree
-nmap <leader>nt :NERDTreeToggle work<CR>
+nmap <leader>n :NERDTreeToggle work<CR>
 let NERDTreeShowBookmarks=1
 let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.hg', '\.svn', '\.bzr']
 let NERDTreeShowHidden=1
