@@ -53,6 +53,7 @@ highlight StatusLine cterm=NONE ctermfg=Black ctermbg=DarkRed
 highlight StatusLineNC cterm=NONE ctermfg=White ctermbg=DarkGrey
 highlight Comment ctermfg=Cyan
 highlight Badspace ctermfg=red ctermbg=red
+highlight EasyMotionTarget ctermbg=NONE ctermfg=108 guifg=#ffffe0 guibg=#284f28
 match Badspace /\s\+$/
 
 " Keys
