@@ -30,6 +30,8 @@ if has('gui_running')
 	set go-=L
 	set go-=b
 	colorscheme zenburn
+	hi EasyMotionTarget guibg=#284f28 guifg=#ffffe0
+	hi EasyMotionShade guibg=#aaaaaa guifg=#cccccc
 endif
 
 " Formatting
@@ -47,14 +49,7 @@ set statusline=\ %t\ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %
 " Colours
 set background=dark
 set t_Co=256
-colorscheme zenburn
-highlight VertSplit cterm=NONE ctermbg=NONE
-highlight StatusLine cterm=NONE ctermfg=Black ctermbg=DarkRed
-highlight StatusLineNC cterm=NONE ctermfg=White ctermbg=DarkGrey
-highlight Comment ctermfg=Cyan
-highlight Badspace ctermfg=red ctermbg=red
-highlight EasyMotionTarget ctermbg=NONE ctermfg=108 guifg=#ffffe0 guibg=#284f28
-match Badspace /\s\+$/
+colorscheme anyterm
 
 " Keys
 inoremap jj <Esc>
