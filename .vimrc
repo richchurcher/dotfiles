@@ -48,7 +48,7 @@ set statusline=\ %t\ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %
 
 " Colours
 set background=dark
-colorscheme anyterm
+colorscheme blacksea
 " Avoid anyterm colorscheme if we're using anything else.
 " Even putty can be set to xterm, whereas $TERM returns 'linux' on Anyterm.
 if $TERM == 'xterm'
