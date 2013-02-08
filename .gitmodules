@@ -43,6 +43,3 @@
 [submodule ".vim/bundle/vim-anyterm"]
 	path = .vim/bundle/vim-anyterm
 	url = git://github.com/basie/vim-anyterm.git
-[submodule ".vim/bundle/AsyncCommand"]
-	path = .vim/bundle/AsyncCommand
-	url = git://github.com/pydave/AsyncCommand.git
