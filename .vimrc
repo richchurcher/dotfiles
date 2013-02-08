@@ -48,8 +48,6 @@ set statusline=\ %t\ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %
 
 " Colours
 set background=dark
-colorscheme anyterm
-" Avoid anyterm colorscheme if we're using anything else.
 " Even putty can be set to xterm, whereas $TERM returns 'linux' on Anyterm.
 if $TERM == 'xterm'
   set t_Co=256
@@ -119,3 +117,10 @@ nnoremap <silent> <leader>gl :Glog<CR>
 nnoremap <silent> <leader>gp :Git push<CR>
 nnoremap <silent> <leader>gw :Gwrite<CR>
 
+" AEUpdate
+function! AEUpdate()
+  botright new
+  setlocal buftype=nofile bufhidden=wipe nobuflisted noswapfile nowrap
+  execute '$read !~/work/google_appengine/appcfg.py update . --oauth2'
+  setlocal nomodifiable
+endfunction
