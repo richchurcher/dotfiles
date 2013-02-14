@@ -30,8 +30,8 @@ if has('gui_running')
 	set go-=L
 	set go-=b
 	colorscheme zenburn
-	hi EasyMotionTarget guibg=#284f28 guifg=#ffffe0
-	hi EasyMotionShade guibg=#aaaaaa guifg=#cccccc
+	hi link EasyMotionTarget CursorLineNr
+	hi link EasyMotionShade Comment
 endif
 
 " Formatting
@@ -61,6 +61,7 @@ nmap <leader>ev :e $MYVIMRC<CR>
 nmap <leader>sv :so $MYVIMRC<CR>
 map <Leader>p <C-^>
 map <Leader>. :bn<CR>
+map <Leader>bd :bd<CR>
 map <Leader>w :w<CR>
 map <Leader>q :q<CR>
 " Datestamp
@@ -117,10 +118,5 @@ nnoremap <silent> <leader>gl :Glog<CR>
 nnoremap <silent> <leader>gp :Git push<CR>
 nnoremap <silent> <leader>gw :Gwrite<CR>
 
-" AEUpdate
-function! AEUpdate()
-  botright new
-  setlocal buftype=nofile bufhidden=wipe nobuflisted noswapfile nowrap
-  execute '$read !~/work/google_appengine/appcfg.py update . --oauth2'
-  setlocal nomodifiable
-endfunction
+" App Engine
+nnoremap <leader>au :AsyncShell ~/work/google_appengine/appcfg.py update . --oauth2<CR>
