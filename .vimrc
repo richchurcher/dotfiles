@@ -96,8 +96,8 @@ map <Leader>= <C-w>=
 
 " Ctags
 set tags=./tags;/,~/.vimtags
-let Tlist_Ctags_Cmd = "/usr/bin/ctags"
 let Tlist_WinWidth = 50
+let tlist_go_settings = 'go;f:func;p:package;t:type;c:const;v:var'
 map <Leader>t :TlistToggle<cr>
 map <Leader>j <C-]>
 let g:easytags_dynamic_files = 1
