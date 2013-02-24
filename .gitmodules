@@ -46,3 +46,6 @@
 [submodule ".vim/bundle/AsyncCommand"]
 	path = .vim/bundle/AsyncCommand
 	url = git://github.com/pydave/AsyncCommand.git
+[submodule ".vim/bundle/ctrlp.vim"]
+	path = .vim/bundle/ctrlp.vim
+	url = git://github.com/kien/ctrlp.vim.git
