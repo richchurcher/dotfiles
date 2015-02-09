@@ -43,3 +43,6 @@
 [submodule ".vim/bundle/Wombat"]
 	path = .vim/bundle/Wombat
 	url = https://github.com/vim-scripts/Wombat.git
+[submodule ".vim/bundle/vim-pathogen"]
+	path = .vim/bundle/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen.git
