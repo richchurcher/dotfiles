@@ -3,12 +3,14 @@ dotfiles
 
 From scratch:
 
-`git clone --recursive git@github.com:basie/dotfiles.git`
+`git clone --recursive https://github.com/richchurcher/dotfiles.git`
+`ln -s dotfiles/.vimrc .vimrc`
+`ln -s dotfiles/.vim .vim`
 
-Backup, then:
+Adding submodules:
+
+`git submodule add https://github.com/author/submodule.git`
+
+Note also:
 
 `mv dotfiles/* dotfiles/.[^.]* .`
-
-This will overwrite .git, .gitmodules, .gitignore, .vimrc, .vim, .bashrc. Adding submodules:
-
-`git submodule add git://github.com/foo/bar.git .vim/bundle/bar`
