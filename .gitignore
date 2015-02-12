@@ -1,1 +1,3 @@
 **/tags
+.vim/bundle
+.nvim/bundle
