@@ -104,7 +104,7 @@ map <Leader>j <C-]>
 let g:easytags_dynamic_files = 1
 
 " NerdTree
-nmap <leader>n :NERDTreeToggle work<CR>
+nmap <leader>n :NERDTreeToggle ~/work<CR>
 let NERDTreeShowBookmarks=1
 let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.hg', '\.svn', '\.bzr']
 let NERDTreeShowHidden=1
