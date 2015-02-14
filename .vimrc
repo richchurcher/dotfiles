@@ -21,7 +21,6 @@ set whichwrap=b,s,h,l,<,>,[,]
 set scrolljump=5
 set scrolloff=3
 set nolist
-set winheight=999
 if has('gui_running')
 	set go-=T
 	set go-=r
@@ -107,6 +106,7 @@ let NERDTreeShowHidden=1
 let NERDTreeDirArrows=0
 
 " Fugitive
+set previewheight=30
 nnoremap <silent> <leader>gs :Gstatus<CR>
 nnoremap <silent> <leader>gd :Gdiff<CR>
 nnoremap <silent> <leader>gc :Gcommit<CR>
