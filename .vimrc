@@ -49,7 +49,6 @@ set statusline=\ %t\ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %
 
 " Colours
 set background=dark
-" Even putty can be set to xterm, whereas $TERM returns 'linux' on Anyterm.
 if $TERM == 'xterm'
   set t_Co=256
   colorscheme zenburn
@@ -91,9 +90,6 @@ cmap cd. lcd %:p:h
 " Indent without leaving visual mode
 vnoremap < <gv
 vnoremap > >gv
-
-" Even out window size
-map <Leader>= <C-w>=
 
 " Ctags
 set tags=./tags;/,~/.vimtags
