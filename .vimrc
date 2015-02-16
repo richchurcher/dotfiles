@@ -43,6 +43,7 @@ set autoindent
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4
+set expandtab
 set fillchars=vert:\ ,stl:\ ,stlnc:\ , " note: trailling comma required
 set statusline=\ %t\ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
 
