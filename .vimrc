@@ -1,8 +1,30 @@
 " Essentials
 set nocompatible
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
-call pathogen#helptags()
+"runtime bundle/vim-pathogen/autoload/pathogen.vim
+"call pathogen#infect()
+"call pathogen#helptags()
+call plug#begin('~/.vim/plugged')
+
+" Always
+Plug 'jnurmine/Zenburn'
+Plug 'twerth/ir_black'
+Plug 'altercation/vim-colors-solarized'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'xolox/vim-easytags'
+Plug 'xolox/vim-misc'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'scrooloose/nerdcommenter'
+Plug 'guns/ultisnips'
+Plug 'kien/ctrlp.vim'
+
+" On demand
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'mileszs/ack.vim', { 'on': 'Ack' }
+
+call plug#end()
+
 set nobackup
 set noswapfile
 

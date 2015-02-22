@@ -9,14 +9,14 @@ From scratch:
     ln -s dotfiles/.vim .vim
 	ln -s dotfiles/.vim .nvim
 
+In Vim:
+
+    :PlugInstall
+
 Possibly:
 
 	ln -s ~/dotfiles/Preferences.sublime-settings ~/.config/sublime-text-3/Preferences/User/Preferences.sublime-settings
 	ln -s ~/dotfiles/Default.sublime-keymap ~/.config/sublime-text-3/Preferences/User/Default.sublime-keymap
-
-Adding submodules:
-
-    git submodule add https://github.com/author/submodule.git
 
 Note also:
 
