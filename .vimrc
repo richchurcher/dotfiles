@@ -15,7 +15,7 @@ Plug 'xolox/vim-misc'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
-Plug 'guns/ultisnips'
+Plug 'SirVer/ultisnips'
 Plug 'kien/ctrlp.vim'
 
 " On demand
