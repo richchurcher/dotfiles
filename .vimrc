@@ -17,12 +17,13 @@ Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
 Plug 'SirVer/ultisnips'
 Plug 'kien/ctrlp.vim'
+Plug 'floobits/floobits-neovim'
 
 " On demand
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'mileszs/ack.vim', { 'on': 'Ack' }
-Plug 'floobits/floobits-neovim', { 'on': ['FlooJoinWorkspace', 'FlooShareDirPublic', 'FlooShareDirPrivate'] }
+Plug 'Valloric/YouCompleteMe', { 'for': ['javascript', 'cs', 'html', 'go'] }
 
 call plug#end()
 
@@ -52,7 +53,7 @@ if has('gui_running')
 	set go-=l
 	set go-=L
 	set go-=b
-	colorscheme zenburn
+	colorscheme solarized
 	hi link EasyMotionTarget CursorLineNr
 	hi link EasyMotionShade Comment
 endif
@@ -72,10 +73,7 @@ set statusline=\ %t\ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %
 
 " Colours
 set background=dark
-if $TERM == 'xterm'
-  set t_Co=256
-  colorscheme zenburn
-endif
+colorscheme solarized
 
 " Keys
 inoremap jj <Esc>
@@ -139,5 +137,3 @@ nnoremap <silent> <leader>gl :Glog<CR>
 nnoremap <silent> <leader>gp :Git push<CR>
 nnoremap <silent> <leader>gw :Gwrite<CR>
 
-" App Engine
-nnoremap <leader>au :AsyncShell ~/work/google_appengine/appcfg.py update . --oauth2<CR>
