@@ -137,3 +137,6 @@ nnoremap <silent> <leader>gl :Glog<CR>
 nnoremap <silent> <leader>gp :Git push<CR>
 nnoremap <silent> <leader>gw :Gwrite<CR>
 
+" Floobits
+nnoremap <silent> <leader>fl :FlooListMessages<CR>
+nnoremap <silent> <leader>fs :FlooSaySomething<CR>
