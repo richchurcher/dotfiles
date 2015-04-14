@@ -23,7 +23,8 @@ Plug 'floobits/floobits-neovim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'mileszs/ack.vim', { 'on': 'Ack' }
-Plug 'Valloric/YouCompleteMe', { 'for': ['javascript', 'cs', 'html', 'go'] }
+Plug 'Valloric/YouCompleteMe', { 'for': ['javascript', 'cs', 'html'] }
+Plug 'fatih/vim-go', { 'for': 'go' }
 
 call plug#end()
 
@@ -113,7 +114,7 @@ vnoremap < <gv
 vnoremap > >gv
 
 " Ctags
-set tags=./tags;/,~/.vimtags
+set tags=./tags,tags;$HOME
 let Tlist_WinWidth = 50
 let tlist_go_settings = 'go;f:func;p:package;t:type;c:const;v:var'
 map <Leader>t :TlistToggle<cr>
@@ -129,6 +130,7 @@ let NERDTreeDirArrows=0
 
 " Fugitive
 set previewheight=30
+let g:netrw_browsex_viewer = 'google-chrome'
 nnoremap <silent> <leader>gs :Gstatus<CR>
 nnoremap <silent> <leader>gd :Gdiff<CR>
 nnoremap <silent> <leader>gc :Gcommit<CR>
@@ -140,3 +142,6 @@ nnoremap <silent> <leader>gw :Gwrite<CR>
 " Floobits
 nnoremap <silent> <leader>fl :FlooListMessages<CR>
 nnoremap <silent> <leader>fs :FlooSaySomething<CR>
+
+" vim-go
+let g:go_fmt_command = "goimports"
