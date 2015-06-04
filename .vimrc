@@ -1,8 +1,5 @@
 " Essentials
 set nocompatible
-"runtime bundle/vim-pathogen/autoload/pathogen.vim
-"call pathogen#infect()
-"call pathogen#helptags()
 call plug#begin('~/.vim/plugged')
 
 " Always
@@ -17,14 +14,15 @@ Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
 Plug 'SirVer/ultisnips'
 Plug 'kien/ctrlp.vim'
-Plug 'floobits/floobits-neovim'
 
 " On demand
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'mileszs/ack.vim', { 'on': 'Ack' }
-Plug 'Valloric/YouCompleteMe', { 'for': ['javascript', 'cs', 'html'] }
 Plug 'fatih/vim-go', { 'for': 'go' }
+
+"Fiddly install for C#, sometimes handy in other languages... autocompleter
+"Plug 'Valloric/YouCompleteMe', { 'for': ['javascript', 'cs', 'html'] }
 
 call plug#end()
 
@@ -139,9 +137,9 @@ nnoremap <silent> <leader>gl :Glog<CR>
 nnoremap <silent> <leader>gp :Git push<CR>
 nnoremap <silent> <leader>gw :Gwrite<CR>
 
-" Floobits
-nnoremap <silent> <leader>fl :FlooListMessages<CR>
-nnoremap <silent> <leader>fs :FlooSaySomething<CR>
+" Floobits (only useful in neovim)
+"nnoremap <silent> <leader>fl :FlooListMessages<CR>
+"nnoremap <silent> <leader>fs :FlooSaySomething<CR>
 
 " vim-go
 let g:go_fmt_command = "goimports"
