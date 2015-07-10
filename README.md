@@ -3,11 +3,9 @@ dotfiles
 
 From scratch:
 
-    git clone --recursive https://github.com/richchurcher/dotfiles.git
+    git clone https://github.com/richchurcher/dotfiles.git
     ln -s dotfiles/.vimrc .vimrc
-	ln -s dotfiles/.nvimrc .nvimrc
     ln -s dotfiles/.vim .vim
-	ln -s dotfiles/.vim .nvim
 
 In Vim:
 
