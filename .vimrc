@@ -63,9 +63,9 @@ syntax on
 set nowrap
 set textwidth=0 " required to avoid wrapping, apparently
 set autoindent
-set shiftwidth=4
-set tabstop=4
-set softtabstop=4
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
 set expandtab
 set fillchars=vert:\ ,stl:\ ,stlnc:\ , " note: trailling comma required
 set statusline=\ %t\ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
@@ -84,6 +84,7 @@ map <Leader>. :bn<CR>
 map <Leader>bd :bd<CR>
 map <Leader>w :w<CR>
 map <Leader>q :q<CR>
+map <Leader>l :set nu<CR>
 " Datestamp
 nmap <F3> a<C-R>=strftime("%Y-%m-%d %H:%M")<CR><Esc>
 imap <F3> <C-R>=strftime("%Y-%m-%d %H:%M")<CR>
