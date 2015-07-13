@@ -30,6 +30,7 @@ set nobackup
 set noswapfile
 
 " UI
+set relativenumber
 set history=1000
 set hidden " switch buffers without saving
 set backspace=indent,eol,start
