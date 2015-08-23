@@ -31,6 +31,7 @@ set noswapfile
 
 " UI
 set relativenumber
+set number
 set history=1000
 set hidden " switch buffers without saving
 set backspace=indent,eol,start
@@ -64,9 +65,9 @@ syntax on
 set nowrap
 set textwidth=0 " required to avoid wrapping, apparently
 set autoindent
-set shiftwidth=2
-set tabstop=2
-set softtabstop=2
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
 set expandtab
 set fillchars=vert:\ ,stl:\ ,stlnc:\ , " note: trailling comma required
 set statusline=\ %t\ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
@@ -90,10 +91,15 @@ map <Leader>l :set nu<CR>
 nmap <F3> a<C-R>=strftime("%Y-%m-%d %H:%M")<CR><Esc>
 imap <F3> <C-R>=strftime("%Y-%m-%d %H:%M")<CR>
 " Move between windows
-map <C-J> <C-W>j<C-W>_
-map <C-K> <C-W>k<C-W>_
-map <C-L> <C-W>l<C-W>_
-map <C-H> <C-W>h<C-W>_
+tnoremap <C-h> <C-\><C-n><C-w>h
+tnoremap <C-j> <C-\><C-n><C-w>j
+tnoremap <C-k> <C-\><C-n><C-w>k
+tnoremap <C-l> <C-\><C-n><C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
 " Resize windows
 map <A-,> <C-W><
 map <A-.> <C-W>>
