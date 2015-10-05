@@ -33,7 +33,7 @@ fi
 
 export GOPATH=$HOME/work
 export JAVA_HOME=$HOME/work/jdk1.8.0_45
-export PATH="$HOME/bin:$HOME/go/bin:$HOME/.rbenv/bin:$GOPATH/bin:$HOME/work/go_appengine:$HOME/google_appengine:$HOME/work/android-studio/bin:$PATH"
+export PATH="$HOME/bin:$JAVA_HOME/bin:$HOME/go/bin:$HOME/.rbenv/bin:$GOPATH/bin:$HOME/work/go_appengine:$HOME/google_appengine:$HOME/work/android-studio/bin:$PATH"
 eval "$(rbenv init -)"
 export NODE_ENV=development
 export PYTHONPATH=$HOME/google_appengine
@@ -55,3 +55,7 @@ source '/home/basie/google-cloud-sdk/path.bash.inc'
 
 # The next line enables shell command completion for gcloud.
 source '/home/basie/google-cloud-sdk/completion.bash.inc'
+
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/base16-solarized.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL

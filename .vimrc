@@ -3,9 +3,9 @@ set nocompatible
 call plug#begin('~/.vim/plugged')
 
 " Always
+Plug 'chriskempson/base16-vim'
 Plug 'jnurmine/Zenburn'
 Plug 'twerth/ir_black'
-Plug 'altercation/vim-colors-solarized'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'xolox/vim-easytags'
 Plug 'xolox/vim-misc'
@@ -14,6 +14,7 @@ Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
 Plug 'SirVer/ultisnips'
 Plug 'kien/ctrlp.vim'
+Plug 'mattn/emmet-vim'
 
 " On demand
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
@@ -54,7 +55,6 @@ if has('gui_running')
 	set go-=l
 	set go-=L
 	set go-=b
-	colorscheme solarized
 	hi link EasyMotionTarget CursorLineNr
 	hi link EasyMotionShade Comment
 endif
@@ -65,16 +65,17 @@ syntax on
 set nowrap
 set textwidth=0 " required to avoid wrapping, apparently
 set autoindent
-set shiftwidth=4
-set tabstop=4
-set softtabstop=4
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
 set expandtab
 set fillchars=vert:\ ,stl:\ ,stlnc:\ , " note: trailling comma required
 set statusline=\ %t\ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
 
 " Colours
 set background=dark
-colorscheme solarized
+let base16colorspace=256
+colorscheme base16-solarized
 
 " Keys
 inoremap jj <Esc>
