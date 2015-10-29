@@ -15,10 +15,12 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'SirVer/ultisnips'
 Plug 'kien/ctrlp.vim'
 Plug 'mattn/emmet-vim'
+Plug 'mhinz/vim-signify'
 
 " On demand
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'scrooloose/syntastic', { 'for': 'javascript' }
 Plug 'mileszs/ack.vim', { 'on': 'Ack' }
 Plug 'fatih/vim-go', { 'for': 'go' }
 
@@ -146,9 +148,14 @@ nnoremap <silent> <leader>gl :Glog<CR>
 nnoremap <silent> <leader>gp :Git push<CR>
 nnoremap <silent> <leader>gw :Gwrite<CR>
 
-" Floobits (only useful in neovim)
-"nnoremap <silent> <leader>fl :FlooListMessages<CR>
-"nnoremap <silent> <leader>fs :FlooSaySomething<CR>
-
 " vim-go
 let g:go_fmt_command = "goimports"
+
+" vim-javascript
+let javascript_enable_domhtmlcss=1
+
+" vim-signify
+let g:signify_vcs_list = [ 'git', 'hg' ]
+
+" syntastic
+let g:syntastic_javascript_checkers = [ 'eslint' ]

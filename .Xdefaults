@@ -85,6 +85,6 @@ URxvt.fading:               0
 URxvt.loginShell:           true
 URxvt.scrollBar: false
 URxvt.font: xft:Ubuntu Mono:size=12
+URxvt.boldFont:
 URxvt.urlLauncher: google_chrome
 URxvt.intensityStyles: false
-URxvt.allow_bold: false
