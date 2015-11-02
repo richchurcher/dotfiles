@@ -94,10 +94,10 @@ map <Leader>l :set nu<CR>
 nmap <F3> a<C-R>=strftime("%Y-%m-%d %H:%M")<CR><Esc>
 imap <F3> <C-R>=strftime("%Y-%m-%d %H:%M")<CR>
 " Move between windows
-tnoremap <C-h> <C-\><C-n><C-w>h
-tnoremap <C-j> <C-\><C-n><C-w>j
-tnoremap <C-k> <C-\><C-n><C-w>k
-tnoremap <C-l> <C-\><C-n><C-w>l
+" tnoremap <C-h> <C-\><C-n><C-w>h
+" tnoremap <C-j> <C-\><C-n><C-w>j
+" tnoremap <C-k> <C-\><C-n><C-w>k
+" tnoremap <C-l> <C-\><C-n><C-w>l
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
