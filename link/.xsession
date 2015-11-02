@@ -1,3 +1,3 @@
 #!/bin/bash
-[ -f ~/dotfiles/.Xdefaults ] && xrdb -merge ~/dotfiles/.Xdefaults
+[ -f ~/.dotfiles/link/.Xdefaults ] && xrdb -merge ~/.dotfiles/link/.Xdefaults
 exec i3
