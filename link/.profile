@@ -1,8 +1,3 @@
-# ~/.profile: executed by the command interpreter for login shells.
-
-# Set user-defined locale
-export LANG=$(locale -uU)
-
 # This file is not read by bash(1) if ~/.bash_profile or ~/.bash_login
 # exists.
 #
