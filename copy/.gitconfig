@@ -5,6 +5,8 @@
   autocrlf = input
   whitespace = fix,space-before-tab,tab-in-indent,trailing-space
   excludesfile = ~/.gitignore_global
+[push]
+  default = simple
 [apply]
   whitespace = fix
 [alias]
