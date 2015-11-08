@@ -1,6 +1,6 @@
 [user]
   name = Rich Churcher
-  email = richardc@bka.co.nz
+  email = rich.churcher@gmail.com
 [core]
   autocrlf = input
   whitespace = fix,space-before-tab,tab-in-indent,trailing-space
