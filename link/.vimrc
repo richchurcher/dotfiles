@@ -78,6 +78,14 @@ set statusline=\ %t\ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %
 set background=dark
 let base16colorspace=256
 colorscheme base16-solarized
+if has("win32unix")
+  colorscheme zenburn
+  " terminal cursor
+  let &t_SI = "\<Esc>[4 q"
+  let &t_EI = "\<Esc>[2 q"
+  silent !echo -ne "\033]12;red\007"
+  autocmd VimLeave * silent !echo -ne "\033]112\007"
+endif
 
 " Keys
 inoremap jj <Esc>
