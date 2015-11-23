@@ -9,6 +9,9 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias mute='amixer -q -D pulse sset Master 0%'
+alias volhalf='amixer -q -D pulse sset Master 50%'
+alias volfull='amixer -q -D pulse sset Master 100%'
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
