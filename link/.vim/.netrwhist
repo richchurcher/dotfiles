@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/media/work/nature-of-js/docs/workshop'
-let g:netrw_dirhist_2='/media/work/nature-of-js/field-work/node_modules/supertest-as-promised'
-let g:netrw_dirhist_3='/media/work/bka/JavaScript-NT/src/refactor-me'
-let g:netrw_dirhist_4='/media/work/bka/techtest-angular/src/do-not-refactor'
-let g:netrw_dirhist_5='/media/work/bka/bka-test/src/productlist'
-let g:netrw_dirhist_6='/home/basie/bin'
