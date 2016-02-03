@@ -1,8 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/media/work/nature-of-js/docs/workshop'
-let g:netrw_dirhist_2='/media/work/nature-of-js/field-work/node_modules/supertest-as-promised'
-let g:netrw_dirhist_3='/media/work/bka/JavaScript-NT/src/refactor-me'
-let g:netrw_dirhist_4='/media/work/bka/techtest-angular/src/do-not-refactor'
-let g:netrw_dirhist_5='/media/work/bka/bka-test/src/productlist'
-let g:netrw_dirhist_6='/home/basie/bin'
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/media/work/bka/inventory/src/productlist'
+let g:netrw_dirhist_2='/media/work/eda/waffler/src'
+let g:netrw_dirhist_3='/media/work/eda/waffler/src/auth'
+let g:netrw_dirhist_4='/media/work/eda/waffler/src'
+let g:netrw_dirhist_5='/media/work/eda/waffler/node_modules/github'
+let g:netrw_dirhist_6='/media/work/eda/waffler/node_modules/github/api'
+let g:netrw_dirhist_7='/media/work/eda/waffler/node_modules/github/api/v3.0.0'
+let g:netrw_dirhist_8='/media/work/saatchi/sorted/sorted/angular/app/components/category-filter'
