@@ -1,5 +1,3 @@
-export GREP_OPTIONS='--color=auto'
-
 function titlebar() {
   echo -n $'\e]0;'"$*"$'\a'
 }
