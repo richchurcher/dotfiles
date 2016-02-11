@@ -1,0 +1,3 @@
+#!/bin/bash
+xrandr --output DP1 --mode 1920x1200 --right-of eDP1
+feh --bg-fill wallpaper/wallpaper-cortina-xubuntu-azul-sapphiregd.jpg --bg-fill wallpaper/xubuntu___worn_and_torn_by_shifty1981.jpg

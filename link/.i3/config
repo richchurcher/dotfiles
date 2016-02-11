@@ -110,3 +110,4 @@ new_window 1pixel
 
 # Power management/laptop suspend
 exec_always xfce4-power-manager
+exec_always ~/.i3-launch

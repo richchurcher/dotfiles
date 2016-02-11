@@ -167,3 +167,6 @@ let g:signify_vcs_list = [ 'git', 'hg' ]
 
 " syntastic
 let g:syntastic_javascript_checkers = [ 'eslint' ]
+
+" ctrlp
+let g:ctrlp_max_files=0
