@@ -13,7 +13,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
 Plug 'SirVer/ultisnips'
-Plug 'kien/ctrlp.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'mattn/emmet-vim'
 Plug 'mhinz/vim-signify'
 
@@ -110,7 +110,7 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-
+nnoremap <C-p> :FZF<CR>
 " Resize windows
 map <A-,> <C-W><
 map <A-.> <C-W>>
@@ -167,6 +167,3 @@ let g:signify_vcs_list = [ 'git', 'hg' ]
 
 " syntastic
 let g:syntastic_javascript_checkers = [ 'eslint' ]
-
-" ctrlp
-let g:ctrlp_max_files=0
