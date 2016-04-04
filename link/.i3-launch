@@ -1,3 +1,5 @@
 #!/bin/bash
-xrandr --output DP1 --mode 1920x1200 --right-of eDP1
-feh --bg-fill wallpaper/wallpaper-cortina-xubuntu-azul-sapphiregd.jpg --bg-fill wallpaper/xubuntu___worn_and_torn_by_shifty1981.jpg
+xrandr --output DP1 --mode 1920x1080
+xrandr --output HDMI1 --mode 1920x1080 --right-of DP1
+xrandr --output eDP1 --mode 1360x768 --right-of HDMI1
+feh --bg-fill wallpaper/wallpaper-cortina-xubuntu-azul-sapphiregd.jpg --bg-fill wallpaper/xubuntu___worn_and_torn_by_shifty1981.jpg --bg-fill wallpaper/edubuntu-stargazer-full.png
