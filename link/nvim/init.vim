@@ -10,6 +10,7 @@ Plug 'xolox/vim-misc'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/syntastic'
 Plug 'SirVer/ultisnips'
 Plug 'jamshedVesuna/vim-markdown-preview'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -19,7 +20,6 @@ Plug 'rking/ag.vim'
 
 " On demand
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-Plug 'scrooloose/syntastic', { 'for': 'javascript' }
 Plug 'ternjs/tern_for_vim', { 'for': 'javascript', 'do': 'npm install' }
 Plug 'Shougo/deoplete.nvim', { 'for': 'javascript' }
 Plug 'elzr/vim-json', { 'for': 'json' }
@@ -75,6 +75,9 @@ set softtabstop=2
 set expandtab
 set fillchars=vert:\ ,stl:\ ,stlnc:\ , " note: trailling comma required
 set statusline=\ %t\ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
+let g:syntastic_javascript_checkers = ['standard']
+autocmd bufwritepost *.js silent !standard-format --parser babel-eslint -w %
+set autoread
 
 " Colours
 set background=dark
@@ -203,3 +206,6 @@ augroup end
 let vim_markdown_preview_hotkey='<Leader>md'
 let vim_markdown_preview_github=1
 let vim_markdown_preview_toggle=3
+
+" JSON format
+nnoremap <silent> <leader>jf :%!python -m json.tool<CR>
