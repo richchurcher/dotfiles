@@ -1,3 +1,7 @@
 #!/bin/bash
-xrandr --output DP1 --mode 1920x1200 --right-of eDP1
-feh --bg-fill wallpaper/wallpaper-cortina-xubuntu-azul-sapphiregd.jpg --bg-fill wallpaper/xubuntu___worn_and_torn_by_shifty1981.jpg
+
+# DisplayLink
+xrandr --setprovideroutputsource 1 0
+xrandr --output eDP1 --mode 3200x1800
+xrandr --output DVI-I-1 --mode 3840x2160 --left-of eDP1
+feh --bg-fill /usr/share/pixmaps/arch_linux-wallpaper-1366x768.jpg

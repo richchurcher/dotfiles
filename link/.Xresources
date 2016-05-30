@@ -79,12 +79,18 @@ xscreensaver.dateFormat:    %I:%M%P %a %b %d, %Y
 *.color20:      base04
 *.color21:      base06
 
+Xft.dpi: 168
+URxvt.iso14755: true
+URxvt.iso14755_52: false
 URxvt.depth:                32
 URxvt.transparent:          false
 URxvt.fading:               0
 URxvt.loginShell:           true
 URxvt.scrollBar: false
-URxvt.font: xft:Ubuntu Mono:size=12
+URxvt.font: xft:DejaVu Sans Mono:size=11
 URxvt.boldFont:
 URxvt.urlLauncher: google_chrome
 URxvt.intensityStyles: false
+URxvt.perl-ext-common: resize-font
+URxvt.resize-font-smaller: C-Down
+URxvt.resize-font-bigger: C-Up

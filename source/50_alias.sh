@@ -10,6 +10,7 @@ alias mute='amixer -q -D pulse sset Master 0%'
 alias vim='nvim'
 alias volhalf='amixer -q -D pulse sset Master 50%'
 alias volfull='amixer -q -D pulse sset Master 100%'
+alias netctl="sudo netctl"
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
