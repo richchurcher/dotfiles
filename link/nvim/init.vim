@@ -1,27 +1,29 @@
 " Essentials
-set nocompatible
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/nvim/plugged')
 
 " Always
 Plug 'chriskempson/base16-vim'
 Plug 'jnurmine/Zenburn'
-Plug 'twerth/ir_black'
-Plug 'Lokaltog/vim-easymotion'
+Plug 'easymotion/vim-easymotion'
 Plug 'xolox/vim-easytags'
 Plug 'xolox/vim-misc'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/syntastic'
 Plug 'SirVer/ultisnips'
+Plug 'jamshedVesuna/vim-markdown-preview'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'mattn/emmet-vim'
 Plug 'mhinz/vim-signify'
 Plug 'rking/ag.vim'
 
 " On demand
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-Plug 'scrooloose/syntastic', { 'for': 'javascript' }
+Plug 'ternjs/tern_for_vim', { 'for': 'javascript', 'do': 'npm install' }
+Plug 'Shougo/deoplete.nvim', { 'for': 'javascript' }
+Plug 'elzr/vim-json', { 'for': 'json' }
+Plug 'mileszs/ack.vim', { 'on': 'Ack' }
 Plug 'fatih/vim-go', { 'for': 'go' }
 
 "Fiddly install for C#, sometimes handy in other languages... autocompleter
@@ -73,6 +75,9 @@ set softtabstop=2
 set expandtab
 set fillchars=vert:\ ,stl:\ ,stlnc:\ , " note: trailling comma required
 set statusline=\ %t\ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
+let g:syntastic_javascript_checkers = ['standard']
+autocmd bufwritepost *.js silent !standard-format --parser babel-eslint -w %
+set autoread
 
 " Colours
 set background=dark
@@ -98,6 +103,7 @@ map <Leader>bd :bd<CR>
 map <Leader>w :w<CR>
 map <Leader>q :q<CR>
 map <Leader>l :set nu<CR>
+map <Leader>ecd :e %:p:h
 " Datestamp
 nmap <F3> a<C-R>=strftime("%Y-%m-%d %H:%M")<CR><Esc>
 imap <F3> <C-R>=strftime("%Y-%m-%d %H:%M")<CR>
@@ -124,7 +130,6 @@ nnoremap k gk
 
 " Working directory
 cmap cwd lcd %:p:h
-cmap cd. lcd %:p:h
 
 " Indent without leaving visual mode
 vnoremap < <gv
@@ -138,13 +143,6 @@ map <Leader>t :TlistToggle<cr>
 map <Leader>j <C-]>
 let g:easytags_dynamic_files = 1
 
-" NerdTree
-nmap <leader>n :NERDTreeToggle ~/work<CR>
-let NERDTreeShowBookmarks=1
-let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.hg', '\.svn', '\.bzr']
-let NERDTreeShowHidden=1
-let NERDTreeDirArrows=0
-
 " Fugitive
 set previewheight=30
 let g:netrw_browsex_viewer = 'google-chrome'
@@ -155,6 +153,8 @@ nnoremap <silent> <leader>gb :Gblame<CR>
 nnoremap <silent> <leader>gl :Glog<CR>
 nnoremap <silent> <leader>gp :Git push<CR>
 nnoremap <silent> <leader>gw :Gwrite<CR>
+map <leader>2 :diffget //2<CR>
+map <leader>3 :diffget //3<CR>
 
 " vim-go
 let g:go_fmt_command = "goimports"
@@ -167,3 +167,45 @@ let g:signify_vcs_list = [ 'git', 'hg' ]
 
 " syntastic
 let g:syntastic_javascript_checkers = [ 'eslint' ]
+
+" easymotion
+map  <Leader><Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader><Leader>w <Plug>(easymotion-overwin-w)
+
+" deoplete
+let g:deoplete#enable_at_startup = 1
+if !exists('g:deoplete#omni#input_patterns')
+  let g:deoplete#omni#input_patterns = {}
+endif
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+
+" deoplete tab-complete
+inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : deoplete#mappings#manual_complete()
+" ,<Tab> for regular tab
+inoremap <Leader><Tab> <Space><Space>
+
+" tern
+if exists('g:plugs["tern_for_vim"]')
+  autocmd FileType javascript setlocal omnifunc=tern#Complete
+  autocmd FileType javascript nnoremap <silent> <buffer> gb :TernDef<CR>
+  let g:tern_show_argument_hints = 'on_hold'
+  let g:tern_show_signature_in_pum = 1
+endif
+
+" omnifuncs
+augroup omnifuncs
+  autocmd!
+  autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+  autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+  autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+  autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+  autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+augroup end
+
+" vim-markdown-preview
+let vim_markdown_preview_hotkey='<Leader>md'
+let vim_markdown_preview_github=1
+let vim_markdown_preview_toggle=3
+
+" JSON format
+nnoremap <silent> <leader>jf :%!python -m json.tool<CR>
