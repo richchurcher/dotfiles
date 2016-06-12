@@ -1,10 +1,23 @@
 #!/usr/bin/env bash
 
 set -o errexit
-set -o nounset
 
 declare -r __path="$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")"
 declare -r __file="${BASH_SOURCE[0]##*/}"
+declare -r __version="0.1.0"
 
-echo $__file
-echo $__path
+function show_help() {
+  printf "%s\n" \
+    "    Usage: ${__file}" \
+    "    Looks for 'symlink' and 'copy' directories." \
+    "    https://github.com/richchurcher/dotfiles"
+}
+
+function begin() {
+  echo "Yup."
+}
+
+# Note that this is all thoroughly bash-specific, and ^4.2 at that
+[[ "$1" == "-h" || "$1" == "--help" ]] && show_help
+[[ "$1" == "-v" || "$1" == "--version" ]] && echo ${__version}
+[[ $# -eq 0 ]] && begin
