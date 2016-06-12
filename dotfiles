@@ -2,14 +2,14 @@
 
 set -o errexit
 
+declare -r __version="0.1.0"
 declare -r __path="$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")"
 declare -r __file="${BASH_SOURCE[0]##*/}"
-declare -r __version="0.1.0"
 
 function show_help() {
   printf "%s\n" \
     "    Usage: ${__file}" \
-    "    Looks for 'symlink' and 'copy' directories." \
+    "    Looks for 'symlink', 'source', and 'copy' directories." \
     "    https://github.com/richchurcher/dotfiles"
 }
 
