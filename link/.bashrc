@@ -20,4 +20,4 @@ function dotfiles() {
 
 src
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-export WTR_ACCESS_TOKEN=67f611660557d0753de95f99c6d735c6416f544c
+export WTR_ACCESS_TOKEN=8fa7d36ad38cec176db4cc120839722a68ffec9c

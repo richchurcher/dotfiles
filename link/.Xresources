@@ -92,5 +92,5 @@ URxvt.boldFont:
 URxvt.urlLauncher: google_chrome
 URxvt.intensityStyles: false
 URxvt.perl-ext-common: resize-font
-URxvt.resize-font-smaller: C-Down
-URxvt.resize-font-bigger: C-Up
+URxvt.resize-font.smaller: C-Down
+URxvt.resize-font.bigger: C-Up
