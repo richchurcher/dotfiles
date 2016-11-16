@@ -10,7 +10,7 @@ function link() {
 function backup() {
   [[ -e "$1" ]] || mkdir -p "$1"
   echo " : ${2} backed up"
-  #mv "$3" "$1"
+  mv "$3" "$1"
 }
 
 function link_all() {

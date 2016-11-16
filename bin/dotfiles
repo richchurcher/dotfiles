@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
-# Bastardised from https://github.com/cowboy/dotfiles
+# Originally bastardised from https://github.com/cowboy/dotfiles
 
 [[ "$(type -P git)" ]] || { echo "Git required."; exit 1; }
 dotfiles_repo="https://github.com/${github_user:-richchurcher}/dotfiles.git"
-xdg_config=[[ -d "${HOME}/.config" ]]
 
 function init() {
-  if ${xdg_config}; then
-    export DOTFILES="${xdg_config}/dotfiles"
+  # Use XDG config if available
+  if [[ -d "${HOME}/.config" ]]; then
+    export DOTFILES="${HOME}/.config/dotfiles"
   else
     export DOTFILES="${HOME}/.dotfiles"
   fi
@@ -48,5 +48,5 @@ src
 echo "Linking to ${HOME}"
 link_all
 echo "Linking to XDG config (if it exists)"
-[[ ${xdg_config} ]] && link_all "config"
+[[ -d "${HOME}/.config" ]] && link_all "config"
 
