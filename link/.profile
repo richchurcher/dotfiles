@@ -7,3 +7,5 @@ if [ -n "${BASH_VERSION}" ]; then
     source "${HOME}/.bashrc"
   fi
 fi
+
+export PATH="$HOME/.cargo/bin:$PATH"

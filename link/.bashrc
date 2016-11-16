@@ -1,16 +1,20 @@
-export DOTFILES=~/.dotfiles
+if [[ -d ~/.config/dotfiles ]]; then
+  export DOTFILES="$HOME/.config/dotfiles";
+else
+  export DOTFILES="$HOME/.dotfiles";
+fi
+
 PATH="$DOTFILES/bin:$PATH"
 export PATH
 
 function src() {
   local file
-  if [[ "$1" ]]; then
-    source "$DOTFILES/source/$1.sh"
-  else
-    for file in $DOTFILES/source/*; do
-      source "$file"
-    done
-  fi
+  for file in $DOTFILES/lib/*; do
+    source "$file"
+  done
+  for file in $DOTFILES/source/*; do
+    source "$file"
+  done
 }
 
 # Run dotfiles script, then source.
@@ -19,5 +23,3 @@ function dotfiles() {
 }
 
 src
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-export WTR_ACCESS_TOKEN=8fa7d36ad38cec176db4cc120839722a68ffec9c
