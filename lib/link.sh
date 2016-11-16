@@ -3,7 +3,7 @@ function link_test() {
 }
 
 function link() {
-  echo "Linking ${1} -> ${2}"
+  echo "Linking ${0} -> ${1}"
   #ln -sf ${2#$HOME/} ~/
 }
 
@@ -24,7 +24,6 @@ function link_all() {
   for file in "${files[@]}"; do
     base="$(basename $file)"
     dest="$target/$base"
-    echo $base
 
     skip="$("link_test" "$file" "$dest")"
     if [[ "$skip" ]]; then
