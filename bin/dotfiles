@@ -47,6 +47,6 @@ clone
 src
 echo "Linking to ${HOME}"
 link_all
-echo "Linking to XDG config (if it exists)"
+echo "Linking to XDG config (${HOME}/.config, if it exists)"
 [[ -d "${HOME}/.config" ]] && link_all "config"
 
