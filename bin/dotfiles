@@ -72,7 +72,7 @@ function copy_test() {
   fi
 }
 
-function copy_do() {
+function copy() {
   e_success "Copying ~/$1."
   cp "$2" ~/
 }
@@ -101,7 +101,7 @@ function copy_all() {
       mv "$dest" "$backup_dir"
     fi
 
-    "$1_do" "$base" "$file"
+    "copy" "$base" "$file"
   done
 }
 
@@ -109,7 +109,7 @@ function link_test() {
   [[ "$1" -ef "$2" ]] && echo "same file"
 }
 
-function link_do() {
+function link() {
   e_success "Linking ~/$1."
   ln -sf ${2#$HOME/} ~/
 }
@@ -137,7 +137,7 @@ function link_all() {
       mv "$dest" "$backup_dir"
     fi
 
-    "$1_do" "$base" "$file"
+    "link" "$base" "$file"
   done
 }
 

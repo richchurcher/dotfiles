@@ -1,24 +1,22 @@
 call plug#begin('~/.vim/plugged')
 
-function! DoRemote(arg)
-  UpdateRemotePlugins
-endfunction
-
 " Always
 Plug 'chriskempson/base16-vim'
 Plug 'jnurmine/Zenburn'
 Plug 'twerth/ir_black'
 Plug 'Lokaltog/vim-easymotion'
+Plug 'phildawes/racer'
 Plug 'xolox/vim-misc'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
-Plug 'SirVer/ultisnips'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-signify'
 Plug 'neomake/neomake'
-Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'critiqjo/lldb.nvim'
+Plug 'posva/vim-vue'
 " On demand
 Plug 'fatih/vim-go', { 'for': 'go' }
 
@@ -62,7 +60,7 @@ nnoremap <Leader>jf :%!python -m json.tool<CR>
 " Colours
 set background=dark
 let base16colorspace=256
-colorscheme base16-solarized
+colorscheme base16-solarized-dark
 " Make active buffer statusline and search a little more readable
 highlight StatusLine ctermfg=18 ctermbg=3
 highlight Search ctermfg=18 ctermbg=3
@@ -93,6 +91,10 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-p> :FZF<CR>
+tnoremap <C-h> <C-\><C-n><C-w>h
+tnoremap <C-j> <C-\><C-n><C-w>j
+tnoremap <C-k> <C-\><C-n><C-w>k
+tnoremap <C-l> <C-\><C-n><C-w>l
 
 " Resize windows
 map <A-,> <C-W><
@@ -132,16 +134,19 @@ let g:signify_vcs_list = [ 'git', 'hg' ]
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
-" <Tab> completion:
-" - if preceding chars are whitespace, insert tab char
-" - otherwise start manual autocomplete
-imap <silent><expr><Tab> pumvisible() ? "\<C-n>"
-	\ : (<SID>is_whitespace() ? "\<Tab>"
-	\ : deoplete#mappings#manual_complete())
-
-smap <silent><expr><Tab> pumvisible() ? "\<C-n>"
-	\ : (<SID>is_whitespace() ? "\<Tab>"
-	\ : deoplete#mappings#manual_complete())
+inoremap <silent><expr> <TAB>
+    \ pumvisible() ? "\<C-n>" :
+    \ <SID>check_back_space() ? "\<TAB>" :
+    \ deoplete#mappings#manual_complete()
+function! s:check_back_space() abort "{{{
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~ '\s'
+endfunction"}}}
+" Close the documentation window when completion is done
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+" rust
+let g:deoplete#sources#rust#racer_binary = "/home/basie/.cargo/bin/racer"
+let g:deoplete#sources#rust#rust_source_path = "/home/basie/.multirust/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src"
 
 inoremap <expr><S-Tab>  pumvisible() ? "\<C-p>" : "\<C-h>"
 
@@ -161,3 +166,6 @@ let g:neomake_error_sign = {
   \ 'texthl': 'DiffAdd'
   \ }
 autocmd! BufWritePost * Neomake
+
+" lldb.nvim
+nmap <silent> <leader>bp <Plug>LLBreakSwitch<CR>
