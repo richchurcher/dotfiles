@@ -1,16 +1,13 @@
 #!/usr/bin/env bash
 
+[[ "$(type -P git)" ]] || { echo "Git required."; exit 1; }
+
 function init() {
   if [[ -d ~/.config ]]; then
     export DOTFILES="${HOME}/.config/dotfiles";
   else
     export DOTFILES="${HOME}/.dotfiles";
   fi
-
-  local file
-  for file in ${DOTFILES}/lib/*; do
-    source "$file"
-  done
 
   [[ -d $DOTFILES/bin ]] && PATH=$DOTFILES/bin:$PATH
   export PATH
@@ -19,8 +16,32 @@ function init() {
   shopt -s nullglob
 }
 
+function src() {
+  local file
+  for file in ${DOTFILES}/lib/*; do
+    echo "$file"
+    source "$file"
+  done
+}
+
+function clone() {
+  if [[ ! -d $DOTFILES ]]; then
+    git clone https://github.com/${github_user:-richchurcher}/dotfiles.git $DOTFILES
+  elif [[ "$1" != "restart" ]]; then
+    cd $DOTFILES
+    prev_head="$(git rev-parse HEAD)"
+    git pull
+    if [[ "$(git rev-parse HEAD)" != "$prev_head" ]]; then
+      e_header "Changes detected, restarting script"
+      exec "$0" "restart"
+    fi
+  fi
+}
+
 init
-[[ git_in_path ]] || exit 1
-link_all
-link_all "config"
+clone
+src
+#e_header "Using ${DOTFILES}..."
+#link_all
+#link_all "config"
 
