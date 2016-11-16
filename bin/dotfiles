@@ -45,6 +45,6 @@ echo "Checking for updates at ${dotfiles_repo}"
 clone
 src
 
-#link_all
+link_all
 #link_all "config"
 

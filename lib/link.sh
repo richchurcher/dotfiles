@@ -3,8 +3,8 @@ function link_test() {
 }
 
 function link() {
-  echo "Linking $1"
-  ln -sf ${2#$HOME/} ~/
+  echo "Linking ${1} -> ${2}"
+  #ln -sf ${2#$HOME/} ~/
 }
 
 function link_all() {
@@ -20,7 +20,7 @@ function link_all() {
   files=($($link_files "${files[@]}"))
   if (( ${#files[@]} == 0 )); then return; fi
 
-  e_header "Linking to ${1:-home}"
+  echo "Linking to ${1:-home}"
   for file in "${files[@]}"; do
     base="$(basename $file)"
     dest="$target/$base"
