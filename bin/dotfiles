@@ -1,160 +1,26 @@
 #!/usr/bin/env bash
-[[ "$1" == "source" ]] || \
 
-echo 'Dotfiles, heavily munged from https://github.com/cowboy/dotfiles'
-
-if [[ "$1" == "-h" || "$1" == "--help" ]]; then cat <<HELP
-
-Usage: $(basename "$0")
-
-https://github.com/richchurcher/dotfiles
-
-HELP
-exit; fi
-
-# Use .config if it exists
-if [[ -d ~/.config ]]; then
-  export DOTFILES="$HOME/.config/dotfiles";
-else
-  export DOTFILES="$HOME/.dotfiles";
-fi
-
-function e_header()   { echo -e "\n\033[1m$@\033[0m"; }
-function e_success()  { echo -e " \033[1;32m✔\033[0m  $@"; }
-function e_error()    { echo -e " \033[1;31m✖\033[0m  $@"; }
-function e_arrow()    { echo -e " \033[1;34m➜\033[0m  $@"; }
-
-# If this file was being sourced, exit now.
-[[ "$1" == "source" ]] && return
-
-export prompt_delay=5
-
-if [[ ! "$(type -P git)" ]]; then
-  e_error "Git required."
-  exit 1
-fi
-
-# Clone
-if [[ ! -d $DOTFILES ]]; then
-  new_dotfiles_install=1
-  prompt_delay=15
-  e_header "Downloading dotfiles"
-  git clone https://github.com/${github_user:-richchurcher}/dotfiles.git $DOTFILES
-  cd $DOTFILES
-elif [[ "$1" != "restart" ]]; then
-  # Make sure we have the latest files.
-  e_header "Updating dotfiles"
-  cd $DOTFILES
-  prev_head="$(git rev-parse HEAD)"
-  git pull
-  if [[ "$(git rev-parse HEAD)" != "$prev_head" ]]; then
-    e_header "Changes detected, restarting script"
-    exec "$0" "restart"
-  fi
-fi
-
-# Add binaries into the path
-[[ -d $DOTFILES/bin ]] && PATH=$DOTFILES/bin:$PATH
-export PATH
-
-# Tweak file globbing.
-shopt -s dotglob
-shopt -s nullglob
-
-mkdir -p "$DOTFILES/caches/init"
-backup_dir="$DOTFILES/backups/$(date "+%Y_%m_%d-%H_%M_%S")/"
-backup=
-
-function copy_test() {
-  if [[ -e "$2" && ! "$(cmp "$1" "$2" 2> /dev/null)" ]]; then
-    echo "same file"
-  elif [[ "$1" -ot "$2" ]]; then
-    echo "destination file newer"
-  fi
-}
-
-function copy() {
-  e_success "Copying $1"
-  cp "$2" ~/
-}
-
-function copy_all() {
-  local base dest skip target
-  if [[ "$1" == "config" ]]; then
-    target="$HOME/.config";
+function init() {
+  if [[ -d ~/.config ]]; then
+    export DOTFILES="${HOME}/.config/dotfiles";
   else
-    target="$HOME";
+    export DOTFILES="${HOME}/.dotfiles";
   fi
-  local files=($DOTFILES/copy$1/*)
 
-  files=($($copy_files "${files[@]}"))
-  if (( ${#files[@]} == 0 )); then return; fi
-
-  e_header "Copying to ${1:-home}"
-  for file in "${files[@]}"; do
-    base="$(basename $file)"
-    dest="$target/$base"
-
-    # If _test function returns a string, display it and skip file
-    skip="$("copy_test" "$file" "$dest")"
-    if [[ "$skip" ]]; then
-      e_error "Skipping $base, $skip."
-      continue
-    fi
-
-    if [[ -e "$dest" ]]; then
-      e_arrow "Backing up ~/$base."
-      [[ -e "$backup_dir" ]] || mkdir -p "$backup_dir"
-      mv "$dest" "$backup_dir"
-    fi
-
-    "copy" "$base" "$file"
+  local file
+  for file in ${DOTFILES}/lib/*; do
+    source "$file"
   done
+
+  [[ -d $DOTFILES/bin ]] && PATH=$DOTFILES/bin:$PATH
+  export PATH
+
+  shopt -s dotglob
+  shopt -s nullglob
 }
 
-function link_test() {
-  [[ "$1" -ef "$2" ]] && echo "same file"
-}
-
-function link() {
-  e_success "Linking $1"
-  ln -sf ${2#$HOME/} ~/
-}
-
-function link_all() {
-  local base dest skip target
-  if [[ "$1" == "config" ]]; then
-    target="$HOME/.config";
-  else
-    target="$HOME";
-  fi
-  local files=($DOTFILES/link$1/*)
-  files=($($link_files "${files[@]}"))
-  if (( ${#files[@]} == 0 )); then return; fi
-
-  e_header "Linking to ${1:-home}"
-  for file in "${files[@]}"; do
-    base="$(basename $file)"
-    dest="$target/$base"
-
-    skip="$("link_test" "$file" "$dest")"
-    if [[ "$skip" ]]; then
-      e_error "Skipping ~/$base, $skip."
-      continue
-    fi
-
-    if [[ -e "$dest" ]]; then
-      e_arrow "Backing up ~/$base."
-      [[ -e "$backup_dir" ]] || mkdir -p "$backup_dir"
-      mv "$dest" "$backup_dir"
-    fi
-
-    "link" "$base" "$file"
-  done
-}
-
-copy_all
-copy_all "config"
+init
+[[ git_in_path ]] || exit 1
 link_all
 link_all "config"
 
