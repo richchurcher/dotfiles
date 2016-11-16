@@ -3,12 +3,13 @@
 
 [[ "$(type -P git)" ]] || { echo "Git required."; exit 1; }
 dotfiles_repo="https://github.com/${github_user:-richchurcher}/dotfiles.git"
+xdg_config=[[ -d "${HOME}/.config" ]]
 
 function init() {
-  if [[ -d ~/.config ]]; then
-    export DOTFILES="${HOME}/.config/dotfiles";
+  if ${xdg_config}; then
+    export DOTFILES="${xdg_config}/dotfiles"
   else
-    export DOTFILES="${HOME}/.dotfiles";
+    export DOTFILES="${HOME}/.dotfiles"
   fi
 
   [[ -d $DOTFILES/bin ]] && PATH=$DOTFILES/bin:$PATH
@@ -44,7 +45,8 @@ echo "Using ${DOTFILES}"
 echo "Checking for updates at ${dotfiles_repo}"
 clone
 src
-
+echo "Linking to ${HOME}"
 link_all
-#link_all "config"
+echo "Linking to XDG config (if it exists)"
+[[ ${xdg_config} ]] && link_all "config"
 
