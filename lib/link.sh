@@ -16,8 +16,8 @@ function link_all() {
     target="$HOME";
   fi
 
-  local files=($DOTFILES/link$1/*)
-  files=($($link_files "${files[@]}"))
+  local files=($DOTFILES/link${1}/*)
+  files=($("$link" "${files[@]}"))
   if (( ${#files[@]} == 0 )); then return; fi
 
   echo "Linking to ${1:-home}"
