@@ -4,7 +4,7 @@ function link_test() {
 
 function link() {
   echo " : ${3}/${1} -> ${2}"
-  #ln -sf ${2} ${3}
+  ln -sf ${2} ${3}
 }
 
 function backup() {
