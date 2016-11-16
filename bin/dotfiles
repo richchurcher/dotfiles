@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
+# Bastardised from https://github.com/cowboy/dotfiles
 
 [[ "$(type -P git)" ]] || { echo "Git required."; exit 1; }
+dotfiles_repo="https://github.com/${github_user:-richchurcher}/dotfiles.git"
 
 function init() {
   if [[ -d ~/.config ]]; then
@@ -19,29 +21,30 @@ function init() {
 function src() {
   local file
   for file in ${DOTFILES}/lib/*; do
-    echo "$file"
     source "$file"
   done
 }
 
 function clone() {
-  if [[ ! -d $DOTFILES ]]; then
-    git clone https://github.com/${github_user:-richchurcher}/dotfiles.git $DOTFILES
+  if [[ ! -d ${DOTFILES} ]]; then
+    git clone ${dotfiles_repo} ${DOTFILES}
   elif [[ "$1" != "restart" ]]; then
-    cd $DOTFILES
+    cd ${DOTFILES}
     prev_head="$(git rev-parse HEAD)"
     git pull
     if [[ "$(git rev-parse HEAD)" != "$prev_head" ]]; then
-      e_header "Changes detected, restarting script"
+      echo "Restarting to incorporate changes"
       exec "$0" "restart"
     fi
   fi
 }
 
 init
+echo "Using ${DOTFILES}"
+echo "Checking for updates at ${dotfiles_repo}"
 clone
 src
-#e_header "Using ${DOTFILES}..."
+
 #link_all
 #link_all "config"
 

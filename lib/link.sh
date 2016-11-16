@@ -3,7 +3,7 @@ function link_test() {
 }
 
 function link() {
-  e_success "Linking $1"
+  echo "Linking $1"
   ln -sf ${2#$HOME/} ~/
 }
 
@@ -28,13 +28,13 @@ function link_all() {
 
     skip="$("link_test" "$file" "$dest")"
     if [[ "$skip" ]]; then
-      e_error "Skipping ~/$base, $skip."
+      echo "Skipping $base, $skip."
       continue
     fi
 
     local backup_dir="$DOTFILES/backups/$(date "+%Y_%m_%d-%H_%M_%S")/"
     if [[ -e "$dest" ]]; then
-      e_arrow "Backing up ~/$base."
+      echo "Backing up $base."
       [[ -e "$backup_dir" ]] || mkdir -p "$backup_dir"
       mv "$dest" "$backup_dir"
     fi
