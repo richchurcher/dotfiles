@@ -3,23 +3,29 @@ function link_test() {
 }
 
 function link() {
-  echo "Linking ${0} -> ${1}"
-  #ln -sf ${2#$HOME/} ~/
+  echo " : ${3}/${1} -> ${2}"
+  ln -sf ${2} ${3}
+}
+
+function backup() {
+  [[ -e "$1" ]] || mkdir -p "$1"
+  echo " : ${2} backed up"
+  #mv "$3" "$1"
 }
 
 function link_all() {
   local base backup_dir dest skip target
+  local backup_dir="$DOTFILES/backups/$(date "+%Y_%m_%d-%H_%M_%S")/"
 
-  if [[ "$1" == "config" ]]; then
-    target="$HOME/.config";
+  if [[ "$1" = "config" ]]; then
+    target="$HOME/.config"
   else
-    target="$HOME";
+    target="$HOME"
   fi
 
   local files=($DOTFILES/link${1}/*)
   if (( ${#files[@]} == 0 )); then return; fi
 
-  echo "Linking to ${1:-home}"
   for file in "${files[@]}"; do
     base="$(basename $file)"
     dest="$target/$base"
@@ -30,14 +36,11 @@ function link_all() {
       continue
     fi
 
-    local backup_dir="$DOTFILES/backups/$(date "+%Y_%m_%d-%H_%M_%S")/"
     if [[ -e "$dest" ]]; then
-      echo "Backing up $base."
-      [[ -e "$backup_dir" ]] || mkdir -p "$backup_dir"
-      mv "$dest" "$backup_dir"
+      "backup" "$backup_dir" "$base" "$dest"
     fi
 
-    "link" "$base" "$file"
+    "link" "$base" "$file" "$target"
   done
 }
 
