@@ -34,6 +34,7 @@ if [[ ! "$(type -P git)" ]]; then
   exit 1
 fi
 
+# Clone
 if [[ ! -d $DOTFILES ]]; then
   new_dotfiles_install=1
   prompt_delay=15
@@ -73,25 +74,31 @@ function copy_test() {
 }
 
 function copy() {
-  e_success "Copying ~/$1."
+  e_success "Copying $1"
   cp "$2" ~/
 }
 
 function copy_all() {
-  local base dest skip
+  local base dest skip target
+  if [[ "$1" == "config" ]]; then
+    target="$HOME/.config";
+  else
+    target="$HOME";
+  fi
   local files=($DOTFILES/copy$1/*)
+
   files=($($copy_files "${files[@]}"))
   if (( ${#files[@]} == 0 )); then return; fi
 
   e_header "Copying to ${1:-home}"
   for file in "${files[@]}"; do
     base="$(basename $file)"
-    dest="$HOME/$base"
+    dest="$target/$base"
 
     # If _test function returns a string, display it and skip file
     skip="$("copy_test" "$file" "$dest")"
     if [[ "$skip" ]]; then
-      e_error "Skipping ~/$base, $skip."
+      e_error "Skipping $base, $skip."
       continue
     fi
 
@@ -110,12 +117,17 @@ function link_test() {
 }
 
 function link() {
-  e_success "Linking ~/$1."
+  e_success "Linking $1"
   ln -sf ${2#$HOME/} ~/
 }
 
 function link_all() {
-  local base dest skip
+  local base dest skip target
+  if [[ "$1" == "config" ]]; then
+    target="$HOME/.config";
+  else
+    target="$HOME";
+  fi
   local files=($DOTFILES/link$1/*)
   files=($($link_files "${files[@]}"))
   if (( ${#files[@]} == 0 )); then return; fi
@@ -123,7 +135,7 @@ function link_all() {
   e_header "Linking to ${1:-home}"
   for file in "${files[@]}"; do
     base="$(basename $file)"
-    dest="$HOME/$base"
+    dest="$target/$base"
 
     skip="$("link_test" "$file" "$dest")"
     if [[ "$skip" ]]; then
