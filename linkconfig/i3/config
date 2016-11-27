@@ -1,5 +1,5 @@
 set $mod Mod4
-font pango:DejaVu Sans Mono 18
+font pango:DejaVu Sans Mono 14
 floating_modifier $mod
 
 bindsym $mod+Return exec i3-sensible-terminal
@@ -108,7 +108,7 @@ bar {
 bar {
         output DP1
         status_command i3status
-        font pango:DejaVu Sans 10
+        font pango:DejaVu Sans 14
 }
 
 bar {
