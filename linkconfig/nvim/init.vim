@@ -84,6 +84,7 @@ map <Leader>. :bn<CR>
 map <Leader>bd :bd<CR>
 map <Leader>w :w<CR>
 map <Leader>q :q<CR>
+map <Leader>m <C-W><Bar>
 
 " Move between windows
 nnoremap <C-h> <C-w>h
