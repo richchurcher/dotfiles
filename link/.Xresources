@@ -79,7 +79,7 @@ xscreensaver.dateFormat:    %I:%M%P %a %b %d, %Y
 *.color20:      base04
 *.color21:      base06
 
-Xft.dpi: 127
+Xft.dpi: 150
 URxvt.iso14755: true
 URxvt.iso14755_52: false
 URxvt.depth:                32
