@@ -58,21 +58,14 @@ set statusline=\ %t\ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %
 nnoremap <Leader>jf :%!python -m json.tool<CR>
 
 " Colours
-set background=dark
-let base16colorspace=256
-colorscheme base16-solarized-dark
-" Make active buffer statusline and search a little more readable
-highlight StatusLine ctermfg=18 ctermbg=3
-highlight Search ctermfg=18 ctermbg=3
-
-if has("win32unix")
-  colorscheme zenburn
-  " terminal cursor
-  let &t_SI = "\<Esc>[4 q"
-  let &t_EI = "\<Esc>[2 q"
-  silent !echo -ne "\033]12;red\007"
-  autocmd VimLeave * silent !echo -ne "\033]112\007"
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
 endif
+
+" Make active buffer statusline and search a little more readable
+" highlight StatusLine ctermfg=18 ctermbg=3
+" highlight Search ctermfg=18 ctermbg=3
 
 " Keys
 inoremap jj <Esc>

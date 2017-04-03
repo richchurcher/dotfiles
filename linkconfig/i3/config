@@ -1,5 +1,5 @@
 set $mod Mod4
-font pango:DejaVu Sans Mono 14
+font pango:DejaVu Sans Mono, Awesome 10
 floating_modifier $mod
 
 bindsym $mod+Return exec i3-sensible-terminal
@@ -99,31 +99,59 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+## Base16 Solarized Dark
+set $base00 #002b36
+set $base01 #073642
+set $base02 #586e75
+set $base03 #657b83
+set $base04 #839496
+set $base05 #93a1a1
+set $base06 #eee8d5
+set $base07 #fdf6e3
+set $base08 #dc322f
+set $base09 #cb4b16
+set $base0A #b58900
+set $base0B #859900
+set $base0C #2aa198
+set $base0D #268bd2
+set $base0E #6c71c4
+set $base0F #d33682
+
+bar {
+        output VGA-1
+        status_command i3status
+        colors {
+                background $base00
+                statusline $base05
+                separator $base02
+                focused_workspace $base04 $base09 $base07
+                inactive_workspace $base03 $base01 $base03
+                urgent_workspace $base04 $base08 $base07
+        }
+}
+
 bar {
         output eDP1
         status_command i3status
-        font pango:DejaVu Sans 18
 }
 
 bar {
         output DP1
         status_command i3status
-        font pango:DejaVu Sans 14
 }
 
 bar {
         output DVI-I-1
         status_command i3status
-        font pango:DejaVu Sans 18
 }
 
 bar {
         output DVI-I-2
         status_command i3status
-        font pango:DejaVu Sans 18
 }
 
 # No title bars
 new_window 1pixel
 
 exec_always ~/.i3-launch
+

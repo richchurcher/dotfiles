@@ -6,6 +6,7 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias maxvm='xrandr --output VGA-1 --mode 1366x768'
 alias mute='amixer -q -D pulse sset Master 0%'
 alias vim='nvim'
 alias volhalf='amixer -q -D pulse sset Master 50%'
