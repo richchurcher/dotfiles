@@ -17,8 +17,16 @@ Plug 'neomake/neomake'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'critiqjo/lldb.nvim'
 Plug 'posva/vim-vue'
+Plug 'floobits/floobits-neovim'
 " On demand
 Plug 'fatih/vim-go', { 'for': 'go' }
+
+function! BuildComposer(info)
+  if a:info.status != 'unchanged' || a:info.force
+    !cargo build --release
+  endif
+endfunction
+Plug 'euclio/vim-markdown-composer', { 'for': 'markdown', 'do': function('BuildComposer') }
 
 call plug#end()
 

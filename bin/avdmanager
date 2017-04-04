@@ -1,0 +1,2 @@
+#!/usr/bin/bash
+/opt/android-sdk/tools/bin/avdmanager
