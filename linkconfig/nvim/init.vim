@@ -1,32 +1,31 @@
-call plug#begin('~/.vim/plugged')
+let g:ale_emit_conflict_warnings = 0
+
+call plug#begin('$XDG_DATA_HOME/nvim/plugged')
 
 " Always
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'chriskempson/base16-vim'
-Plug 'jnurmine/Zenburn'
-Plug 'twerth/ir_black'
-Plug 'Lokaltog/vim-easymotion'
-Plug 'phildawes/racer'
+Plug 'justinmk/vim-sneak'
 Plug 'xolox/vim-misc'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
 Plug 'scrooloose/nerdcommenter'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-signify'
+Plug 'w0rp/ale'
 Plug 'neomake/neomake'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'critiqjo/lldb.nvim'
-Plug 'posva/vim-vue'
-Plug 'floobits/floobits-neovim'
-" On demand
-Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'matze/vim-move'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'raghur/vim-ghost', { 'do': ':GhostInstall' }
+Plug 'guns/xterm-color-table.vim'
 
-function! BuildComposer(info)
-  if a:info.status != 'unchanged' || a:info.force
-    !cargo build --release
-  endif
-endfunction
-Plug 'euclio/vim-markdown-composer', { 'for': 'markdown', 'do': function('BuildComposer') }
+" In development
+" Plug '~/w/neocortex'
 
 call plug#end()
 
@@ -50,12 +49,22 @@ set whichwrap=b,s,h,l,<,>,[,]
 set scrolljump=5
 set scrolloff=3
 set nolist
+set clipboard+=unnamedplus
 
 " Formatting
+set background=dark
 filetype plugin indent on
 syntax on
+if filereadable('$XDG_CONFIG_HOME/background')
+  let base16colorspace=256
+  source '$XDG_CONFIG_HOME/background'
+endif
+let g:airline_powerline_fonts=1
+let g:solarized_base16=1
+let g:airline_theme='solarized'
 set nowrap
-set textwidth=0 " required to avoid wrapping, apparently
+set textwidth=0
+set wrapmargin=0
 set autoindent
 set shiftwidth=2
 set tabstop=2
@@ -65,18 +74,9 @@ set fillchars=vert:\ ,stl:\ ,stlnc:\ , " note: trailling comma required
 set statusline=\ %t\ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
 nnoremap <Leader>jf :%!python -m json.tool<CR>
 
-" Colours
-if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace=256
-  source ~/.vimrc_background
-endif
-
-" Make active buffer statusline and search a little more readable
-" highlight StatusLine ctermfg=18 ctermbg=3
-" highlight Search ctermfg=18 ctermbg=3
-
-" Keys
+" Key
 inoremap jj <Esc>
+inoremap jk <Esc>
 let mapleader = ','
 nmap <leader>ev :e $MYVIMRC<CR>
 nmap <leader>sv :so $MYVIMRC<CR>
@@ -85,7 +85,16 @@ map <Leader>. :bn<CR>
 map <Leader>bd :bd<CR>
 map <Leader>w :w<CR>
 map <Leader>q :q<CR>
-map <Leader>m <C-W><Bar>
+
+" Maximise current
+map <leader>m <C-W><Bar>
+
+" Open all folds
+map <leader>ff zR
+
+" Splits
+map <leader>vs :vs<CR>
+map <leader>sp :sp<CR>
 
 " Move between windows
 nnoremap <C-h> <C-w>h
@@ -127,22 +136,41 @@ nnoremap <silent> <leader>gb :Gblame<CR>
 nnoremap <silent> <leader>gl :Glog<CR>
 nnoremap <silent> <leader>gp :Git push<CR>
 nnoremap <silent> <leader>gw :Gwrite<CR>
+nnoremap <silent> <leader>du :diffupdate<CR>
+nnoremap <silent> <leader>dgt :diffget //2<CR>
+nnoremap <silent> <leader>dgm :diffget //3<CR>
+
+" Location list
+nnoremap <silent> <leader>ln :lnext<CR>
+nnoremap <silent> <leader>lp :lprevious<CR>
 
 " vim-go
 let g:go_fmt_command = "goimports"
 
 " vim-signify
-let g:signify_vcs_list = [ 'git', 'hg' ]
+highlight clear SignColumn
+let g:signify_vcs_list               = [ 'git', 'hg' ]
+let g:signify_sign_add               = '+'
+let g:signify_sign_delete            = '_'
+let g:signify_sign_delete_first_line = '‾'
+let g:signify_sign_change            = 'Δ'
+let g:signify_sign_changedelete      = g:signify_sign_change
+
+" highlight lines in Sy and vimdiff etc.)
+
+highlight DiffAdd cterm=bold ctermbg=none ctermfg=34
+highlight DiffDelete cterm=bold ctermbg=none ctermfg=16
+highlight DiffChange cterm=bold ctermbg=none ctermfg=4
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
 inoremap <silent><expr> <TAB>
-    \ pumvisible() ? "\<C-n>" :
-    \ <SID>check_back_space() ? "\<TAB>" :
-    \ deoplete#mappings#manual_complete()
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ deoplete#mappings#manual_complete()
 function! s:check_back_space() abort "{{{
-    let col = col('.') - 1
-    return !col || getline('.')[col - 1]  =~ '\s'
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
 endfunction"}}}
 " Close the documentation window when completion is done
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
@@ -153,63 +181,67 @@ let g:deoplete#sources#rust#rust_source_path = "/home/basie/.multirust/toolchain
 inoremap <expr><S-Tab>  pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:is_whitespace() "{{{
-	let col = col('.') - 1
-	return ! col || getline('.')[col - 1] =~? '\s'
+  let col = col('.') - 1
+  return ! col || getline('.')[col - 1] =~? '\s'
 endfunction "}}}
 
-" neomake
-let g:neomake_javascript_enabled_makers = ['eslint']
-let g:neomake_warning_sign = {
-  \ 'text': '=>',
-  \ 'texthl': 'DiffChange'
-  \ }
+" javascript make/test
+highlight NeomakeErrorMsg ctermfg=1 ctermbg=18
+highlight NeomakeWarningMsg ctermfg=16 ctermbg=18
 let g:neomake_error_sign = {
-  \ 'text': '=>',
-  \ 'texthl': 'DiffAdd'
-  \ }
-autocmd! BufWritePost * Neomake
+    \ 'text': '✖',
+    \ 'texthl': 'NeomakeErrorMsg'
+    \ }
+let g:neomake_warning_sign = {
+    \ 'text': '⚑',
+    \ 'texthl': 'NeomakeWarningMsg'
+    \ }
+let g:neomake_open_list = 2
+let g:neomake_javascript_jest_maker = {
+    \ 'exe': './node_modules/jest-cli/bin/jest.js',
+    \ 'args': [ '-c=./vim-jest.json', '--no-watchman' ],
+    \ 'errorformat':
+        \ '%f:%l:%c:%t:%m,' .
+        \ '%-G%.%#'
+    \ }
+let g:neomake_javascript_enabled_makers = ['jest']
+call neomake#configure#automake('w')
 
-" lldb.nvim
-nmap <silent> <leader>bp <Plug>LLBreakSwitch<CR>
+" linting
+let g:ale_sign_error = '✖'
+let g:ale_sign_warning = '⚑'
+highlight ALEErrorSign ctermfg=1 ctermbg=18
+highlight ALEWarningSign ctermfg=16 ctermbg=18
+let g:ale_linters = {
+    \ 'javascript': ['standard']
+    \ }
+let g:ale_fixers = {
+    \ 'javascript': ['standard']
+    \ }
+let g:ale_fix_on_save = 1
 
-" go
-"let g:go_fmt_command = "gofmt"
-"let g:go_fmt_options = "-tabs=false -tabwidth=4"
+" nerdcommenter
+let g:NERDSpaceDelims = 1
+let g:NERDDefaultAlign = 'left'
+let g:NERDCommentEmptyLines = 1
+let g:NERDTrimTrailingWhitespace = 1
 
-autocmd! BufEnter *.go setlocal shiftwidth=2 tabstop=2 softtabstop=2 noexpandtab
+" Sneak
+let g:sneak#label = 1
+map f <Plug>Sneak_f
+map F <Plug>Sneak_F
+map t <Plug>Sneak_t
+map T <Plug>Sneak_T
 
-" vim-go setup
-let g:go_fmt_command = "goimports"
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
-let g:go_fmt_fail_silently = 1 " use neomake instead
-
-" run go test first to catch errors in tests and code, and then gometalinter
-let gomakeprg =
-  \ 'go test -o /tmp/vim-go-test -c ./%:h && ' .
-    \ '! gometalinter ' .
-      \ '--disable=gofmt ' .
-      \ '--disable=dupl ' .
-      \ '--tests ' .
-      \ '--fast ' .
-      \ '--sort=severity ' .
-      \ '--exclude "should have comment" ' .
-    \ '| grep "%"'
-
-" match gometalinter + go test output
-let goerrorformat =
-  \ '%f:%l:%c:%t%*[^:]:\ %m,' .
-  \ '%f:%l::%t%*[^:]:\ %m,' .
-  \ '%W%f:%l: warning: %m,' .
-  \ '%E%f:%l:%c:%m,' .
-  \ '%E%f:%l:%m,' .
-  \ '%C%\s%\+%m,' .
-  \ '%-G#%.%#'
-
-" wire in Neomake
-autocmd BufEnter *.go let &makeprg = gomakeprg
-autocmd BufEnter *.go let &errorformat = goerrorformat
-autocmd! BufWritePost *.go Neomake!
+" ripgrep
+if executable("rg")
+    set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
+    set grepformat=%f:%l:%c:%m,%f:%l:%m
+endif
+command! -bang -nargs=* Rg
+      \ call fzf#vim#grep(
+      \   'rg --column --line-number --no-heading --color=always --ignore-case '.shellescape(<q-args>), 1,
+      \   <bang>0 ? fzf#vim#with_preview('up:60%')
+      \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+      \   <bang>0)
+nnoremap <leader>rg :Rg 
