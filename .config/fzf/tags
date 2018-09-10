@@ -1,0 +1,1694 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/bf8aa43e/
+$(SRC_LINK)	Makefile	/^$(SRC_LINK):$/;"	t
+$(VENDOR_LINK)	Makefile	/^$(VENDOR_LINK):$/;"	t
+(-[udlr]: up/down/left/right)	README.md	/^#        (-[udlr]: up\/down\/left\/right)$/;"	c
+*Backward incompatible changes*	CHANGELOG.md	/^### *Backward incompatible changes*$/;"	S
+- See the source code (completion.{bash,zsh}) for the details.	README.md	/^# - See the source code (completion.{bash,zsh}) for the details.$/;"	c
+- The first argument to the function ($1) is the base path to start traversal	README.md	/^# - The first argument to the function ($1) is the base path to start traversal$/;"	c
+- You can select multiple items with TAB key	README.md	/^# - You can select multiple items with TAB key$/;"	c
+0.10.0	CHANGELOG.md	/^0.10.0$/;"	s
+0.10.1	CHANGELOG.md	/^0.10.1$/;"	s
+0.10.2	CHANGELOG.md	/^0.10.2$/;"	s
+0.10.3	CHANGELOG.md	/^0.10.3$/;"	s
+0.10.4	CHANGELOG.md	/^0.10.4$/;"	s
+0.10.5	CHANGELOG.md	/^0.10.5$/;"	s
+0.10.6	CHANGELOG.md	/^0.10.6$/;"	s
+0.10.7	CHANGELOG.md	/^0.10.7$/;"	s
+0.10.8	CHANGELOG.md	/^0.10.8$/;"	s
+0.10.9	CHANGELOG.md	/^0.10.9$/;"	s
+0.11.0	CHANGELOG.md	/^0.11.0$/;"	s
+0.11.1	CHANGELOG.md	/^0.11.1$/;"	s
+0.11.2	CHANGELOG.md	/^0.11.2$/;"	s
+0.11.3	CHANGELOG.md	/^0.11.3$/;"	s
+0.11.4	CHANGELOG.md	/^0.11.4$/;"	s
+0.12.0	CHANGELOG.md	/^0.12.0$/;"	s
+0.12.1	CHANGELOG.md	/^0.12.1$/;"	s
+0.12.2	CHANGELOG.md	/^0.12.2$/;"	s
+0.13.0	CHANGELOG.md	/^0.13.0$/;"	s
+0.13.1	CHANGELOG.md	/^0.13.1$/;"	s
+0.13.2	CHANGELOG.md	/^0.13.2$/;"	s
+0.13.3	CHANGELOG.md	/^0.13.3$/;"	s
+0.13.4	CHANGELOG.md	/^0.13.4$/;"	s
+0.13.5	CHANGELOG.md	/^0.13.5$/;"	s
+0.15.0	CHANGELOG.md	/^0.15.0$/;"	s
+0.15.1	CHANGELOG.md	/^0.15.1$/;"	s
+0.15.2	CHANGELOG.md	/^0.15.2$/;"	s
+0.15.3	CHANGELOG.md	/^0.15.3$/;"	s
+0.15.4	CHANGELOG.md	/^0.15.4$/;"	s
+0.15.5	CHANGELOG.md	/^0.15.5$/;"	s
+0.15.6	CHANGELOG.md	/^0.15.6$/;"	s
+0.15.7	CHANGELOG.md	/^0.15.7$/;"	s
+0.15.8	CHANGELOG.md	/^0.15.8$/;"	s
+0.15.9	CHANGELOG.md	/^0.15.9$/;"	s
+0.16.0	CHANGELOG.md	/^0.16.0$/;"	s
+0.16.1	CHANGELOG.md	/^0.16.1$/;"	s
+0.16.10	CHANGELOG.md	/^0.16.10$/;"	s
+0.16.11	CHANGELOG.md	/^0.16.11$/;"	s
+0.16.2	CHANGELOG.md	/^0.16.2$/;"	s
+0.16.3	CHANGELOG.md	/^0.16.3$/;"	s
+0.16.4	CHANGELOG.md	/^0.16.4$/;"	s
+0.16.5	CHANGELOG.md	/^0.16.5$/;"	s
+0.16.6	CHANGELOG.md	/^0.16.6$/;"	s
+0.16.7	CHANGELOG.md	/^0.16.7$/;"	s
+0.16.8	CHANGELOG.md	/^0.16.8$/;"	s
+0.16.9	CHANGELOG.md	/^0.16.9$/;"	s
+0.17.0	CHANGELOG.md	/^0.17.0$/;"	s
+0.17.0-2	CHANGELOG.md	/^0.17.0-2$/;"	s
+0.17.1	CHANGELOG.md	/^0.17.1$/;"	s
+0.17.3	CHANGELOG.md	/^0.17.3$/;"	s
+0.9.10	CHANGELOG.md	/^0.9.10$/;"	s
+0.9.11	CHANGELOG.md	/^0.9.11$/;"	s
+0.9.12	CHANGELOG.md	/^0.9.12$/;"	s
+0.9.13	CHANGELOG.md	/^0.9.13$/;"	s
+0.9.3	CHANGELOG.md	/^0.9.3$/;"	s
+0.9.4	CHANGELOG.md	/^0.9.4$/;"	s
+0.9.5	CHANGELOG.md	/^0.9.5$/;"	s
+0.9.6	CHANGELOG.md	/^0.9.6$/;"	s
+0.9.7	CHANGELOG.md	/^0.9.7$/;"	s
+0.9.8	CHANGELOG.md	/^0.9.8$/;"	s
+0.9.9	CHANGELOG.md	/^0.9.9$/;"	s
+<img src="https://raw.githubusercontent.com/junegunn/i/master/fzf.png" height="170" alt="fzf - a command-line fuzzy finder"> [![travis-ci](https://travis-ci.org/junegunn/fzf.svg?branch=master)](https://travis-ci.org/junegunn/fzf)	README.md	/^<img src="https:\/\/raw.githubusercontent.com\/junegunn\/i\/master\/fzf.png" height="170" alt="f/;"	c
+AUTHOR	man/man1/fzf.1	/^.SH AUTHOR$/;"	s	title:fzf
+Add	src/cache.go	/^func (cc *ChunkCache) Add(chunk *Chunk, key string, list []Result) {$/;"	f	unknown:fzf.ChunkCache
+Added `--ansi` option (#150)	CHANGELOG.md	/^#### Added `--ansi` option (#150)$/;"	t
+Added `--expect` option (#163)	CHANGELOG.md	/^#### Added `--expect` option (#163)$/;"	t
+Added `--tac` option to reverse the order of the input.	CHANGELOG.md	/^#### Added `--tac` option to reverse the order of the input.$/;"	t
+Advanced topics	README.md	/^Advanced topics$/;"	s
+Algo	src/algo/algo.go	/^type Algo func(caseSensitive bool, normalize bool, forward bool, input *util.Chars, pattern []ru/;"	t	package:algo
+Alt0	src/tui/tui.go	/^	Alt0$/;"	c	package:tui
+AltA	src/tui/tui.go	/^	AltA = Alt0 + 'a' - '0' + iota$/;"	c	package:tui
+AltB	src/tui/tui.go	/^	AltB$/;"	c	package:tui
+AltBS	src/tui/tui.go	/^	AltBS$/;"	c	package:tui
+AltC	src/tui/tui.go	/^	AltC$/;"	c	package:tui
+AltD	src/tui/tui.go	/^	AltD$/;"	c	package:tui
+AltDown	src/tui/tui.go	/^	AltDown$/;"	c	package:tui
+AltE	src/tui/tui.go	/^	AltE$/;"	c	package:tui
+AltF	src/tui/tui.go	/^	AltF$/;"	c	package:tui
+AltLeft	src/tui/tui.go	/^	AltLeft$/;"	c	package:tui
+AltRight	src/tui/tui.go	/^	AltRight$/;"	c	package:tui
+AltSlash	src/tui/tui.go	/^	AltSlash$/;"	c	package:tui
+AltSpace	src/tui/tui.go	/^	AltSpace$/;"	c	package:tui
+AltUp	src/tui/tui.go	/^	AltUp$/;"	c	package:tui
+AltZ	src/tui/tui.go	/^	AltZ     = AltA + 'z' - 'a'$/;"	c	package:tui
+Ansi	src/options.go	/^	Ansi        bool$/;"	m	struct:fzf.Options
+Arch Linux	README.md	/^### Arch Linux$/;"	S
+As Vim plugin	README.md	/^### As Vim plugin$/;"	S
+AsString	src/item.go	/^func (item *Item) AsString(stripAnsi bool) string {$/;"	f	unknown:fzf.Item
+AsString	src/pattern.go	/^func (p *Pattern) AsString() string {$/;"	f	unknown:fzf.Pattern
+AsUint16	src/util/util.go	/^func AsUint16(val int) uint16 {$/;"	f	package:util
+AtomicBool	src/util/atomicbool.go	/^type AtomicBool struct {$/;"	s	package:util
+Attr	src/tui/dummy.go	/^type Attr int$/;"	t	package:tui
+Attr	src/tui/tcell.go	/^type Attr tcell.Style$/;"	t	package:tui
+AttrRegular	src/tui/dummy.go	/^	AttrRegular Attr = Attr(0)$/;"	c	package:tui
+AttrRegular	src/tui/tcell.go	/^	AttrRegular Attr = 0$/;"	c	package:tui
+BINARY	Makefile	/^	BINARY := $(BINARY32)$/;"	m
+BINARY	Makefile	/^	BINARY := $(BINARY64)$/;"	m
+BINARY	Makefile	/^	BINARY := $(BINARYARM5)$/;"	m
+BINARY	Makefile	/^	BINARY := $(BINARYARM6)$/;"	m
+BINARY	Makefile	/^	BINARY := $(BINARYARM7)$/;"	m
+BINARY32	Makefile	/^BINARY32    := fzf-$(GOOS)_386$/;"	m
+BINARY64	Makefile	/^BINARY64    := fzf-$(GOOS)_amd64$/;"	m
+BINARYARM5	Makefile	/^BINARYARM5  := fzf-$(GOOS)_arm5$/;"	m
+BINARYARM6	Makefile	/^BINARYARM6  := fzf-$(GOOS)_arm6$/;"	m
+BINARYARM7	Makefile	/^BINARYARM7  := fzf-$(GOOS)_arm7$/;"	m
+BINARYARM8	Makefile	/^BINARYARM8  := fzf-$(GOOS)_arm8$/;"	m
+BSpace	src/tui/tui.go	/^	BSpace$/;"	c	package:tui
+BTab	src/tui/tui.go	/^	BTab$/;"	c	package:tui
+BUILD_FLAGS	Makefile	/^BUILD_FLAGS := -a -ldflags "-X main.revision=$(REVISION) -w -extldflags=$(LDFLAGS)" -tags "$(TAG/;"	m
+Before submitting	.github/ISSUE_TEMPLATE.md	/^### Before submitting$/;"	S
+Bg	src/tui/tui.go	/^	Bg           Color$/;"	m	struct:tui.ColorTheme
+Bg	src/tui/tui.go	/^func (p ColorPair) Bg() Color {$/;"	f	unknown:tui.ColorPair
+Black	src/options.go	/^	Black       bool$/;"	m	struct:fzf.Options
+Blink	src/tui/dummy.go	/^	Blink            = Attr(1 << 4)$/;"	c	package:tui
+Blink	src/tui/tcell.go	/^	Blink          = Attr(tcell.AttrBlink)$/;"	c	package:tui
+Blink2	src/tui/dummy.go	/^	Blink2           = Attr(1 << 5)$/;"	c	package:tui
+Bold	src/options.go	/^	Bold        bool$/;"	m	struct:fzf.Options
+Bold	src/tui/dummy.go	/^	Bold             = Attr(1)$/;"	c	package:tui
+Bold	src/tui/tcell.go	/^	Bold      Attr = Attr(tcell.AttrBold)$/;"	c	package:tui
+Border	src/tui/tui.go	/^	Border       Color$/;"	m	struct:tui.ColorTheme
+BorderAround	src/tui/tui.go	/^	BorderAround$/;"	c	package:tui
+BorderHorizontal	src/tui/tui.go	/^	BorderHorizontal$/;"	c	package:tui
+BorderNone	src/tui/tui.go	/^	BorderNone BorderStyle = iota$/;"	c	package:tui
+BorderStyle	src/tui/tui.go	/^type BorderStyle int$/;"	t	package:tui
+Bordered	src/options.go	/^	Bordered    bool$/;"	m	struct:fzf.Options
+Bug fixes	CHANGELOG.md	/^### Bug fixes$/;"	S
+Build 32-bit and 64-bit executables and tarballs in target	BUILD.md	/^# Build 32-bit and 64-bit executables and tarballs in target$/;"	c
+Build fzf binary and copy it to bin directory	BUILD.md	/^# Build fzf binary and copy it to bin directory$/;"	c
+Build fzf binary for your platform in target	BUILD.md	/^# Build fzf binary for your platform in target$/;"	c
+Build instructions	BUILD.md	/^Build instructions$/;"	s
+BuildPattern	src/pattern.go	/^func BuildPattern(fuzzy bool, fuzzyAlgo algo.Algo, extended bool, caseMode Case, normalize bool,/;"	f	package:fzf
+Building fzf	BUILD.md	/^Building fzf$/;"	c
+Building fzf	README.md	/^Building fzf$/;"	s
+ByOrder	src/result.go	/^type ByOrder []Offset$/;"	t	package:fzf
+ByRelevance	src/result.go	/^type ByRelevance []Result$/;"	t	package:fzf
+ByRelevanceTac	src/result.go	/^type ByRelevanceTac []Result$/;"	t	package:fzf
+Bytes	src/util/chars.go	/^func (chars *Chars) Bytes() []byte {$/;"	f	unknown:util.Chars
+CFill	src/tui/light.go	/^func (w *LightWindow) CFill(fg Color, bg Color, attr Attr, text string) FillReturn {$/;"	f	unknown:tui.LightWindow
+CFill	src/tui/tcell.go	/^func (w *TcellWindow) CFill(fg Color, bg Color, a Attr, str string) FillReturn {$/;"	f	unknown:tui.TcellWindow
+CHANGELOG	CHANGELOG.md	/^CHANGELOG$/;"	c
+COMPREPLY=	shell/completion.bash	/^    COMPREPLY=()$/;"	f
+COMPREPLY=	shell/completion.bash	/^  COMPREPLY=()$/;"	f
+CPrint	src/tui/light.go	/^func (w *LightWindow) CPrint(pair ColorPair, attr Attr, text string) {$/;"	f	unknown:tui.LightWindow
+CPrint	src/tui/tcell.go	/^func (w *TcellWindow) CPrint(pair ColorPair, attr Attr, text string) {$/;"	f	unknown:tui.TcellWindow
+CacheKey	src/pattern.go	/^func (p *Pattern) CacheKey() string {$/;"	f	unknown:fzf.Pattern
+Can select multiple processes with <TAB> or <Shift-TAB> keys	README.md	/^# Can select multiple processes with <TAB> or <Shift-TAB> keys$/;"	c
+Case	src/options.go	/^	Case        Case$/;"	m	struct:fzf.Options
+Case	src/options.go	/^type Case int$/;"	t	package:fzf
+CaseIgnore	src/options.go	/^	CaseIgnore$/;"	c	package:fzf
+CaseRespect	src/options.go	/^	CaseRespect$/;"	c	package:fzf
+CaseSmart	src/options.go	/^	CaseSmart Case = iota$/;"	c	package:fzf
+Change	src/tui/tui.go	/^	Change$/;"	c	package:tui
+Changed behavior on `--no-sort`	CHANGELOG.md	/^#### Changed behavior on `--no-sort`$/;"	t
+Char	src/tui/tui.go	/^	Char       rune$/;"	m	struct:tui.Event
+Chars	src/util/chars.go	/^type Chars struct {$/;"	s	package:util
+Chunk	src/chunklist.go	/^type Chunk struct {$/;"	s	package:fzf
+ChunkCache	src/cache.go	/^type ChunkCache struct {$/;"	s	package:fzf
+ChunkList	src/chunklist.go	/^type ChunkList struct {$/;"	s	package:fzf
+Clear	src/tui/dummy.go	/^func (r *FullscreenRenderer) Clear()      {}$/;"	f	unknown:tui.FullscreenRenderer
+Clear	src/tui/light.go	/^func (r *LightRenderer) Clear() {$/;"	f	unknown:tui.LightRenderer
+Clear	src/tui/tcell.go	/^func (r *FullscreenRenderer) Clear() {$/;"	f	unknown:tui.FullscreenRenderer
+Clear	src/util/eventbox.go	/^func (events *Events) Clear() {$/;"	f	unknown:util.Events
+ClearOnExit	src/options.go	/^	ClearOnExit bool$/;"	m	struct:fzf.Options
+Close	src/tui/dummy.go	/^func (r *FullscreenRenderer) Close()      {}$/;"	f	unknown:tui.FullscreenRenderer
+Close	src/tui/light.go	/^func (r *LightRenderer) Close() {$/;"	f	unknown:tui.LightRenderer
+Close	src/tui/light.go	/^func (w *LightWindow) Close() {$/;"	f	unknown:tui.LightWindow
+Close	src/tui/tcell.go	/^func (r *FullscreenRenderer) Close() {$/;"	f	unknown:tui.FullscreenRenderer
+Close	src/tui/tcell.go	/^func (w *TcellWindow) Close() {$/;"	f	unknown:tui.TcellWindow
+ColBorder	src/tui/tui.go	/^	ColBorder       ColorPair$/;"	v	package:tui
+ColCurrent	src/tui/tui.go	/^	ColCurrent      ColorPair$/;"	v	package:tui
+ColCurrentMatch	src/tui/tui.go	/^	ColCurrentMatch ColorPair$/;"	v	package:tui
+ColCursor	src/tui/tui.go	/^	ColCursor       ColorPair$/;"	v	package:tui
+ColHeader	src/tui/tui.go	/^	ColHeader       ColorPair$/;"	v	package:tui
+ColInfo	src/tui/tui.go	/^	ColInfo         ColorPair$/;"	v	package:tui
+ColMatch	src/tui/tui.go	/^	ColMatch        ColorPair$/;"	v	package:tui
+ColNormal	src/tui/tui.go	/^	ColNormal       ColorPair$/;"	v	package:tui
+ColPrompt	src/tui/tui.go	/^	ColPrompt       ColorPair$/;"	v	package:tui
+ColSelected	src/tui/tui.go	/^	ColSelected     ColorPair$/;"	v	package:tui
+ColSpinner	src/tui/tui.go	/^	ColSpinner      ColorPair$/;"	v	package:tui
+Color	src/tui/tui.go	/^type Color int32$/;"	t	package:tui
+ColorPair	src/tui/tui.go	/^type ColorPair struct {$/;"	s	package:tui
+ColorTheme	src/tui/tui.go	/^type ColorTheme struct {$/;"	s	package:tui
+Colors	src/item.go	/^func (item *Item) Colors() []ansiOffset {$/;"	f	unknown:fzf.Item
+CompletionTest	test/test_go.rb	/^module CompletionTest$/;"	m
+Configuration	README-VIM.md	/^### Configuration$/;"	S
+Constrain	src/util/util.go	/^func Constrain(val int, min int, max int) int {$/;"	f	package:util
+Constrain32	src/util/util.go	/^func Constrain32(val int32, min int32, max int32) int32 {$/;"	f	package:util
+CopyRunes	src/util/chars.go	/^func (chars *Chars) CopyRunes(dest []rune) {$/;"	f	unknown:util.Chars
+CountItems	src/chunklist.go	/^func CountItems(cs []*Chunk) int {$/;"	f	package:fzf
+Criteria	src/options.go	/^	Criteria    []criterion$/;"	m	struct:fzf.Options
+CtrlA	src/tui/tui.go	/^	CtrlA$/;"	c	package:tui
+CtrlAltA	src/tui/tui.go	/^	CtrlAltA = AltZ + 1$/;"	c	package:tui
+CtrlAltM	src/tui/tui.go	/^	CtrlAltM = CtrlAltA + 'm' - 'a'$/;"	c	package:tui
+CtrlB	src/tui/tui.go	/^	CtrlB$/;"	c	package:tui
+CtrlC	src/tui/tui.go	/^	CtrlC$/;"	c	package:tui
+CtrlD	src/tui/tui.go	/^	CtrlD$/;"	c	package:tui
+CtrlE	src/tui/tui.go	/^	CtrlE$/;"	c	package:tui
+CtrlF	src/tui/tui.go	/^	CtrlF$/;"	c	package:tui
+CtrlG	src/tui/tui.go	/^	CtrlG$/;"	c	package:tui
+CtrlH	src/tui/tui.go	/^	CtrlH$/;"	c	package:tui
+CtrlJ	src/tui/tui.go	/^	CtrlJ$/;"	c	package:tui
+CtrlK	src/tui/tui.go	/^	CtrlK$/;"	c	package:tui
+CtrlL	src/tui/tui.go	/^	CtrlL$/;"	c	package:tui
+CtrlM	src/tui/tui.go	/^	CtrlM$/;"	c	package:tui
+CtrlN	src/tui/tui.go	/^	CtrlN$/;"	c	package:tui
+CtrlO	src/tui/tui.go	/^	CtrlO$/;"	c	package:tui
+CtrlP	src/tui/tui.go	/^	CtrlP$/;"	c	package:tui
+CtrlQ	src/tui/tui.go	/^	CtrlQ$/;"	c	package:tui
+CtrlR	src/tui/tui.go	/^	CtrlR$/;"	c	package:tui
+CtrlS	src/tui/tui.go	/^	CtrlS$/;"	c	package:tui
+CtrlSpace	src/tui/tui.go	/^	CtrlSpace$/;"	c	package:tui
+CtrlT	src/tui/tui.go	/^	CtrlT$/;"	c	package:tui
+CtrlU	src/tui/tui.go	/^	CtrlU$/;"	c	package:tui
+CtrlV	src/tui/tui.go	/^	CtrlV$/;"	c	package:tui
+CtrlW	src/tui/tui.go	/^	CtrlW$/;"	c	package:tui
+CtrlX	src/tui/tui.go	/^	CtrlX$/;"	c	package:tui
+CtrlY	src/tui/tui.go	/^	CtrlY$/;"	c	package:tui
+CtrlZ	src/tui/tui.go	/^	CtrlZ$/;"	c	package:tui
+Current	src/tui/tui.go	/^	Current      Color$/;"	m	struct:tui.ColorTheme
+CurrentMatch	src/tui/tui.go	/^	CurrentMatch Color$/;"	m	struct:tui.ColorTheme
+Cursor	src/tui/tui.go	/^	Cursor       Color$/;"	m	struct:tui.ColorTheme
+Cycle	src/options.go	/^	Cycle       bool$/;"	m	struct:fzf.Options
+DEBUG	src/algo/algo.go	/^var DEBUG bool$/;"	v	package:algo
+DESCRIPTION	man/man1/fzf-tmux.1	/^.SH DESCRIPTION$/;"	s	title:fzf-tmux
+DESCRIPTION	man/man1/fzf.1	/^.SH DESCRIPTION$/;"	s	title:fzf
+Dark256	src/tui/tui.go	/^	Dark256   *ColorTheme$/;"	v	package:tui
+DarkBg	src/tui/tui.go	/^	DarkBg       Color$/;"	m	struct:tui.ColorTheme
+Default16	src/tui/tui.go	/^	Default16 *ColorTheme$/;"	v	package:tui
+Del	src/tui/tui.go	/^	Del$/;"	c	package:tui
+Delimiter	src/options.go	/^	Delimiter   Delimiter$/;"	m	struct:fzf.Options
+Delimiter	src/tokenizer.go	/^type Delimiter struct {$/;"	s	package:fzf
+Dim	src/tui/dummy.go	/^	Dim              = Attr(1 << 1)$/;"	c	package:tui
+Dim	src/tui/tcell.go	/^	Dim            = Attr(tcell.AttrDim)$/;"	c	package:tui
+Directories under current directory (single-selection)	README.md	/^# Directories under current directory (single-selection)$/;"	c
+Directories under ~/github that match `fzf`	README.md	/^# Directories under ~\/github that match `fzf`$/;"	c
+DoesAutoWrap	src/tui/dummy.go	/^func (r *FullscreenRenderer) DoesAutoWrap() bool { return false }$/;"	f	unknown:tui.FullscreenRenderer
+DoesAutoWrap	src/tui/light.go	/^func (r *LightRenderer) DoesAutoWrap() bool {$/;"	f	unknown:tui.LightRenderer
+DoesAutoWrap	src/tui/tcell.go	/^func (r *FullscreenRenderer) DoesAutoWrap() bool {$/;"	f	unknown:tui.FullscreenRenderer
+Double	src/tui/tui.go	/^	Double bool$/;"	m	struct:tui.MouseEvent
+DoubleClick	src/tui/tui.go	/^	DoubleClick$/;"	c	package:tui
+Down	src/tui/tui.go	/^	Down   bool$/;"	m	struct:tui.MouseEvent
+Down	src/tui/tui.go	/^	Down$/;"	c	package:tui
+DurWithin	src/util/util.go	/^func DurWithin($/;"	f	package:util
+ENVIRONMENT	man/man1/fzf.1	/^.SH ENVIRONMENT VARIABLES$/;"	s	title:fzf
+EOF	install	/^  cat << EOF$/;"	h
+EOF	install	/^  cat > $src << EOF$/;"	h
+EOF	install	/^  fish << EOF$/;"	h
+ESC	src/tui/tui.go	/^	ESC$/;"	c	package:tui
+EXIT	man/man1/fzf.1	/^.SH EXIT STATUS$/;"	s	title:fzf
+EXTENDED	man/man1/fzf.1	/^.SH EXTENDED SEARCH MODE$/;"	s	title:fzf
+EmptyMerger	src/merger.go	/^var EmptyMerger = NewMerger(nil, [][]Result{}, false, false)$/;"	v	package:fzf
+EmptyTheme	src/tui/tui.go	/^func EmptyTheme() *ColorTheme {$/;"	f	package:tui
+Enclose	src/tui/light.go	/^func (w *LightWindow) Enclose(y int, x int) bool {$/;"	f	unknown:tui.LightWindow
+Enclose	src/tui/tcell.go	/^func (w *TcellWindow) Enclose(y int, x int) bool {$/;"	f	unknown:tui.TcellWindow
+End	src/algo/algo.go	/^	End   int$/;"	m	struct:algo.Result
+End	src/tui/tui.go	/^	End$/;"	c	package:tui
+Environment variables	README.md	/^#### Environment variables$/;"	t
+Environment variables / Aliases	README.md	/^#### Environment variables \/ Aliases$/;"	t
+EqualMatch	src/algo/algo.go	/^func EqualMatch(caseSensitive bool, normalize bool, forward bool, text *util.Chars, pattern []ru/;"	f	package:algo
+Erase	src/tui/light.go	/^func (w *LightWindow) Erase() {$/;"	f	unknown:tui.LightWindow
+Erase	src/tui/tcell.go	/^func (w *TcellWindow) Erase() {$/;"	f	unknown:tui.TcellWindow
+Event	src/tui/tui.go	/^type Event struct {$/;"	s	package:tui
+EventBox	src/util/eventbox.go	/^type EventBox struct {$/;"	s	package:util
+EventType	src/util/eventbox.go	/^type EventType int$/;"	t	package:util
+Events	src/util/eventbox.go	/^type Events map[EventType]interface{}$/;"	t	package:util
+EvtClose	src/util/eventbox_test.go	/^	EvtClose$/;"	c	package:util
+EvtHeader	src/constants.go	/^	EvtHeader$/;"	c	package:fzf
+EvtReadFin	src/constants.go	/^	EvtReadFin$/;"	c	package:fzf
+EvtReadFin	src/util/eventbox_test.go	/^	EvtReadFin$/;"	c	package:util
+EvtReadNew	src/constants.go	/^	EvtReadNew util.EventType = iota$/;"	c	package:fzf
+EvtReadNew	src/util/eventbox_test.go	/^	EvtReadNew EventType = iota$/;"	c	package:util
+EvtReady	src/constants.go	/^	EvtReady$/;"	c	package:fzf
+EvtSearchFin	src/constants.go	/^	EvtSearchFin$/;"	c	package:fzf
+EvtSearchFin	src/util/eventbox_test.go	/^	EvtSearchFin$/;"	c	package:util
+EvtSearchNew	src/constants.go	/^	EvtSearchNew$/;"	c	package:fzf
+EvtSearchNew	src/util/eventbox_test.go	/^	EvtSearchNew$/;"	c	package:util
+EvtSearchProgress	src/constants.go	/^	EvtSearchProgress$/;"	c	package:fzf
+EvtSearchProgress	src/util/eventbox_test.go	/^	EvtSearchProgress$/;"	c	package:util
+ExactMatchNaive	src/algo/algo.go	/^func ExactMatchNaive(caseSensitive bool, normalize bool, forward bool, text *util.Chars, pattern/;"	f	package:algo
+Examples	README-VIM.md	/^#### Examples$/;"	t
+Examples	README.md	/^Examples$/;"	s
+ExecCommand	src/util/util_unix.go	/^func ExecCommand(command string) *exec.Cmd {$/;"	f	package:util
+ExecCommand	src/util/util_windows.go	/^func ExecCommand(command string) *exec.Cmd {$/;"	f	package:util
+ExecCommandWith	src/util/util_unix.go	/^func ExecCommandWith(shell string, command string) *exec.Cmd {$/;"	f	package:util
+ExecCommandWith	src/util/util_windows.go	/^func ExecCommandWith(_shell string, command string) *exec.Cmd {$/;"	f	package:util
+Executing external programs	README.md	/^### Executing external programs$/;"	S
+Exit0	src/options.go	/^	Exit0       bool$/;"	m	struct:fzf.Options
+Expect	src/options.go	/^	Expect      map[int]string$/;"	m	struct:fzf.Options
+Extended	src/options.go	/^	Extended    bool$/;"	m	struct:fzf.Options
+F1	src/tui/tui.go	/^	F1$/;"	c	package:tui
+F10	src/tui/tui.go	/^	F10$/;"	c	package:tui
+F11	src/tui/tui.go	/^	F11$/;"	c	package:tui
+F12	src/tui/tui.go	/^	F12$/;"	c	package:tui
+F2	src/tui/tui.go	/^	F2$/;"	c	package:tui
+F3	src/tui/tui.go	/^	F3$/;"	c	package:tui
+F4	src/tui/tui.go	/^	F4$/;"	c	package:tui
+F5	src/tui/tui.go	/^	F5$/;"	c	package:tui
+F6	src/tui/tui.go	/^	F6$/;"	c	package:tui
+F7	src/tui/tui.go	/^	F7$/;"	c	package:tui
+F8	src/tui/tui.go	/^	F8$/;"	c	package:tui
+F9	src/tui/tui.go	/^	F9$/;"	c	package:tui
+FIELD	man/man1/fzf.1	/^.SH FIELD INDEX EXPRESSION$/;"	s	title:fzf
+FZF	plugin/fzf.vim	/^command! -nargs=* -complete=dir -bang FZF call s:cmd(<bang>0, <f-args>)$/;"	c
+FZF Vim integration	README-VIM.md	/^FZF Vim integration$/;"	c
+Fedora	README.md	/^### Fedora$/;"	S
+Feed the output of fd into fzf	README.md	/^# Feed the output of fd into fzf$/;"	c
+Fg	src/tui/tui.go	/^	Fg           Color$/;"	m	struct:tui.ColorTheme
+Fg	src/tui/tui.go	/^func (p ColorPair) Fg() Color {$/;"	f	unknown:tui.ColorPair
+FileWord	src/options.go	/^	FileWord    bool$/;"	m	struct:fzf.Options
+Files and directories	README.md	/^#### Files and directories$/;"	t
+Files under current directory	README.md	/^# Files under current directory$/;"	c
+Files under parent directory	README.md	/^# Files under parent directory$/;"	c
+Files under parent directory that match `fzf`	README.md	/^# Files under parent directory that match `fzf`$/;"	c
+Files under your home directory	README.md	/^# Files under your home directory$/;"	c
+Fill	src/tui/light.go	/^func (w *LightWindow) Fill(text string) FillReturn {$/;"	f	unknown:tui.LightWindow
+Fill	src/tui/tcell.go	/^func (w *TcellWindow) Fill(str string) FillReturn {$/;"	f	unknown:tui.TcellWindow
+FillContinue	src/tui/tui.go	/^	FillContinue FillReturn = iota$/;"	c	package:tui
+FillNextLine	src/tui/tui.go	/^	FillNextLine$/;"	c	package:tui
+FillReturn	src/tui/tui.go	/^type FillReturn int$/;"	t	package:tui
+FillSuspend	src/tui/tui.go	/^	FillSuspend$/;"	c	package:tui
+Filter	src/options.go	/^	Filter      *string$/;"	m	struct:fzf.Options
+FinishFill	src/tui/light.go	/^func (w *LightWindow) FinishFill() {$/;"	f	unknown:tui.LightWindow
+FinishFill	src/tui/tcell.go	/^func (w *TcellWindow) FinishFill() {$/;"	f	unknown:tui.TcellWindow
+Fish shell	README.md	/^#### Fish shell$/;"	t
+Fixes and improvements	CHANGELOG.md	/^### Fixes and improvements$/;"	S
+FullscreenRenderer	src/tui/tui.go	/^type FullscreenRenderer struct {$/;"	s	package:tui
+Fuzzy	src/options.go	/^	Fuzzy       bool$/;"	m	struct:fzf.Options
+Fuzzy completion for bash and zsh	README.md	/^Fuzzy completion for bash and zsh$/;"	s
+FuzzyAlgo	src/options.go	/^	FuzzyAlgo   algo.Algo$/;"	m	struct:fzf.Options
+FuzzyMatchV1	src/algo/algo.go	/^func FuzzyMatchV1(caseSensitive bool, normalize bool, forward bool, text *util.Chars, pattern []/;"	f	package:algo
+FuzzyMatchV2	src/algo/algo.go	/^func FuzzyMatchV2(caseSensitive bool, normalize bool, forward bool, input *util.Chars, pattern [/;"	f	package:algo
+GLIDE_LOCK	Makefile	/^GLIDE_LOCK  := glide.lock$/;"	m
+GLIDE_YAML	Makefile	/^GLIDE_YAML  := glide.yaml$/;"	m
+GOOS	Makefile	/^GOOS        := $(word 1, $(subst \/, " ", $(word 4, $(shell go version))))$/;"	m
+GOPATH	Makefile	/^GOPATH      := $(ROOT_DIR)\/gopath$/;"	m
+GVim	README-VIM.md	/^GVim$/;"	s
+Get	src/merger.go	/^func (mg *Merger) Get(idx int) Result {$/;"	f	unknown:fzf.Merger
+Get	src/util/atomicbool.go	/^func (a *AtomicBool) Get() bool {$/;"	f	unknown:util.AtomicBool
+Get	src/util/chars.go	/^func (chars *Chars) Get(i int) rune {$/;"	f	unknown:util.Chars
+GetChar	src/tui/dummy.go	/^func (r *FullscreenRenderer) GetChar() Event     { return Event{} }$/;"	f	unknown:tui.FullscreenRenderer
+GetChar	src/tui/light.go	/^func (r *LightRenderer) GetChar() Event {$/;"	f	unknown:tui.LightRenderer
+GetChar	src/tui/tcell.go	/^func (r *FullscreenRenderer) GetChar() Event {$/;"	f	unknown:tui.FullscreenRenderer
+HasFullscreenRenderer	src/tui/dummy.go	/^func HasFullscreenRenderer() bool {$/;"	f	package:tui
+HasFullscreenRenderer	src/tui/tcell.go	/^func HasFullscreenRenderer() bool {$/;"	f	package:tui
+Header	src/options.go	/^	Header      []string$/;"	m	struct:fzf.Options
+Header	src/tui/tui.go	/^	Header       Color$/;"	m	struct:tui.ColorTheme
+HeaderLines	src/options.go	/^	HeaderLines int$/;"	m	struct:fzf.Options
+Height	src/options.go	/^	Height      sizeSpec$/;"	m	struct:fzf.Options
+Height	src/tui/light.go	/^func (w *LightWindow) Height() int {$/;"	f	unknown:tui.LightWindow
+Height	src/tui/tcell.go	/^func (w *TcellWindow) Height() int {$/;"	f	unknown:tui.TcellWindow
+HexToColor	src/tui/tui.go	/^func HexToColor(rrggbb string) Color {$/;"	f	package:tui
+Hide statusline	README-VIM.md	/^### Hide statusline$/;"	S
+History	src/history.go	/^type History struct {$/;"	s	package:fzf
+History	src/options.go	/^	History     *History$/;"	m	struct:fzf.Options
+Home	src/tui/tui.go	/^	Home$/;"	c	package:tui
+Host names	README.md	/^#### Host names$/;"	t
+Hscroll	src/options.go	/^	Hscroll     bool$/;"	m	struct:fzf.Options
+HscrollOff	src/options.go	/^	HscrollOff  int$/;"	m	struct:fzf.Options
+I16	src/util/slab.go	/^	I16 []int16$/;"	m	struct:util.Slab
+I32	src/util/slab.go	/^	I32 []int32$/;"	m	struct:util.Slab
+Improvements	CHANGELOG.md	/^### Improvements$/;"	S
+Index	src/item.go	/^func (item *Item) Index() int32 {$/;"	f	unknown:fzf.Item
+Index	src/result.go	/^func (result *Result) Index() int32 {$/;"	f	unknown:fzf.Result
+Index	src/util/chars.go	/^	Index int32$/;"	m	struct:util.Chars
+Info	src/tui/tui.go	/^	Info         Color$/;"	m	struct:tui.ColorTheme
+Init	src/tui/dummy.go	/^func (r *FullscreenRenderer) Init()       {}$/;"	f	unknown:tui.FullscreenRenderer
+Init	src/tui/light.go	/^func (r *LightRenderer) Init() {$/;"	f	unknown:tui.LightRenderer
+Init	src/tui/tcell.go	/^func (r *FullscreenRenderer) Init() {$/;"	f	unknown:tui.FullscreenRenderer
+InlineInfo	src/options.go	/^	InlineInfo  bool$/;"	m	struct:fzf.Options
+Input	src/terminal.go	/^func (t *Terminal) Input() []rune {$/;"	f	unknown:fzf.Terminal
+Installation	README.md	/^Installation$/;"	s
+Invalid	src/tui/tui.go	/^	Invalid$/;"	c	package:tui
+IsBytes	src/util/chars.go	/^func (chars *Chars) IsBytes() bool {$/;"	f	unknown:util.Chars
+IsEmpty	src/pattern.go	/^func (p *Pattern) IsEmpty() bool {$/;"	f	unknown:fzf.Pattern
+IsFull	src/chunklist.go	/^func (c *Chunk) IsFull() bool {$/;"	f	unknown:fzf.Chunk
+IsTty	src/util/util.go	/^func IsTty() bool {$/;"	f	package:util
+IsWindows	src/util/util_unix.go	/^func IsWindows() bool {$/;"	f	package:util
+IsWindows	src/util/util_windows.go	/^func IsWindows() bool {$/;"	f	package:util
+Italic	src/tui/dummy.go	/^	Italic           = Attr(1 << 2)$/;"	c	package:tui
+Italic	src/tui/tcell.go	/^	Italic         = Attr(tcell.AttrNone) \/\/ Not supported$/;"	c	package:tui
+Item	src/item.go	/^type Item struct {$/;"	s	package:fzf
+ItemBuilder	src/chunklist.go	/^type ItemBuilder func(*Item, []byte) bool$/;"	t	package:fzf
+JumpLabels	src/options.go	/^	JumpLabels  string$/;"	m	struct:fzf.Options
+KEY	man/man1/fzf.1	/^.SH KEY BINDINGS$/;"	s	title:fzf
+Key bindings for command line	README.md	/^Key bindings for command line$/;"	s
+Keymap	src/options.go	/^	Keymap      map[int][]action$/;"	m	struct:fzf.Options
+LICENSE	man/man1/fzf.1	/^.SH LICENSE$/;"	s	title:fzf
+Layout	README.md	/^#### Layout$/;"	t
+Left	src/tui/light.go	/^func (w *LightWindow) Left() int {$/;"	f	unknown:tui.LightWindow
+Left	src/tui/tcell.go	/^func (w *TcellWindow) Left() int {$/;"	f	unknown:tui.TcellWindow
+Left	src/tui/tui.go	/^	Left   bool$/;"	m	struct:tui.MouseEvent
+Left	src/tui/tui.go	/^	Left$/;"	c	package:tui
+LeftClick	src/tui/tui.go	/^	LeftClick$/;"	c	package:tui
+Len	src/result.go	/^func (a ByOrder) Len() int {$/;"	f	unknown:fzf.ByOrder
+Len	src/result.go	/^func (a ByRelevance) Len() int {$/;"	f	unknown:fzf.ByRelevance
+Len	src/result.go	/^func (a ByRelevanceTac) Len() int {$/;"	f	unknown:fzf.ByRelevanceTac
+Len	src/terminal.go	/^func (a byTimeOrder) Len() int {$/;"	f	unknown:fzf.byTimeOrder
+Length	src/merger.go	/^func (mg *Merger) Length() int {$/;"	f	unknown:fzf.Merger
+Length	src/util/chars.go	/^func (chars *Chars) Length() int {$/;"	f	unknown:util.Chars
+Less	src/result.go	/^func (a ByOrder) Less(i, j int) bool {$/;"	f	unknown:fzf.ByOrder
+Less	src/result.go	/^func (a ByRelevance) Less(i, j int) bool {$/;"	f	unknown:fzf.ByRelevance
+Less	src/result.go	/^func (a ByRelevanceTac) Less(i, j int) bool {$/;"	f	unknown:fzf.ByRelevanceTac
+Less	src/terminal.go	/^func (a byTimeOrder) Less(i, j int) bool {$/;"	f	unknown:fzf.byTimeOrder
+License	BUILD.md	/^License$/;"	s
+Light256	src/tui/tui.go	/^	Light256  *ColorTheme$/;"	v	package:tui
+LightRenderer	src/tui/light.go	/^type LightRenderer struct {$/;"	s	package:tui
+LightWindow	src/tui/light.go	/^type LightWindow struct {$/;"	s	package:tui
+Lookup	src/cache.go	/^func (cc *ChunkCache) Lookup(chunk *Chunk, key string) []Result {$/;"	f	unknown:fzf.ChunkCache
+Loop	src/matcher.go	/^func (m *Matcher) Loop() {$/;"	f	unknown:fzf.Matcher
+Loop	src/terminal.go	/^func (t *Terminal) Loop() {$/;"	f	unknown:fzf.Terminal
+MAKEFILE	Makefile	/^MAKEFILE    := $(realpath $(lastword $(MAKEFILE_LIST)))$/;"	m
+Make release archives for all supported platforms in target	BUILD.md	/^# Make release archives for all supported platforms in target$/;"	c
+MakeSlab	src/util/slab.go	/^func MakeSlab(size16 int, size32 int) *Slab {$/;"	f	package:util
+Margin	src/options.go	/^	Margin      [4]sizeSpec$/;"	m	struct:fzf.Options
+Match	src/pattern.go	/^func (p *Pattern) Match(chunk *Chunk, slab *util.Slab) []Result {$/;"	f	unknown:fzf.Pattern
+Match	src/tui/tui.go	/^	Match        Color$/;"	m	struct:tui.ColorTheme
+MatchItem	src/pattern.go	/^func (p *Pattern) MatchItem(item *Item, withPos bool, slab *util.Slab) (*Result, []Offset, *[]in/;"	f	unknown:fzf.Pattern
+MatchRequest	src/matcher.go	/^type MatchRequest struct {$/;"	s	package:fzf
+Matcher	src/matcher.go	/^type Matcher struct {$/;"	s	package:fzf
+Max	src/util/util.go	/^func Max(first int, second int) int {$/;"	f	package:util
+Max16	src/util/util.go	/^func Max16(first int16, second int16) int16 {$/;"	f	package:util
+Max32	src/util/util.go	/^func Max32(first int32, second int32) int32 {$/;"	f	package:util
+MaxX	src/tui/dummy.go	/^func (r *FullscreenRenderer) MaxX() int          { return 0 }$/;"	f	unknown:tui.FullscreenRenderer
+MaxX	src/tui/light.go	/^func (r *LightRenderer) MaxX() int {$/;"	f	unknown:tui.LightRenderer
+MaxX	src/tui/tcell.go	/^func (r *FullscreenRenderer) MaxX() int {$/;"	f	unknown:tui.FullscreenRenderer
+MaxY	src/tui/dummy.go	/^func (r *FullscreenRenderer) MaxY() int          { return 0 }$/;"	f	unknown:tui.FullscreenRenderer
+MaxY	src/tui/light.go	/^func (r *LightRenderer) MaxY() int {$/;"	f	unknown:tui.LightRenderer
+MaxY	src/tui/tcell.go	/^func (r *FullscreenRenderer) MaxY() int {$/;"	f	unknown:tui.FullscreenRenderer
+Merge	src/tui/dummy.go	/^func (a Attr) Merge(b Attr) Attr {$/;"	f	unknown:tui.Attr
+Merge	src/tui/tcell.go	/^func (a Attr) Merge(b Attr) Attr {$/;"	f	unknown:tui.Attr
+Merger	src/merger.go	/^type Merger struct {$/;"	s	package:fzf
+Min	src/util/util.go	/^func Min(first int, second int) int {$/;"	f	package:util
+Min32	src/util/util.go	/^func Min32(first int32, second int32) int32 {$/;"	f	package:util
+MinHeight	src/options.go	/^	MinHeight   int$/;"	m	struct:fzf.Options
+Minor improvements/fixes	CHANGELOG.md	/^### Minor improvements\/fixes$/;"	S
+Mod	src/tui/tui.go	/^	Mod    bool$/;"	m	struct:tui.MouseEvent
+Mouse	src/options.go	/^	Mouse       bool$/;"	m	struct:fzf.Options
+Mouse	src/tui/tui.go	/^	Mouse$/;"	c	package:tui
+MouseEvent	src/tui/tui.go	/^	MouseEvent *MouseEvent$/;"	m	struct:tui.Event
+MouseEvent	src/tui/tui.go	/^type MouseEvent struct {$/;"	s	package:tui
+Move	src/tui/light.go	/^func (w *LightWindow) Move(y int, x int) {$/;"	f	unknown:tui.LightWindow
+Move	src/tui/tcell.go	/^func (w *TcellWindow) Move(y int, x int) {$/;"	f	unknown:tui.TcellWindow
+MoveAndClear	src/tui/light.go	/^func (w *LightWindow) MoveAndClear(y int, x int) {$/;"	f	unknown:tui.LightWindow
+MoveAndClear	src/tui/tcell.go	/^func (w *TcellWindow) MoveAndClear(y int, x int) {$/;"	f	unknown:tui.TcellWindow
+Multi	src/options.go	/^	Multi       bool$/;"	m	struct:fzf.Options
+NAME	man/man1/fzf-tmux.1	/^.SH NAME$/;"	s	title:fzf-tmux
+NAME	man/man1/fzf.1	/^.SH NAME$/;"	s	title:fzf
+New features	CHANGELOG.md	/^### New features$/;"	S
+NewAtomicBool	src/util/atomicbool.go	/^func NewAtomicBool(initialState bool) *AtomicBool {$/;"	f	package:util
+NewChunkCache	src/cache.go	/^func NewChunkCache() ChunkCache {$/;"	f	package:fzf
+NewChunkList	src/chunklist.go	/^func NewChunkList(trans ItemBuilder) *ChunkList {$/;"	f	package:fzf
+NewColorPair	src/tui/tui.go	/^func NewColorPair(fg Color, bg Color) ColorPair {$/;"	f	package:tui
+NewEventBox	src/util/eventbox.go	/^func NewEventBox() *EventBox {$/;"	f	package:util
+NewFullscreenRenderer	src/tui/tui.go	/^func NewFullscreenRenderer(theme *ColorTheme, forceBlack bool, mouse bool) Renderer {$/;"	f	package:tui
+NewHistory	src/history.go	/^func NewHistory(path string, maxSize int) (*History, error) {$/;"	f	package:fzf
+NewLightRenderer	src/tui/light.go	/^func NewLightRenderer(theme *ColorTheme, forceBlack bool, mouse bool, tabstop int, clearOnExit b/;"	f	package:tui
+NewMatcher	src/matcher.go	/^func NewMatcher(patternBuilder func([]rune) *Pattern,$/;"	f	package:fzf
+NewMerger	src/merger.go	/^func NewMerger(pattern *Pattern, lists [][]Result, sorted bool, tac bool) *Merger {$/;"	f	package:fzf
+NewReader	src/reader.go	/^func NewReader(pusher func([]byte) bool, eventBox *util.EventBox, delimNil bool) *Reader {$/;"	f	package:fzf
+NewTerminal	src/terminal.go	/^func NewTerminal(opts *Options, eventBox *util.EventBox) *Terminal {$/;"	f	package:fzf
+NewWindow	src/tui/dummy.go	/^func (r *FullscreenRenderer) NewWindow(top int, left int, width int, height int, borderStyle Bor/;"	f	unknown:tui.FullscreenRenderer
+NewWindow	src/tui/light.go	/^func (r *LightRenderer) NewWindow(top int, left int, width int, height int, borderStyle BorderSt/;"	f	unknown:tui.LightRenderer
+NewWindow	src/tui/tcell.go	/^func (r *FullscreenRenderer) NewWindow(top int, left int, width int, height int, borderStyle Bor/;"	f	unknown:tui.FullscreenRenderer
+NilClass	test/test_go.rb	/^class NilClass$/;"	c
+Normalize	src/options.go	/^	Normalize   bool$/;"	m	struct:fzf.Options
+NormalizeRunes	src/algo/normalize.go	/^func NormalizeRunes(runes []rune) []rune {$/;"	f	package:algo
+Now fzf (w/o pipe) will use fd instead of find	README.md	/^# Now fzf (w\/o pipe) will use fd instead of find$/;"	c
+Nth	src/options.go	/^	Nth         []Range$/;"	m	struct:fzf.Options
+OPTIONS	man/man1/fzf-tmux.1	/^.SH OPTIONS$/;"	s	title:fzf-tmux
+OPTIONS	man/man1/fzf.1	/^.SH OPTIONS$/;"	s	title:fzf
+Offset	src/result.go	/^type Offset [2]int32$/;"	t	package:fzf
+Options	README.md	/^#### Options$/;"	t
+Options	src/options.go	/^type Options struct {$/;"	s	package:fzf
+Options to fzf command	README.md	/^# Options to fzf command$/;"	c
+ParseOptions	src/options.go	/^func ParseOptions() *Options {$/;"	f	package:fzf
+ParseRange	src/tokenizer.go	/^func ParseRange(str *string) (Range, bool) {$/;"	f	package:fzf
+PassMerger	src/merger.go	/^func PassMerger(chunks *[]*Chunk, tac bool) *Merger {$/;"	f	package:fzf
+Pattern	src/pattern.go	/^type Pattern struct {$/;"	s	package:fzf
+Pause	src/tui/dummy.go	/^func (r *FullscreenRenderer) Pause(bool)  {}$/;"	f	unknown:tui.FullscreenRenderer
+Pause	src/tui/light.go	/^func (r *LightRenderer) Pause(clear bool) {$/;"	f	unknown:tui.LightRenderer
+Pause	src/tui/tcell.go	/^func (r *FullscreenRenderer) Pause(bool) {$/;"	f	unknown:tui.FullscreenRenderer
+Peek	src/util/eventbox.go	/^func (b *EventBox) Peek(event EventType) bool {$/;"	f	unknown:util.EventBox
+Performance	README.md	/^### Performance$/;"	S
+PgDn	src/tui/tui.go	/^	PgDn$/;"	c	package:tui
+PgUp	src/tui/tui.go	/^	PgUp$/;"	c	package:tui
+PrefixMatch	src/algo/algo.go	/^func PrefixMatch(caseSensitive bool, normalize bool, forward bool, text *util.Chars, pattern []r/;"	f	package:algo
+Prerequisites	BUILD.md	/^### Prerequisites$/;"	S
+Press CTRL-Y to copy the line to clipboard and aborts fzf (requires pbcopy)	README.md	/^# Press CTRL-Y to copy the line to clipboard and aborts fzf (requires pbcopy)$/;"	c
+Press F1 to open the file with less without leaving fzf	README.md	/^# Press F1 to open the file with less without leaving fzf$/;"	c
+Preview	src/options.go	/^	Preview     previewOpts$/;"	m	struct:fzf.Options
+Preview window	README.md	/^### Preview window$/;"	S
+Print	src/tui/light.go	/^func (w *LightWindow) Print(text string) {$/;"	f	unknown:tui.LightWindow
+Print	src/tui/tcell.go	/^func (w *TcellWindow) Print(text string) {$/;"	f	unknown:tui.TcellWindow
+PrintQuery	src/options.go	/^	PrintQuery  bool$/;"	m	struct:fzf.Options
+Printer	src/options.go	/^	Printer     func(string)$/;"	m	struct:fzf.Options
+Process IDs	README.md	/^#### Process IDs$/;"	t
+Prompt	src/options.go	/^	Prompt      string$/;"	m	struct:fzf.Options
+Prompt	src/tui/tui.go	/^	Prompt       Color$/;"	m	struct:tui.ColorTheme
+Pros	README.md	/^Pros$/;"	s
+Push	src/chunklist.go	/^func (cl *ChunkList) Push(data []byte) bool {$/;"	f	unknown:fzf.ChunkList
+Query	src/options.go	/^	Query       string$/;"	m	struct:fzf.Options
+RELEASE32	Makefile	/^RELEASE32   := fzf-$(VERSION)-$(GOOS)_386$/;"	m
+RELEASE64	Makefile	/^RELEASE64   := fzf-$(VERSION)-$(GOOS)_amd64$/;"	m
+RELEASEARM5	Makefile	/^RELEASEARM5 := fzf-$(VERSION)-$(GOOS)_arm5$/;"	m
+RELEASEARM6	Makefile	/^RELEASEARM6 := fzf-$(VERSION)-$(GOOS)_arm6$/;"	m
+RELEASEARM7	Makefile	/^RELEASEARM7 := fzf-$(VERSION)-$(GOOS)_arm7$/;"	m
+RELEASEARM8	Makefile	/^RELEASEARM8 := fzf-$(VERSION)-$(GOOS)_arm8$/;"	m
+REVISION	Makefile	/^REVISION    := $(shell git log -n 1 --pretty=format:%h -- $(SOURCES))$/;"	m
+ROOT_DIR	Makefile	/^ROOT_DIR    := $(shell dirname $(MAKEFILE))$/;"	m
+Range	src/tokenizer.go	/^type Range struct {$/;"	s	package:fzf
+Read	src/util/util_unix.go	/^func Read(fd int, b []byte) (int, error) {$/;"	f	package:util
+Read	src/util/util_windows.go	/^func Read(fd int, b []byte) (int, error) {$/;"	f	package:util
+ReadSource	src/reader.go	/^func (r *Reader) ReadSource() {$/;"	f	unknown:fzf.Reader
+ReadZero	src/options.go	/^	ReadZero    bool$/;"	m	struct:fzf.Options
+Reader	src/reader.go	/^type Reader struct {$/;"	s	package:fzf
+Reduced initial memory footprint (#151)	CHANGELOG.md	/^#### Reduced initial memory footprint (#151)$/;"	t
+Refresh	src/tui/dummy.go	/^func (r *FullscreenRenderer) Refresh()    {}$/;"	f	unknown:tui.FullscreenRenderer
+Refresh	src/tui/light.go	/^func (r *LightRenderer) Refresh() {$/;"	f	unknown:tui.LightRenderer
+Refresh	src/tui/light.go	/^func (w *LightWindow) Refresh() {$/;"	f	unknown:tui.LightWindow
+Refresh	src/tui/tcell.go	/^func (r *FullscreenRenderer) Refresh() {$/;"	f	unknown:tui.FullscreenRenderer
+Refresh	src/tui/tcell.go	/^func (w *TcellWindow) Refresh() {$/;"	f	unknown:tui.TcellWindow
+RefreshWindows	src/tui/dummy.go	/^func (r *FullscreenRenderer) RefreshWindows(windows []Window) {}$/;"	f	unknown:tui.FullscreenRenderer
+RefreshWindows	src/tui/light.go	/^func (r *LightRenderer) RefreshWindows(windows []Window) {$/;"	f	unknown:tui.LightRenderer
+RefreshWindows	src/tui/tcell.go	/^func (r *FullscreenRenderer) RefreshWindows(windows []Window) {$/;"	f	unknown:tui.FullscreenRenderer
+Renderer	src/tui/tui.go	/^type Renderer interface {$/;"	i	package:tui
+Reset	src/matcher.go	/^func (m *Matcher) Reset(chunks []*Chunk, patternRunes []rune, cancel bool, final bool, sort bool/;"	f	unknown:fzf.Matcher
+Resize	src/tui/tui.go	/^	Resize$/;"	c	package:tui
+Respecting `.gitignore`	README.md	/^#### Respecting `.gitignore`$/;"	t
+Result	src/algo/algo.go	/^type Result struct {$/;"	s	package:algo
+Result	src/result.go	/^type Result struct {$/;"	s	package:fzf
+Resume	src/tui/dummy.go	/^func (r *FullscreenRenderer) Resume(bool) {}$/;"	f	unknown:tui.FullscreenRenderer
+Resume	src/tui/light.go	/^func (r *LightRenderer) Resume(clear bool) {$/;"	f	unknown:tui.LightRenderer
+Resume	src/tui/tcell.go	/^func (r *FullscreenRenderer) Resume(bool) {$/;"	f	unknown:tui.FullscreenRenderer
+Reverse	src/options.go	/^	Reverse     bool$/;"	m	struct:fzf.Options
+Reverse	src/tui/dummy.go	/^	Reverse          = Attr(1 << 6)$/;"	c	package:tui
+Reverse	src/tui/tcell.go	/^	Reverse        = Attr(tcell.AttrReverse)$/;"	c	package:tui
+Right	src/tui/tui.go	/^	Right$/;"	c	package:tui
+RightClick	src/tui/tui.go	/^	RightClick$/;"	c	package:tui
+Run	src/core.go	/^func Run(opts *Options, revision string) {$/;"	f	package:fzf
+Rune	src/tui/tui.go	/^	Rune = iota$/;"	c	package:tui
+RuneWidth	src/util/util.go	/^func RuneWidth(r rune, prefixWidth int, tabstop int) int {$/;"	f	package:util
+RunesToChars	src/util/chars.go	/^func RunesToChars(runes []rune) Chars {$/;"	f	package:util
+S	src/tui/tui.go	/^	S      int$/;"	m	struct:tui.MouseEvent
+SDown	src/tui/tui.go	/^	SDown$/;"	c	package:tui
+SEE	man/man1/fzf.1	/^.SH SEE ALSO$/;"	s	title:fzf
+SLeft	src/tui/tui.go	/^	SLeft$/;"	c	package:tui
+SOURCES	Makefile	/^SOURCES     := $(wildcard *.go src\/*.go src\/*\/*.go) $(SRC_LINK) $(VENDOR_LINK) $(GLIDE_LOCK) /;"	m
+SRC_LINK	Makefile	/^SRC_LINK    := $(GOPATH)\/src\/github.com\/junegunn\/fzf\/src$/;"	m
+SRight	src/tui/tui.go	/^	SRight$/;"	c	package:tui
+SUp	src/tui/tui.go	/^	SUp$/;"	c	package:tui
+SYNOPSIS	man/man1/fzf-tmux.1	/^.SH SYNOPSIS$/;"	s	title:fzf-tmux
+SYNOPSIS	man/man1/fzf.1	/^.SH SYNOPSIS$/;"	s	title:fzf
+Score	src/algo/algo.go	/^	Score int$/;"	m	struct:algo.Result
+Search	src/cache.go	/^func (cc *ChunkCache) Search(chunk *Chunk, key string) []Result {$/;"	f	unknown:fzf.ChunkCache
+Search syntax	README.md	/^#### Search syntax$/;"	t
+Select1	src/options.go	/^	Select1     bool$/;"	m	struct:fzf.Options
+Selected	src/tui/tui.go	/^	Selected     Color$/;"	m	struct:tui.ColorTheme
+Set	src/util/atomicbool.go	/^func (a *AtomicBool) Set(newState bool) bool {$/;"	f	unknown:util.AtomicBool
+Set	src/util/eventbox.go	/^func (b *EventBox) Set(event EventType, value interface{}) {$/;"	f	unknown:util.EventBox
+SetNonblock	src/util/util_unix.go	/^func SetNonblock(file *os.File, nonblock bool) {$/;"	f	package:util
+SetNonblock	src/util/util_windows.go	/^func SetNonblock(file *os.File, nonblock bool) {$/;"	f	package:util
+Setting fd as the default source for fzf	README.md	/^# Setting fd as the default source for fzf$/;"	c
+Settings	README.md	/^#### Settings$/;"	t
+Shell	test/test_go.rb	/^class Shell$/;"	c
+Slab	src/util/slab.go	/^type Slab struct {$/;"	s	package:util
+Snapshot	src/chunklist.go	/^func (cl *ChunkList) Snapshot() ([]*Chunk, int) {$/;"	f	unknown:fzf.ChunkList
+Sort	src/options.go	/^	Sort        int$/;"	m	struct:fzf.Options
+Spinner	src/tui/tui.go	/^	Spinner      Color$/;"	m	struct:tui.ColorTheme
+Start	src/algo/algo.go	/^	Start int$/;"	m	struct:algo.Result
+String	src/pattern.go	/^func (t term) String() string {$/;"	f	unknown:fzf.term
+String	src/tokenizer.go	/^func (d Delimiter) String() string {$/;"	f	unknown:fzf.Delimiter
+String	src/tokenizer.go	/^func (t Token) String() string {$/;"	f	unknown:fzf.Token
+String	src/util/chars.go	/^func (chars *Chars) String() string {$/;"	f	unknown:util.Chars
+Style	src/tui/tcell.go	/^func (c Color) Style() tcell.Color {$/;"	f	unknown:tui.Color
+SuffixMatch	src/algo/algo.go	/^func SuffixMatch(caseSensitive bool, normalize bool, forward bool, text *util.Chars, pattern []r/;"	f	package:algo
+Supported commands	README.md	/^#### Supported commands$/;"	t
+Swap	src/result.go	/^func (a ByOrder) Swap(i, j int) {$/;"	f	unknown:fzf.ByOrder
+Swap	src/result.go	/^func (a ByRelevance) Swap(i, j int) {$/;"	f	unknown:fzf.ByRelevance
+Swap	src/result.go	/^func (a ByRelevanceTac) Swap(i, j int) {$/;"	f	unknown:fzf.ByRelevanceTac
+Swap	src/terminal.go	/^func (a byTimeOrder) Swap(i, j int) {$/;"	f	unknown:fzf.byTimeOrder
+Sync	src/options.go	/^	Sync        bool$/;"	m	struct:fzf.Options
+Tab	src/tui/tui.go	/^	Tab$/;"	c	package:tui
+Table of Contents	README.md	/^Table of Contents$/;"	s
+Tabstop	src/options.go	/^	Tabstop     int$/;"	m	struct:fzf.Options
+Tac	src/options.go	/^	Tac         bool$/;"	m	struct:fzf.Options
+TcellWindow	src/tui/tcell.go	/^type TcellWindow struct {$/;"	s	package:tui
+Terminal	src/terminal.go	/^type Terminal struct {$/;"	s	package:fzf
+TestAdditiveExpect	src/options_test.go	/^func TestAdditiveExpect(t *testing.T) {$/;"	f	package:fzf
+TestAtomicBool	src/util/atomicbool_test.go	/^func TestAtomicBool(t *testing.T) {$/;"	f	package:util
+TestBase	test/test_go.rb	/^class TestBase < Minitest::Test$/;"	c
+TestBash	test/test_go.rb	/^class TestBash < TestBase$/;"	c
+TestBind	src/options_test.go	/^func TestBind(t *testing.T) {$/;"	f	package:fzf
+TestCacheKey	src/pattern_test.go	/^func TestCacheKey(t *testing.T) {$/;"	f	package:fzf
+TestCacheable	src/pattern_test.go	/^func TestCacheable(t *testing.T) {$/;"	f	package:fzf
+TestCaseSensitivity	src/pattern_test.go	/^func TestCaseSensitivity(t *testing.T) {$/;"	f	package:fzf
+TestCharsLength	src/util/chars_test.go	/^func TestCharsLength(t *testing.T) {$/;"	f	package:util
+TestCharsToString	src/util/chars_test.go	/^func TestCharsToString(t *testing.T) {$/;"	f	package:util
+TestChunkCache	src/cache_test.go	/^func TestChunkCache(t *testing.T) {$/;"	f	package:fzf
+TestChunkList	src/chunklist_test.go	/^func TestChunkList(t *testing.T) {$/;"	f	package:fzf
+TestColorOffset	src/result_test.go	/^func TestColorOffset(t *testing.T) {$/;"	f	package:fzf
+TestColorSpec	src/options_test.go	/^func TestColorSpec(t *testing.T) {$/;"	f	package:fzf
+TestContrain	src/util/util_test.go	/^func TestContrain(t *testing.T) {$/;"	f	package:util
+TestDefaultCtrlNP	src/options_test.go	/^func TestDefaultCtrlNP(t *testing.T) {$/;"	f	package:fzf
+TestDelimiterRegex	src/options_test.go	/^func TestDelimiterRegex(t *testing.T) {$/;"	f	package:fzf
+TestDelimiterRegexRegex	src/options_test.go	/^func TestDelimiterRegexRegex(t *testing.T) {$/;"	f	package:fzf
+TestDelimiterRegexString	src/options_test.go	/^func TestDelimiterRegexString(t *testing.T) {$/;"	f	package:fzf
+TestEmptyMerger	src/merger_test.go	/^func TestEmptyMerger(t *testing.T) {$/;"	f	package:fzf
+TestEmptyPattern	src/algo/algo_test.go	/^func TestEmptyPattern(t *testing.T) {$/;"	f	package:algo
+TestEqual	src/pattern_test.go	/^func TestEqual(t *testing.T) {$/;"	f	package:fzf
+TestEventBox	src/util/eventbox_test.go	/^func TestEventBox(t *testing.T) {$/;"	f	package:util
+TestExact	src/pattern_test.go	/^func TestExact(t *testing.T) {$/;"	f	package:fzf
+TestExactMatchNaive	src/algo/algo_test.go	/^func TestExactMatchNaive(t *testing.T) {$/;"	f	package:algo
+TestExactMatchNaiveBackward	src/algo/algo_test.go	/^func TestExactMatchNaiveBackward(t *testing.T) {$/;"	f	package:algo
+TestExtractColor	src/ansi_test.go	/^func TestExtractColor(t *testing.T) {$/;"	f	package:fzf
+TestFish	test/test_go.rb	/^class TestFish < TestBase$/;"	c
+TestFuzzyMatch	src/algo/algo_test.go	/^func TestFuzzyMatch(t *testing.T) {$/;"	f	package:algo
+TestFuzzyMatchBackward	src/algo/algo_test.go	/^func TestFuzzyMatchBackward(t *testing.T) {$/;"	f	package:algo
+TestGoFZF	test/test_go.rb	/^class TestGoFZF < TestBase$/;"	c
+TestHexToColor	src/tui/tui_test.go	/^func TestHexToColor(t *testing.T) {$/;"	f	package:tui
+TestHistory	src/history_test.go	/^func TestHistory(t *testing.T) {$/;"	f	package:fzf
+TestIrrelevantNth	src/options_test.go	/^func TestIrrelevantNth(t *testing.T) {$/;"	f	package:fzf
+TestLongString	src/algo/algo_test.go	/^func TestLongString(t *testing.T) {$/;"	f	package:algo
+TestMax	src/util/util_test.go	/^func TestMax(t *testing.T) {$/;"	f	package:util
+TestMergerSorted	src/merger_test.go	/^func TestMergerSorted(t *testing.T) {$/;"	f	package:fzf
+TestMergerUnsorted	src/merger_test.go	/^func TestMergerUnsorted(t *testing.T) {$/;"	f	package:fzf
+TestNormalize	src/algo/algo_test.go	/^func TestNormalize(t *testing.T) {$/;"	f	package:algo
+TestOffsetSort	src/result_test.go	/^func TestOffsetSort(t *testing.T) {$/;"	f	package:fzf
+TestOrigTextAndTransformed	src/pattern_test.go	/^func TestOrigTextAndTransformed(t *testing.T) {$/;"	f	package:fzf
+TestParseKeys	src/options_test.go	/^func TestParseKeys(t *testing.T) {$/;"	f	package:fzf
+TestParseKeysWithComma	src/options_test.go	/^func TestParseKeysWithComma(t *testing.T) {$/;"	f	package:fzf
+TestParseNilTheme	src/options_test.go	/^func TestParseNilTheme(t *testing.T) {$/;"	f	package:fzf
+TestParseRange	src/tokenizer_test.go	/^func TestParseRange(t *testing.T) {$/;"	f	package:fzf
+TestParseTermsEmpty	src/pattern_test.go	/^func TestParseTermsEmpty(t *testing.T) {$/;"	f	package:fzf
+TestParseTermsExtended	src/pattern_test.go	/^func TestParseTermsExtended(t *testing.T) {$/;"	f	package:fzf
+TestParseTermsExtendedExact	src/pattern_test.go	/^func TestParseTermsExtendedExact(t *testing.T) {$/;"	f	package:fzf
+TestPrefixMatch	src/algo/algo_test.go	/^func TestPrefixMatch(t *testing.T) {$/;"	f	package:algo
+TestPreviewOpts	src/options_test.go	/^func TestPreviewOpts(t *testing.T) {$/;"	f	package:fzf
+TestQuoteEntryCmd	src/terminal_test.go	/^func TestQuoteEntryCmd(t *testing.T) {$/;"	f	package:fzf
+TestRankComparison	src/result_test.go	/^func TestRankComparison(t *testing.T) {$/;"	f	package:fzf
+TestReadFromCommand	src/reader_test.go	/^func TestReadFromCommand(t *testing.T) {$/;"	f	package:fzf
+TestReplacePlaceholder	src/terminal_test.go	/^func TestReplacePlaceholder(t *testing.T) {$/;"	f	package:fzf
+TestResultRank	src/result_test.go	/^func TestResultRank(t *testing.T) {$/;"	f	package:fzf
+TestShell	test/test_go.rb	/^module TestShell$/;"	m
+TestSplitNth	src/options_test.go	/^func TestSplitNth(t *testing.T) {$/;"	f	package:fzf
+TestStringPtr	src/item_test.go	/^func TestStringPtr(t *testing.T) {$/;"	f	package:fzf
+TestSuffixMatch	src/algo/algo_test.go	/^func TestSuffixMatch(t *testing.T) {$/;"	f	package:algo
+TestToCharsAscii	src/util/chars_test.go	/^func TestToCharsAscii(t *testing.T) {$/;"	f	package:util
+TestToggle	src/options_test.go	/^func TestToggle(t *testing.T) {$/;"	f	package:fzf
+TestTokenize	src/tokenizer_test.go	/^func TestTokenize(t *testing.T) {$/;"	f	package:fzf
+TestTransform	src/tokenizer_test.go	/^func TestTransform(t *testing.T) {$/;"	f	package:fzf
+TestTransformIndexOutOfBounds	src/tokenizer_test.go	/^func TestTransformIndexOutOfBounds(t *testing.T) {$/;"	f	package:fzf
+TestTrimLength	src/util/chars_test.go	/^func TestTrimLength(t *testing.T) {$/;"	f	package:util
+TestZsh	test/test_go.rb	/^class TestZsh < TestBase$/;"	c
+Theme	src/options.go	/^	Theme       *tui.ColorTheme$/;"	m	struct:fzf.Options
+Third-party libraries used	BUILD.md	/^Third-party libraries used$/;"	s
+Tips	README.md	/^Tips$/;"	s
+Tmux	test/test_go.rb	/^class Tmux$/;"	c
+To apply the command to CTRL-T as well	README.md	/^# To apply the command to CTRL-T as well$/;"	c
+To install useful key bindings and fuzzy completion:	README.md	/^# To install useful key bindings and fuzzy completion:$/;"	c
+ToChars	src/util/chars.go	/^func ToChars(bytes []byte) Chars {$/;"	f	package:util
+ToRunes	src/util/chars.go	/^func (chars *Chars) ToRunes() []rune {$/;"	f	unknown:util.Chars
+ToString	src/util/chars.go	/^func (chars *Chars) ToString() string {$/;"	f	unknown:util.Chars
+ToggleSort	src/options.go	/^	ToggleSort  bool$/;"	m	struct:fzf.Options
+Token	src/tokenizer.go	/^type Token struct {$/;"	s	package:fzf
+Tokenize	src/tokenizer.go	/^func Tokenize(text string, delimiter Delimiter) []Token {$/;"	f	package:fzf
+Top	src/tui/light.go	/^func (w *LightWindow) Top() int {$/;"	f	unknown:tui.LightWindow
+Top	src/tui/tcell.go	/^func (w *TcellWindow) Top() int {$/;"	f	unknown:tui.TcellWindow
+TrailingWhitespaces	src/util/chars.go	/^func (chars *Chars) TrailingWhitespaces() int {$/;"	f	unknown:util.Chars
+Transform	src/tokenizer.go	/^func Transform(tokens []Token, withNth []Range) []Token {$/;"	f	package:fzf
+TrimLength	src/item.go	/^func (item *Item) TrimLength() uint16 {$/;"	f	unknown:fzf.Item
+TrimLength	src/util/chars.go	/^func (chars *Chars) TrimLength() uint16 {$/;"	f	unknown:util.Chars
+Try highlight, coderay, rougify in turn, then fall back to cat	README.md	/^# Try highlight, coderay, rougify in turn, then fall back to cat$/;"	c
+Type	src/tui/tui.go	/^	Type       int$/;"	m	struct:tui.Event
+UNAME_M	Makefile	/^UNAME_M := $(shell uname -m)$/;"	m
+Underline	src/tui/dummy.go	/^	Underline        = Attr(1 << 3)$/;"	c	package:tui
+Underline	src/tui/tcell.go	/^	Underline      = Attr(tcell.AttrUnderline)$/;"	c	package:tui
+Unwatch	src/util/eventbox.go	/^func (b *EventBox) Unwatch(events ...EventType) {$/;"	f	unknown:util.EventBox
+Up	src/tui/tui.go	/^	Up$/;"	c	package:tui
+UpdateCount	src/terminal.go	/^func (t *Terminal) UpdateCount(cnt int, final bool, success bool) {$/;"	f	unknown:fzf.Terminal
+UpdateHeader	src/terminal.go	/^func (t *Terminal) UpdateHeader(header []string) {$/;"	f	unknown:fzf.Terminal
+UpdateList	src/terminal.go	/^func (t *Terminal) UpdateList(merger *Merger) {$/;"	f	unknown:fzf.Terminal
+UpdateProgress	src/terminal.go	/^func (t *Terminal) UpdateProgress(progress float32) {$/;"	f	unknown:fzf.Terminal
+Upgrading fzf	README.md	/^Upgrading fzf$/;"	s
+Usage	README.md	/^Usage$/;"	s
+Use fd (https://github.com/sharkdp/fd) instead of the default find	README.md	/^# Use fd (https:\/\/github.com\/sharkdp\/fd) instead of the default find$/;"	c
+Use fd to generate the list for directory completion	README.md	/^# Use fd to generate the list for directory completion$/;"	c
+Use head instead of cat so that the command doesn't take too long to finish	README.md	/^# Use head instead of cat so that the command doesn't take too long to finish$/;"	c
+Use ~~ as the trigger sequence instead of the default **	README.md	/^# Use ~~ as the trigger sequence instead of the default **$/;"	c
+Using Homebrew or Linuxbrew	README.md	/^### Using Homebrew or Linuxbrew$/;"	S
+Using Makefile	BUILD.md	/^### Using Makefile$/;"	S
+Using `go get`	BUILD.md	/^### Using `go get`$/;"	S
+Using git	README.md	/^### Using git$/;"	S
+Using the finder	README.md	/^#### Using the finder$/;"	t
+VENDOR_LINK	Makefile	/^VENDOR_LINK := $(GOPATH)\/src\/github.com\/junegunn\/fzf\/vendor$/;"	m
+VERSION	Makefile	/^VERSION     := $(shell awk -F= '\/version =\/ {print $$2}' src\/constants.go | tr -d "\\" ")$/;"	m
+Version	src/options.go	/^	Version     bool$/;"	m	struct:fzf.Options
+Vim plugin	README.md	/^Vim plugin$/;"	s
+Wait	src/util/eventbox.go	/^func (b *EventBox) Wait(callback func(*Events)) {$/;"	f	unknown:util.EventBox
+WaitFor	src/util/eventbox.go	/^func (b *EventBox) WaitFor(event EventType) {$/;"	f	unknown:util.EventBox
+Watch	src/util/eventbox.go	/^func (b *EventBox) Watch(events ...EventType) {$/;"	f	unknown:util.EventBox
+Width	src/tui/light.go	/^func (w *LightWindow) Width() int {$/;"	f	unknown:tui.LightWindow
+Width	src/tui/tcell.go	/^func (w *TcellWindow) Width() int {$/;"	f	unknown:tui.TcellWindow
+Window	src/tui/tui.go	/^type Window interface {$/;"	i	package:tui
+Windows	README.md	/^### Windows$/;"	S
+WithNth	src/options.go	/^	WithNth     []Range$/;"	m	struct:fzf.Options
+X	src/tui/light.go	/^func (w *LightWindow) X() int {$/;"	f	unknown:tui.LightWindow
+X	src/tui/tcell.go	/^func (w *TcellWindow) X() int {$/;"	f	unknown:tui.TcellWindow
+X	src/tui/tui.go	/^	X      int$/;"	m	struct:tui.MouseEvent
+Y	src/tui/light.go	/^func (w *LightWindow) Y() int {$/;"	f	unknown:tui.LightWindow
+Y	src/tui/tcell.go	/^func (w *TcellWindow) Y() int {$/;"	f	unknown:tui.TcellWindow
+Y	src/tui/tui.go	/^	Y      int$/;"	m	struct:tui.MouseEvent
+[License](LICENSE)	README-VIM.md	/^[License](LICENSE)$/;"	s
+[License](LICENSE)	README.md	/^[License](LICENSE)$/;"	s
+__fsel	shell/key-bindings.zsh	/^__fsel() {$/;"	f
+__fzf_cd__	shell/key-bindings.bash	/^__fzf_cd__() {$/;"	f
+__fzf_generic_path_completion	shell/completion.bash	/^__fzf_generic_path_completion() {$/;"	f
+__fzf_generic_path_completion	shell/completion.zsh	/^__fzf_generic_path_completion() {$/;"	f
+__fzf_history__	shell/key-bindings.bash	/^__fzf_history__() ($/;"	f
+__fzf_orig_completion_filter	shell/completion.bash	/^__fzf_orig_completion_filter() {$/;"	f
+__fzf_select__	shell/key-bindings.bash	/^__fzf_select__() {$/;"	f
+__fzf_select_tmux__	shell/key-bindings.bash	/^__fzf_select_tmux__() {$/;"	f
+__fzf_use_tmux__	shell/key-bindings.bash	/^__fzf_use_tmux__() {$/;"	f
+__fzf_use_tmux__	shell/key-bindings.zsh	/^__fzf_use_tmux__() {$/;"	f
+__fzfcmd	shell/key-bindings.bash	/^__fzfcmd() {$/;"	f
+__fzfcmd	shell/key-bindings.zsh	/^__fzfcmd() {$/;"	f
+__fzfcmd_complete	shell/completion.bash	/^__fzfcmd_complete() {$/;"	f
+__fzfcmd_complete	shell/completion.zsh	/^__fzfcmd_complete() {$/;"	f
+_cache	src/pattern.go	/^	_cache        ChunkCache$/;"	v	package:fzf
+_colorToAttribute	src/tui/tcell.go	/^	_colorToAttribute = []tcell.Color{$/;"	v	package:tui
+_fzf_compgen_dir	shell/completion.bash	/^  _fzf_compgen_dir() {$/;"	f
+_fzf_compgen_dir	shell/completion.zsh	/^  _fzf_compgen_dir() {$/;"	f
+_fzf_compgen_path	shell/completion.bash	/^  _fzf_compgen_path() {$/;"	f
+_fzf_compgen_path	shell/completion.zsh	/^  _fzf_compgen_path() {$/;"	f
+_fzf_complete	shell/completion.bash	/^_fzf_complete() {$/;"	f
+_fzf_complete	shell/completion.zsh	/^_fzf_complete() {$/;"	f
+_fzf_complete_export	shell/completion.bash	/^_fzf_complete_export() {$/;"	f
+_fzf_complete_export	shell/completion.zsh	/^_fzf_complete_export() {$/;"	f
+_fzf_complete_kill	shell/completion.bash	/^_fzf_complete_kill() {$/;"	f
+_fzf_complete_ssh	shell/completion.bash	/^_fzf_complete_ssh() {$/;"	f
+_fzf_complete_ssh	shell/completion.zsh	/^_fzf_complete_ssh() {$/;"	f
+_fzf_complete_telnet	shell/completion.bash	/^_fzf_complete_telnet() {$/;"	f
+_fzf_complete_telnet	shell/completion.zsh	/^_fzf_complete_telnet() {$/;"	f
+_fzf_complete_unalias	shell/completion.bash	/^_fzf_complete_unalias() {$/;"	f
+_fzf_complete_unalias	shell/completion.zsh	/^_fzf_complete_unalias() {$/;"	f
+_fzf_complete_unset	shell/completion.bash	/^_fzf_complete_unset() {$/;"	f
+_fzf_complete_unset	shell/completion.zsh	/^_fzf_complete_unset() {$/;"	f
+_fzf_defc	shell/completion.bash	/^_fzf_defc() {$/;"	f
+_fzf_dir_completion	shell/completion.bash	/^_fzf_dir_completion() {$/;"	f
+_fzf_dir_completion	shell/completion.zsh	/^_fzf_dir_completion() {$/;"	f
+_fzf_feed_fifo	shell/completion.zsh	/^_fzf_feed_fifo() ($/;"	f
+_fzf_file_completion	shell/completion.bash	/^_fzf_file_completion() {$/;"	f
+_fzf_handle_dynamic_completion	shell/completion.bash	/^_fzf_handle_dynamic_completion() {$/;"	f
+_fzf_opts_completion	shell/completion.bash	/^_fzf_opts_completion() {$/;"	f
+_fzf_path_completion	shell/completion.bash	/^_fzf_path_completion() {$/;"	f
+_fzf_path_completion	shell/completion.zsh	/^_fzf_path_completion() {$/;"	f
+_patternCache	src/pattern.go	/^	_patternCache map[string]*Pattern$/;"	v	package:fzf
+_runeWidths	src/util/util.go	/^var _runeWidths = make(map[rune]int)$/;"	v	package:util
+_screen	src/tui/tcell.go	/^	_screen tcell.Screen$/;"	v	package:tui
+_spinner	src/terminal.go	/^var _spinner = []string{`-`, `\\`, `|`, `\/`, `-`, `\\`, `|`, `\/`}$/;"	v	package:fzf
+_splitRegex	src/pattern.go	/^	_splitRegex   *regexp.Regexp$/;"	v	package:fzf
+`--filter` will not block when sort is disabled	CHANGELOG.md	/^#### `--filter` will not block when sort is disabled$/;"	t
+`:FZF[!]`	README-VIM.md	/^`:FZF[!]`$/;"	s
+`fzf#run`	README-VIM.md	/^`fzf#run`$/;"	s
+`fzf#wrap`	README-VIM.md	/^`fzf#wrap`$/;"	s
+`fzf-tmux` script	README.md	/^`fzf-tmux` script$/;"	s
+`git ls-tree` for fast traversal	README.md	/^#### `git ls-tree` for fast traversal$/;"	t
+a	src/terminal.go	/^	a string$/;"	m	struct:fzf.action
+actAbort	src/terminal.go	/^	actAbort$/;"	c	package:fzf
+actAccept	src/terminal.go	/^	actAccept$/;"	c	package:fzf
+actAcceptNonEmpty	src/terminal.go	/^	actAcceptNonEmpty$/;"	c	package:fzf
+actBackwardChar	src/terminal.go	/^	actBackwardChar$/;"	c	package:fzf
+actBackwardDeleteChar	src/terminal.go	/^	actBackwardDeleteChar$/;"	c	package:fzf
+actBackwardKillWord	src/terminal.go	/^	actBackwardKillWord$/;"	c	package:fzf
+actBackwardWord	src/terminal.go	/^	actBackwardWord$/;"	c	package:fzf
+actBeginningOfLine	src/terminal.go	/^	actBeginningOfLine$/;"	c	package:fzf
+actCancel	src/terminal.go	/^	actCancel$/;"	c	package:fzf
+actClearScreen	src/terminal.go	/^	actClearScreen$/;"	c	package:fzf
+actDeleteChar	src/terminal.go	/^	actDeleteChar$/;"	c	package:fzf
+actDeleteCharEOF	src/terminal.go	/^	actDeleteCharEOF$/;"	c	package:fzf
+actDeselectAll	src/terminal.go	/^	actDeselectAll$/;"	c	package:fzf
+actDown	src/terminal.go	/^	actDown$/;"	c	package:fzf
+actEndOfLine	src/terminal.go	/^	actEndOfLine$/;"	c	package:fzf
+actExecute	src/terminal.go	/^	actExecute$/;"	c	package:fzf
+actExecuteMulti	src/terminal.go	/^	actExecuteMulti \/\/ Deprecated$/;"	c	package:fzf
+actExecuteSilent	src/terminal.go	/^	actExecuteSilent$/;"	c	package:fzf
+actForwardChar	src/terminal.go	/^	actForwardChar$/;"	c	package:fzf
+actForwardWord	src/terminal.go	/^	actForwardWord$/;"	c	package:fzf
+actHalfPageDown	src/terminal.go	/^	actHalfPageDown$/;"	c	package:fzf
+actHalfPageUp	src/terminal.go	/^	actHalfPageUp$/;"	c	package:fzf
+actIgnore	src/terminal.go	/^	actIgnore actionType = iota$/;"	c	package:fzf
+actInvalid	src/terminal.go	/^	actInvalid$/;"	c	package:fzf
+actJump	src/terminal.go	/^	actJump$/;"	c	package:fzf
+actJumpAccept	src/terminal.go	/^	actJumpAccept$/;"	c	package:fzf
+actKillLine	src/terminal.go	/^	actKillLine$/;"	c	package:fzf
+actKillWord	src/terminal.go	/^	actKillWord$/;"	c	package:fzf
+actMouse	src/terminal.go	/^	actMouse$/;"	c	package:fzf
+actNextHistory	src/terminal.go	/^	actNextHistory$/;"	c	package:fzf
+actPageDown	src/terminal.go	/^	actPageDown$/;"	c	package:fzf
+actPageUp	src/terminal.go	/^	actPageUp$/;"	c	package:fzf
+actPreviewDown	src/terminal.go	/^	actPreviewDown$/;"	c	package:fzf
+actPreviewPageDown	src/terminal.go	/^	actPreviewPageDown$/;"	c	package:fzf
+actPreviewPageUp	src/terminal.go	/^	actPreviewPageUp$/;"	c	package:fzf
+actPreviewUp	src/terminal.go	/^	actPreviewUp$/;"	c	package:fzf
+actPreviousHistory	src/terminal.go	/^	actPreviousHistory$/;"	c	package:fzf
+actPrintQuery	src/terminal.go	/^	actPrintQuery$/;"	c	package:fzf
+actReplaceQuery	src/terminal.go	/^	actReplaceQuery$/;"	c	package:fzf
+actRune	src/terminal.go	/^	actRune$/;"	c	package:fzf
+actSelectAll	src/terminal.go	/^	actSelectAll$/;"	c	package:fzf
+actSigStop	src/terminal.go	/^	actSigStop$/;"	c	package:fzf
+actToggle	src/terminal.go	/^	actToggle$/;"	c	package:fzf
+actToggleAll	src/terminal.go	/^	actToggleAll$/;"	c	package:fzf
+actToggleDown	src/terminal.go	/^	actToggleDown$/;"	c	package:fzf
+actToggleIn	src/terminal.go	/^	actToggleIn$/;"	c	package:fzf
+actToggleOut	src/terminal.go	/^	actToggleOut$/;"	c	package:fzf
+actTogglePreview	src/terminal.go	/^	actTogglePreview$/;"	c	package:fzf
+actTogglePreviewWrap	src/terminal.go	/^	actTogglePreviewWrap$/;"	c	package:fzf
+actToggleSort	src/terminal.go	/^	actToggleSort$/;"	c	package:fzf
+actToggleUp	src/terminal.go	/^	actToggleUp$/;"	c	package:fzf
+actTop	src/terminal.go	/^	actTop$/;"	c	package:fzf
+actUnixLineDiscard	src/terminal.go	/^	actUnixLineDiscard$/;"	c	package:fzf
+actUnixWordRubout	src/terminal.go	/^	actUnixWordRubout$/;"	c	package:fzf
+actUp	src/terminal.go	/^	actUp$/;"	c	package:fzf
+actYank	src/terminal.go	/^	actYank$/;"	c	package:fzf
+action	src/terminal.go	/^type action struct {$/;"	s	package:fzf
+actionType	src/terminal.go	/^type actionType int$/;"	t	package:fzf
+algo	src/algo/algo.go	/^package algo$/;"	p
+algo	src/algo/algo_test.go	/^package algo$/;"	p
+algo	src/algo/normalize.go	/^package algo$/;"	p
+all	Makefile	/^all: target\/$(BINARY)$/;"	t
+alloc16	src/algo/algo.go	/^func alloc16(offset int, slab *util.Slab, size int) (int, []int16) {$/;"	f	package:algo
+alloc32	src/algo/algo.go	/^func alloc32(offset int, slab *util.Slab, size int) (int, []int32) {$/;"	f	package:algo
+ansi	src/terminal.go	/^	ansi       bool$/;"	m	struct:fzf.Terminal
+ansiOffset	src/ansi.go	/^type ansiOffset struct {$/;"	s	package:fzf
+ansiRegex	src/ansi.go	/^var ansiRegex *regexp.Regexp$/;"	v	package:fzf
+ansiState	src/ansi.go	/^type ansiState struct {$/;"	s	package:fzf
+any_include?	test/test_go.rb	/^          def any_include?(val)$/;"	f	method:until
+append	src/history.go	/^func (h *History) append(line string) error {$/;"	f	unknown:fzf.History
+append_line	install	/^append_line() {$/;"	f
+args=	bin/fzf-tmux	/^args=()$/;"	f
+asciiFuzzyIndex	src/algo/algo.go	/^func asciiFuzzyIndex(input *util.Chars, pattern []rune, caseSensitive bool) int {$/;"	f	package:algo
+ask	install	/^ask() {$/;"	f
+assert	src/merger_test.go	/^func assert(t *testing.T, cond bool, msg ...string) {$/;"	f	package:fzf
+assertMatch	src/algo/algo_test.go	/^func assertMatch(t *testing.T, fun Algo, caseSensitive, forward bool, input, pattern string, sid/;"	f	package:algo
+assertMatch2	src/algo/algo_test.go	/^func assertMatch2(t *testing.T, fun Algo, caseSensitive, normalize, forward bool, input, pattern/;"	f	package:algo
+at	src/terminal.go	/^	at   time.Time$/;"	m	struct:fzf.selectedItem
+atof	src/options.go	/^func atof(str string) float64 {$/;"	f	package:fzf
+atoi	src/options.go	/^func atoi(str string) int {$/;"	f	package:fzf
+atoi	src/tui/light.go	/^func atoi(s string, defaultValue int) int {$/;"	f	package:tui
+attr	src/ansi.go	/^	attr tui.Attr$/;"	m	struct:fzf.ansiState
+attr	src/result.go	/^	attr   tui.Attr$/;"	m	struct:fzf.colorOffset
+attrCodes	src/tui/light.go	/^func attrCodes(attr Attr) []string {$/;"	f	package:tui
+attrFor	src/tui/tui.go	/^func attrFor(color ColorPair, attr Attr) Attr {$/;"	f	package:tui
+awkBlack	src/tokenizer.go	/^	awkBlack$/;"	c	package:fzf
+awkNil	src/tokenizer.go	/^	awkNil = iota$/;"	c	package:fzf
+awkTokenizer	src/tokenizer.go	/^func awkTokenizer(input string) ([]string, int) {$/;"	f	package:fzf
+awkWhite	src/tokenizer.go	/^	awkWhite$/;"	c	package:fzf
+bash	test/test_go.rb	/^    def bash$/;"	S	class:Shell
+basicMatch	src/pattern.go	/^func (p *Pattern) basicMatch(item *Item, withPos bool, slab *util.Slab) (Offset, int, *[]int) {$/;"	f	unknown:fzf.Pattern
+begin	src/tokenizer.go	/^	begin int$/;"	m	struct:fzf.Range
+bg	src/ansi.go	/^	bg   tui.Color$/;"	m	struct:fzf.ansiState
+bg	src/tui/light.go	/^	bg       Color$/;"	m	struct:tui.LightWindow
+bg	src/tui/tui.go	/^	bg Color$/;"	m	struct:tui.ColorPair
+bin/fzf	Makefile	/^bin\/fzf: target\/$(BINARY) | bin$/;"	t
+bonusAt	src/algo/algo.go	/^func bonusAt(input *util.Chars, idx int) int16 {$/;"	f	package:algo
+bonusBoundary	src/algo/algo.go	/^	bonusBoundary = scoreMatch \/ 2$/;"	c	package:algo
+bonusCamel123	src/algo/algo.go	/^	bonusCamel123 = bonusBoundary + scoreGapExtention$/;"	c	package:algo
+bonusConsecutive	src/algo/algo.go	/^	bonusConsecutive = -(scoreGapStart + scoreGapExtention)$/;"	c	package:algo
+bonusFirstCharMultiplier	src/algo/algo.go	/^	bonusFirstCharMultiplier = 2$/;"	c	package:algo
+bonusFor	src/algo/algo.go	/^func bonusFor(prevClass charClass, class charClass) int16 {$/;"	f	package:algo
+bonusNonWord	src/algo/algo.go	/^	bonusNonWord = scoreMatch \/ 2$/;"	c	package:algo
+border	src/terminal.go	/^	border     tui.Window$/;"	m	struct:fzf.Terminal
+border	src/tui/light.go	/^	border   BorderStyle$/;"	m	struct:tui.LightWindow
+borderStyle	src/tui/tcell.go	/^	borderStyle BorderStyle$/;"	m	struct:tui.TcellWindow
+bordered	src/terminal.go	/^	bordered   bool$/;"	m	struct:fzf.Terminal
+buffer	src/tui/light.go	/^	buffer        []byte$/;"	m	struct:tui.LightRenderer
+buildCacheKey	src/pattern.go	/^func (p *Pattern) buildCacheKey() string {$/;"	f	unknown:fzf.Pattern
+buildLists	src/merger_test.go	/^func buildLists(partiallySorted bool) ([][]Result, []Result) {$/;"	f	package:fzf
+buildPlusList	src/terminal.go	/^func (t *Terminal) buildPlusList(template string, forcePlus bool) (bool, []*Item) {$/;"	f	unknown:fzf.Terminal
+buildResult	src/result.go	/^func buildResult(item *Item, offsets []Offset, score int) Result {$/;"	f	package:fzf
+byBegin	src/options.go	/^	byBegin$/;"	c	package:fzf
+byEnd	src/options.go	/^	byEnd$/;"	c	package:fzf
+byLength	src/options.go	/^	byLength$/;"	c	package:fzf
+byScore	src/options.go	/^	byScore criterion = iota$/;"	c	package:fzf
+byTimeOrder	src/terminal.go	/^type byTimeOrder []selectedItem$/;"	t	package:fzf
+cache	src/cache.go	/^	cache map[*Chunk]*queryCache$/;"	m	struct:fzf.ChunkCache
+cacheKey	src/pattern.go	/^	cacheKey      string$/;"	m	struct:fzf.Pattern
+cacheable	src/merger.go	/^func (mg *Merger) cacheable() bool {$/;"	f	unknown:fzf.Merger
+cacheable	src/pattern.go	/^	cacheable     bool$/;"	m	struct:fzf.Pattern
+calculateScore	src/algo/algo.go	/^func calculateScore(caseSensitive bool, normalize bool, text *util.Chars, pattern []rune, sidx i/;"	f	package:algo
+calculateSize	src/terminal.go	/^func calculateSize(base int, size sizeSpec, margin int, minSize int) int {$/;"	f	package:fzf
+capture	test/test_go.rb	/^  def capture(pane = 0)$/;"	f
+caseSensitive	src/pattern.go	/^	caseSensitive bool$/;"	m	struct:fzf.Pattern
+caseSensitive	src/pattern.go	/^	caseSensitive bool$/;"	m	struct:fzf.term
+charClass	src/algo/algo.go	/^type charClass int$/;"	t	package:algo
+charClassOf	src/algo/algo.go	/^func charClassOf(char rune) charClass {$/;"	f	package:algo
+charClassOfAscii	src/algo/algo.go	/^func charClassOfAscii(char rune) charClass {$/;"	f	package:algo
+charClassOfNonAscii	src/algo/algo.go	/^func charClassOfNonAscii(char rune) charClass {$/;"	f	package:algo
+charLetter	src/algo/algo.go	/^	charLetter$/;"	c	package:algo
+charLower	src/algo/algo.go	/^	charLower$/;"	c	package:algo
+charNonWord	src/algo/algo.go	/^	charNonWord charClass = iota$/;"	c	package:algo
+charNumber	src/algo/algo.go	/^	charNumber$/;"	c	package:algo
+charUpper	src/algo/algo.go	/^	charUpper$/;"	c	package:algo
+checkAscii	src/util/chars.go	/^func checkAscii(bytes []byte) (bool, int) {$/;"	f	package:util
+check_binary	install	/^check_binary() {$/;"	f
+chunkSize	src/constants.go	/^	chunkSize int = 100$/;"	c	package:fzf
+chunks	src/chunklist.go	/^	chunks []*Chunk$/;"	m	struct:fzf.ChunkList
+chunks	src/matcher.go	/^	chunks  []*Chunk$/;"	m	struct:fzf.MatchRequest
+chunks	src/merger.go	/^	chunks  *[]*Chunk$/;"	m	struct:fzf.Merger
+clean	Makefile	/^clean:$/;"	t
+cleanExit	src/terminal.go	/^	cleanExit  bool$/;"	m	struct:fzf.Terminal
+cleanse	src/tui/light.go	/^func cleanse(str string) string {$/;"	f	package:tui
+cleanup	bin/fzf-tmux	/^cleanup() {$/;"	f
+clearChunkCache	src/pattern.go	/^func clearChunkCache() {$/;"	f	package:fzf
+clearOnExit	src/tui/light.go	/^	clearOnExit   bool$/;"	m	struct:tui.LightRenderer
+clearPatternCache	src/pattern.go	/^func clearPatternCache() {$/;"	f	package:fzf
+clickY	src/tui/light.go	/^	clickY        []int$/;"	m	struct:tui.LightRenderer
+clickY	src/tui/tui.go	/^	clickY       []int$/;"	m	struct:tui.FullscreenRenderer
+colBlack	src/tui/tui.go	/^	colBlack Color = iota$/;"	c	package:tui
+colBlue	src/tui/tui.go	/^	colBlue$/;"	c	package:tui
+colCyan	src/tui/tui.go	/^	colCyan$/;"	c	package:tui
+colDefault	src/tui/tui.go	/^	colDefault         = -1$/;"	c	package:tui
+colGreen	src/tui/tui.go	/^	colGreen$/;"	c	package:tui
+colMagenta	src/tui/tui.go	/^	colMagenta$/;"	c	package:tui
+colRed	src/tui/tui.go	/^	colRed$/;"	c	package:tui
+colUndefined	src/tui/tui.go	/^	colUndefined Color = -2$/;"	c	package:tui
+colWhite	src/tui/tui.go	/^	colWhite$/;"	c	package:tui
+colYellow	src/tui/tui.go	/^	colYellow$/;"	c	package:tui
+color	src/ansi.go	/^	color  ansiState$/;"	m	struct:fzf.ansiOffset
+color	src/result.go	/^	color  tui.ColorPair$/;"	m	struct:fzf.colorOffset
+color	src/tui/tcell.go	/^	color       bool$/;"	m	struct:tui.TcellWindow
+colorCodes	src/tui/light.go	/^func colorCodes(fg Color, bg Color) []string {$/;"	f	package:tui
+colorOffset	src/result.go	/^type colorOffset struct {$/;"	s	package:fzf
+colorOffsets	src/result.go	/^func (result *Result) colorOffsets(matchOffsets []Offset, theme *tui.ColorTheme, color tui.Color/;"	f	unknown:fzf.Result
+colored	src/ansi.go	/^func (s *ansiState) colored() bool {$/;"	f	unknown:fzf.ansiState
+colored	src/tui/light.go	/^	colored  bool$/;"	m	struct:tui.LightWindow
+colors	src/item.go	/^	colors      *[]ansiOffset \/\/ 8$/;"	m	struct:fzf.Item
+command	src/options.go	/^	command  string$/;"	m	struct:fzf.previewOpts
+command for listing path candidates.	README.md	/^# command for listing path candidates.$/;"	c
+compareRanks	src/result_others.go	/^func compareRanks(irank Result, jrank Result, tac bool) bool {$/;"	f	package:fzf
+compareRanks	src/result_x86.go	/^func compareRanks(irank Result, jrank Result, tac bool) bool {$/;"	f	package:fzf
+cond	src/util/eventbox.go	/^	cond   *sync.Cond$/;"	m	struct:util.EventBox
+confirm	uninstall	/^confirm() {$/;"	f
+consoleDevice	src/tui/light.go	/^const consoleDevice string = "\/dev\/tty"$/;"	c	package:tui
+constrain	src/terminal.go	/^func (t *Terminal) constrain() {$/;"	f	unknown:fzf.Terminal
+coordinatorDelayMax	src/constants.go	/^	coordinatorDelayMax  time.Duration = 100 * time.Millisecond$/;"	c	package:fzf
+coordinatorDelayStep	src/constants.go	/^	coordinatorDelayStep time.Duration = 10 * time.Millisecond$/;"	c	package:fzf
+copySlice	src/terminal.go	/^func copySlice(slice []rune) []rune {$/;"	f	package:fzf
+count	src/chunklist.go	/^	count int$/;"	m	struct:fzf.Chunk
+count	src/merger.go	/^	count   int$/;"	m	struct:fzf.Merger
+count	src/terminal.go	/^	count      int$/;"	m	struct:fzf.Terminal
+counts	test/test_go.rb	/^          def counts$/;"	f	method:until
+cprint2	src/tui/light.go	/^func (w *LightWindow) cprint2(fg Color, bg Color, attr Attr, text string) {$/;"	f	unknown:tui.LightWindow
+create_file	install	/^create_file() {$/;"	f
+criterion	src/options.go	/^type criterion int$/;"	t	package:fzf
+csi	src/tui/light.go	/^func (r *LightRenderer) csi(code string) {$/;"	f	unknown:tui.LightRenderer
+csi	src/tui/light.go	/^func (w *LightWindow) csi(code string) {$/;"	f	unknown:tui.LightWindow
+csiColor	src/tui/light.go	/^func (w *LightWindow) csiColor(fg Color, bg Color, attr Attr) bool {$/;"	f	unknown:tui.LightWindow
+current	src/history.go	/^func (h *History) current() string {$/;"	f	unknown:fzf.History
+current	src/terminal.go	/^	current  bool$/;"	m	struct:fzf.itemLine
+currentItem	src/terminal.go	/^func (t *Terminal) currentItem() *Item {$/;"	f	unknown:fzf.Terminal
+cursor	src/history.go	/^	cursor   int$/;"	m	struct:fzf.History
+cursors	src/merger.go	/^	cursors []int$/;"	m	struct:fzf.Merger
+cx	src/terminal.go	/^	cx         int$/;"	m	struct:fzf.Terminal
+cy	src/terminal.go	/^	cy         int$/;"	m	struct:fzf.Terminal
+cycle	src/terminal.go	/^	cycle      bool$/;"	m	struct:fzf.Terminal
+debugV2	src/algo/algo.go	/^func debugV2(T []rune, pattern []rune, F []int32, lastIdx int, H []int16, C []int16) {$/;"	f	package:algo
+defaultCommand	src/constants.go	/^var defaultCommand string$/;"	v	package:fzf
+defaultEscDelay	src/tui/light.go	/^	defaultEscDelay = 100$/;"	c	package:tui
+defaultHeight	src/tui/light.go	/^	defaultHeight = 24$/;"	c	package:tui
+defaultHistoryMax	src/constants.go	/^	defaultHistoryMax int = 1000$/;"	c	package:fzf
+defaultJumpLabels	src/constants.go	/^	defaultJumpLabels string = "asdfghjklqwertyuiopzxcvbnm1234567890ASDFGHJKLQWERTYUIOPZXCVBNM`~;:,/;"	c	package:fzf
+defaultKeymap	src/terminal.go	/^func defaultKeymap() map[int][]action {$/;"	f	package:fzf
+defaultMargin	src/options.go	/^func defaultMargin() [4]sizeSpec {$/;"	f	package:fzf
+defaultOptions	src/options.go	/^func defaultOptions() *Options {$/;"	f	package:fzf
+defaultTheme	src/tui/light.go	/^func (r *LightRenderer) defaultTheme() *ColorTheme {$/;"	f	unknown:tui.LightRenderer
+defaultTheme	src/tui/tcell.go	/^func (r *FullscreenRenderer) defaultTheme() *ColorTheme {$/;"	f	unknown:tui.FullscreenRenderer
+defaultWidth	src/tui/light.go	/^	defaultWidth  = 80$/;"	c	package:tui
+delChar	src/terminal.go	/^func (t *Terminal) delChar() bool {$/;"	f	unknown:fzf.Terminal
+delimNil	src/reader.go	/^	delimNil bool$/;"	m	struct:fzf.Reader
+delimiter	src/pattern.go	/^	delimiter     Delimiter$/;"	m	struct:fzf.Pattern
+delimiter	src/terminal.go	/^	delimiter  Delimiter$/;"	m	struct:fzf.Terminal
+delimiterRegexp	src/options.go	/^func delimiterRegexp(str string) Delimiter {$/;"	f	package:fzf
+deselectItem	src/terminal.go	/^func (t *Terminal) deselectItem(item *Item) {$/;"	f	unknown:fzf.Terminal
+devPrefixes	src/tui/ttyname_unix.go	/^var devPrefixes = [...]string{"\/dev\/pts\/", "\/dev\/"}$/;"	v	package:tui
+displayWidth	src/terminal.go	/^func (t *Terminal) displayWidth(runes []rune) int {$/;"	f	unknown:fzf.Terminal
+displayWidth	src/tui/light.go	/^	displayWidth int$/;"	m	struct:tui.wrappedLine
+displayWidthWithLimit	src/terminal.go	/^func (t *Terminal) displayWidthWithLimit(runes []rune, prefixWidth int, limit int) int {$/;"	f	unknown:fzf.Terminal
+doubleClickDuration	src/tui/tui.go	/^	doubleClickDuration = 500 * time.Millisecond$/;"	c	package:tui
+download	install	/^download() {$/;"	f
+drawBorder	src/tui/light.go	/^func (w *LightWindow) drawBorder() {$/;"	f	unknown:tui.LightWindow
+drawBorder	src/tui/tcell.go	/^func (w *TcellWindow) drawBorder(around bool) {$/;"	f	unknown:tui.TcellWindow
+drawBorderAround	src/tui/light.go	/^func (w *LightWindow) drawBorderAround() {$/;"	f	unknown:tui.LightWindow
+drawBorderHorizontal	src/tui/light.go	/^func (w *LightWindow) drawBorderHorizontal() {$/;"	f	unknown:tui.LightWindow
+dupeTheme	src/options.go	/^func dupeTheme(theme *tui.ColorTheme) *tui.ColorTheme {$/;"	f	package:fzf
+emptyLine	src/terminal.go	/^var emptyLine = itemLine{}$/;"	v	package:fzf
+enabled	src/terminal.go	/^	enabled bool$/;"	m	struct:fzf.previewer
+end	src/tokenizer.go	/^	end   int$/;"	m	struct:fzf.Range
+end_with?	test/test_go.rb	/^  def end_with?(_str)$/;"	f	class:NilClass
+equals	src/ansi.go	/^func (s *ansiState) equals(t *ansiState) bool {$/;"	f	unknown:fzf.ansiState
+errorExit	src/options.go	/^func errorExit(msg string) {$/;"	f	package:fzf
+errorExit	src/tui/tui.go	/^func errorExit(message string) {$/;"	f	package:tui
+escDelay	src/tui/light.go	/^	escDelay      int$/;"	m	struct:tui.LightRenderer
+escPollInterval	src/tui/light.go	/^	escPollInterval = 5$/;"	c	package:tui
+escSequence	src/tui/light.go	/^func (r *LightRenderer) escSequence(sz *int) Event {$/;"	f	unknown:tui.LightRenderer
+escapedColon	src/options.go	/^	escapedColon = 0$/;"	c	package:fzf
+escapedComma	src/options.go	/^	escapedComma = 1$/;"	c	package:fzf
+escapedPlus	src/options.go	/^	escapedPlus  = 2$/;"	c	package:fzf
+event	src/reader.go	/^	event    int32$/;"	m	struct:fzf.Reader
+eventBox	src/matcher.go	/^	eventBox       *util.EventBox$/;"	m	struct:fzf.Matcher
+eventBox	src/reader.go	/^	eventBox *util.EventBox$/;"	m	struct:fzf.Reader
+eventBox	src/terminal.go	/^	eventBox   *util.EventBox$/;"	m	struct:fzf.Terminal
+events	src/util/eventbox.go	/^	events Events$/;"	m	struct:util.EventBox
+executeCommand	src/terminal.go	/^func (t *Terminal) executeCommand(template string, forcePlus bool, background bool) {$/;"	f	unknown:fzf.Terminal
+executeRegexp	src/options.go	/^var executeRegexp *regexp.Regexp$/;"	v	package:fzf
+exitError	src/constants.go	/^	exitError     = 2$/;"	c	package:fzf
+exitInterrupt	src/constants.go	/^	exitInterrupt = 130$/;"	c	package:fzf
+exitNoMatch	src/constants.go	/^	exitNoMatch   = 1$/;"	c	package:fzf
+exitOk	src/constants.go	/^	exitOk        = 0$/;"	c	package:fzf
+expect	src/terminal.go	/^	expect     map[int]string$/;"	m	struct:fzf.Terminal
+extended	src/pattern.go	/^	extended      bool$/;"	m	struct:fzf.Pattern
+extendedMatch	src/pattern.go	/^func (p *Pattern) extendedMatch(item *Item, withPos bool, slab *util.Slab) ([]Offset, int, *[]in/;"	f	unknown:fzf.Pattern
+extractColor	src/ansi.go	/^func extractColor(str string, state *ansiState, proc func(string, *ansiState) bool) (string, *[]/;"	f	package:fzf
+fail	bin/fzf-tmux	/^fail() {$/;"	f
+fd	src/tui/light.go	/^func (r *LightRenderer) fd() int {$/;"	f	unknown:tui.LightRenderer
+fe	.fzf.bash	/^fe() {$/;"	f
+feed	src/reader.go	/^func (r *Reader) feed(src io.Reader) {$/;"	f	unknown:fzf.Reader
+fg	src/ansi.go	/^	fg   tui.Color$/;"	m	struct:fzf.ansiState
+fg	src/tui/light.go	/^	fg       Color$/;"	m	struct:tui.LightWindow
+fg	src/tui/tui.go	/^	fg Color$/;"	m	struct:tui.ColorPair
+fill	src/tui/light.go	/^func (w *LightWindow) fill(str string, onMove func()) FillReturn {$/;"	f	unknown:tui.LightWindow
+fill	src/tui/tcell.go	/^func fill(x, y, w, h int, r rune) {$/;"	f	package:tui
+fillString	src/tui/tcell.go	/^func (w *TcellWindow) fillString(text string, pair ColorPair, a Attr) FillReturn {$/;"	f	unknown:tui.TcellWindow
+fin	src/reader.go	/^func (r *Reader) fin(success bool) {$/;"	f	unknown:fzf.Reader
+final	src/matcher.go	/^	final   bool$/;"	m	struct:fzf.MatchRequest
+final	src/merger.go	/^	final   bool$/;"	m	struct:fzf.Merger
+findAnsiStart	src/ansi.go	/^func findAnsiStart(str string) int {$/;"	f	package:fzf
+findFirstMatch	src/terminal.go	/^func findFirstMatch(pattern string, str string) int {$/;"	f	package:fzf
+findLastMatch	src/terminal.go	/^func findLastMatch(pattern string, str string) int {$/;"	f	package:fzf
+findOffset	src/tui/light.go	/^func (r *LightRenderer) findOffset() (row int, col int) {$/;"	f	unknown:tui.LightRenderer
+firstKey	src/options.go	/^func firstKey(keymap map[int]string) int {$/;"	f	package:fzf
+fish	test/test_go.rb	/^    def fish$/;"	S	class:Shell
+flush	src/tui/light.go	/^func (r *LightRenderer) flush() {$/;"	f	unknown:tui.LightRenderer
+forceBlack	src/tui/light.go	/^	forceBlack    bool$/;"	m	struct:tui.LightRenderer
+forceBlack	src/tui/tui.go	/^	forceBlack   bool$/;"	m	struct:tui.FullscreenRenderer
+forward	src/pattern.go	/^	forward       bool$/;"	m	struct:fzf.Pattern
+fullscreen	src/terminal.go	/^	fullscreen bool$/;"	m	struct:fzf.Terminal
+fullscreen	src/tui/light.go	/^	fullscreen    bool$/;"	m	struct:tui.LightRenderer
+fuzzy	src/pattern.go	/^	fuzzy         bool$/;"	m	struct:fzf.Pattern
+fuzzyAlgo	src/pattern.go	/^	fuzzyAlgo     algo.Algo$/;"	m	struct:fzf.Pattern
+fzf	man/man1/fzf.1	/^.TH fzf 1 "Apr 2018" "fzf 0.17.4-devel" "fzf - a command-line fuzzy finder"$/;"	t
+fzf	src/ansi.go	/^package fzf$/;"	p
+fzf	src/ansi_test.go	/^package fzf$/;"	p
+fzf	src/cache.go	/^package fzf$/;"	p
+fzf	src/cache_test.go	/^package fzf$/;"	p
+fzf	src/chunklist.go	/^package fzf$/;"	p
+fzf	src/chunklist_test.go	/^package fzf$/;"	p
+fzf	src/constants.go	/^package fzf$/;"	p
+fzf	src/core.go	/^package fzf$/;"	p
+fzf	src/history.go	/^package fzf$/;"	p
+fzf	src/history_test.go	/^package fzf$/;"	p
+fzf	src/item.go	/^package fzf$/;"	p
+fzf	src/item_test.go	/^package fzf$/;"	p
+fzf	src/matcher.go	/^package fzf$/;"	p
+fzf	src/merger.go	/^package fzf$/;"	p
+fzf	src/merger_test.go	/^package fzf$/;"	p
+fzf	src/options.go	/^package fzf$/;"	p
+fzf	src/options_test.go	/^package fzf$/;"	p
+fzf	src/pattern.go	/^package fzf$/;"	p
+fzf	src/pattern_test.go	/^package fzf$/;"	p
+fzf	src/reader.go	/^package fzf$/;"	p
+fzf	src/reader_test.go	/^package fzf$/;"	p
+fzf	src/result.go	/^package fzf$/;"	p
+fzf	src/result_others.go	/^package fzf$/;"	p
+fzf	src/result_test.go	/^package fzf$/;"	p
+fzf	src/result_x86.go	/^package fzf$/;"	p
+fzf	src/terminal.go	/^package fzf$/;"	p
+fzf	src/terminal_test.go	/^package fzf$/;"	p
+fzf	src/terminal_unix.go	/^package fzf$/;"	p
+fzf	src/terminal_windows.go	/^package fzf$/;"	p
+fzf	src/tokenizer.go	/^package fzf$/;"	p
+fzf	src/tokenizer_test.go	/^package fzf$/;"	p
+fzf	test/test_go.rb	/^  def fzf(*opts)$/;"	f	class:TestBase
+fzf inside terminal buffer	README-VIM.md	/^fzf inside terminal buffer$/;"	s
+fzf!	test/test_go.rb	/^  def fzf!(*opts)$/;"	f	class:TestBase
+fzf#run	plugin/fzf.vim	/^function! fzf#run(...) abort$/;"	f
+fzf#shellescape	plugin/fzf.vim	/^function! fzf#shellescape(arg, ...)$/;"	f
+fzf#wrap	plugin/fzf.vim	/^function! fzf#wrap(...)$/;"	f
+fzf-cd-widget	shell/key-bindings.zsh	/^fzf-cd-widget() {$/;"	f
+fzf-completion	shell/completion.zsh	/^fzf-completion() {$/;"	f
+fzf-file-widget	shell/key-bindings.bash	/^fzf-file-widget() {$/;"	f
+fzf-file-widget	shell/key-bindings.zsh	/^fzf-file-widget() {$/;"	f
+fzf-history-widget	shell/key-bindings.zsh	/^fzf-history-widget() {$/;"	f
+fzf-redraw-prompt	shell/key-bindings.zsh	/^fzf-redraw-prompt() {$/;"	f
+fzf-tmux	man/man1/fzf-tmux.1	/^.TH fzf-tmux 1 "Dec 2017" "fzf 0.17.3" "fzf-tmux - open fzf in tmux split pane"$/;"	t
+fzf.on_exit	plugin/fzf.vim	/^      function! fzf.on_exit(job_id, exit_status, event) dict$/;"	f
+fzf.on_exit	plugin/fzf.vim	/^  function! fzf.on_exit(id, code, ...)$/;"	f
+fzf.switch_back	plugin/fzf.vim	/^  function! fzf.switch_back(inplace)$/;"	f
+fzf_popd	plugin/fzf.vim	/^augroup fzf_popd$/;"	a
+fzf_swap	plugin/fzf.vim	/^    augroup fzf_swap$/;"	a
+g:loaded_fzf	plugin/fzf.vim	/^let g:loaded_fzf = 1$/;"	v
+getBytes	src/tui/light.go	/^func (r *LightRenderer) getBytes() []byte {$/;"	f	unknown:tui.LightRenderer
+getBytesInternal	src/tui/light.go	/^func (r *LightRenderer) getBytesInternal(buffer []byte, nonblock bool) []byte {$/;"	f	unknown:tui.LightRenderer
+getEnv	src/tui/light.go	/^func getEnv(name string, defaultValue int) int {$/;"	f	package:tui
+getch	src/tui/light.go	/^func (r *LightRenderer) getch(nonblock bool) (int, bool) {$/;"	f	unknown:tui.LightRenderer
+go	test/test_go.rb	/^  def go(*args)$/;"	f
+hasPlusFlag	src/terminal.go	/^func hasPlusFlag(template string) bool {$/;"	f	package:fzf
+hasPreviewWindow	src/terminal.go	/^func (t *Terminal) hasPreviewWindow() bool {$/;"	f	unknown:fzf.Terminal
+hasPreviewer	src/terminal.go	/^func (t *Terminal) hasPreviewer() bool {$/;"	f	unknown:fzf.Terminal
+header	src/terminal.go	/^	header     []string$/;"	m	struct:fzf.Terminal
+header0	src/terminal.go	/^	header0    []string$/;"	m	struct:fzf.Terminal
+height	src/tui/light.go	/^	height        int$/;"	m	struct:tui.LightRenderer
+height	src/tui/light.go	/^	height   int$/;"	m	struct:tui.LightWindow
+height	src/tui/tcell.go	/^	height      int$/;"	m	struct:tui.TcellWindow
+help	bin/fzf-tmux	/^help() {$/;"	f
+help	install	/^help() {$/;"	f
+help	src/options.go	/^func help(code int) {$/;"	f	package:fzf
+hidden	src/options.go	/^	hidden   bool$/;"	m	struct:fzf.previewOpts
+history	src/terminal.go	/^	history    *History$/;"	m	struct:fzf.Terminal
+hscroll	src/terminal.go	/^	hscroll    bool$/;"	m	struct:fzf.Terminal
+hscrollOff	src/terminal.go	/^	hscrollOff int$/;"	m	struct:fzf.Terminal
+id	src/tui/tui.go	/^	id int$/;"	m	struct:tui.ColorPair
+ignore	src/util/eventbox.go	/^	ignore map[EventType]bool$/;"	m	struct:util.EventBox
+inBytes	src/util/chars.go	/^	inBytes         bool$/;"	m	struct:util.Chars
+include?	test/test_go.rb	/^  def include?(_str)$/;"	f	class:NilClass
+index	src/matcher.go	/^	index   int$/;"	m	struct:fzf.partialResult
+index	src/result.go	/^	index  int32$/;"	m	struct:fzf.colorOffset
+indexAt	src/algo/algo.go	/^func indexAt(index int, max int, forward bool) int {$/;"	f	package:algo
+init	src/ansi.go	/^func init() {$/;"	f	package:fzf
+init	src/constants.go	/^func init() {$/;"	f	package:fzf
+init	src/options.go	/^func init() {$/;"	f	package:fzf
+init	src/pattern.go	/^func init() {$/;"	f	package:fzf
+init	src/pattern_test.go	/^func init() {$/;"	f	package:fzf
+init	src/terminal.go	/^func init() {$/;"	f	package:fzf
+init	src/tui/tui.go	/^func init() {$/;"	f	package:tui
+initDelay	src/terminal.go	/^	initDelay  time.Duration$/;"	m	struct:fzf.Terminal
+initFunc	src/terminal.go	/^	initFunc   func()$/;"	m	struct:fzf.Terminal
+initPalette	src/tui/tui.go	/^func initPalette(theme *ColorTheme) {$/;"	f	package:tui
+initScreen	src/tui/tcell.go	/^func (r *FullscreenRenderer) initScreen() {$/;"	f	unknown:tui.FullscreenRenderer
+initTheme	src/tui/tui.go	/^func initTheme(theme *ColorTheme, baseTheme *ColorTheme, forceBlack bool) {$/;"	f	package:tui
+initialDelay	src/constants.go	/^	initialDelay    = 20 * time.Millisecond$/;"	c	package:fzf
+initialDelayTac	src/constants.go	/^	initialDelayTac = 100 * time.Millisecond$/;"	c	package:fzf
+initialize	test/test_go.rb	/^  def initialize(shell = :bash)$/;"	f	class:Tmux
+inlineInfo	src/terminal.go	/^	inlineInfo bool$/;"	m	struct:fzf.Terminal
+input	src/terminal.go	/^	input      []rune$/;"	m	struct:fzf.Terminal
+install	Makefile	/^install: bin\/fzf$/;"	t
+interpretCode	src/ansi.go	/^func interpretCode(ansiCode string, prevState *ansiState) *ansiState {$/;"	f	package:fzf
+inv	src/pattern.go	/^	inv           bool$/;"	m	struct:fzf.term
+is24	src/tui/tui.go	/^func (c Color) is24() bool {$/;"	f	unknown:tui.Color
+is24	src/tui/tui.go	/^func (p ColorPair) is24() bool {$/;"	f	unknown:tui.ColorPair
+isAlphabet	src/options.go	/^func isAlphabet(char uint8) bool {$/;"	f	package:fzf
+isAscii	src/algo/algo.go	/^func isAscii(runes []rune) bool {$/;"	f	package:algo
+isExecuteAction	src/options.go	/^func isExecuteAction(str string) actionType {$/;"	f	package:fzf
+isNumeric	src/options.go	/^func isNumeric(char uint8) bool {$/;"	f	package:fzf
+isPreviewEnabled	src/terminal.go	/^func (t *Terminal) isPreviewEnabled() bool {$/;"	f	unknown:fzf.Terminal
+item	src/result.go	/^	item   *Item$/;"	m	struct:fzf.Result
+item	src/terminal.go	/^	item *Item$/;"	m	struct:fzf.selectedItem
+itemLine	src/terminal.go	/^type itemLine struct {$/;"	s	package:fzf
+item_count	test/test_go.rb	/^          def item_count$/;"	f	method:until
+items	src/chunklist.go	/^	items [chunkSize]Item$/;"	m	struct:fzf.Chunk
+iter	src/pattern.go	/^func (p *Pattern) iter(pfun algo.Algo, tokens []Token, caseSensitive bool, normalize bool, forwa/;"	f	unknown:fzf.Pattern
+joinTokens	src/tokenizer.go	/^func joinTokens(tokens []Token) string {$/;"	f	package:fzf
+jumpAcceptEnabled	src/terminal.go	/^	jumpAcceptEnabled$/;"	c	package:fzf
+jumpDisabled	src/terminal.go	/^	jumpDisabled jumpMode = iota$/;"	c	package:fzf
+jumpEnabled	src/terminal.go	/^	jumpEnabled$/;"	c	package:fzf
+jumpLabels	src/terminal.go	/^	jumpLabels string$/;"	m	struct:fzf.Terminal
+jumpMode	src/terminal.go	/^type jumpMode int$/;"	t	package:fzf
+jumping	src/terminal.go	/^	jumping    jumpMode$/;"	m	struct:fzf.Terminal
+keyMatch	src/terminal.go	/^func keyMatch(key int, event tui.Event) bool {$/;"	f	package:fzf
+keymap	src/terminal.go	/^	keymap     map[int][]action$/;"	m	struct:fzf.Terminal
+kill	test/test_go.rb	/^  def kill$/;"	f
+label	src/terminal.go	/^	label    string$/;"	m	struct:fzf.itemLine
+lastChunk	src/chunklist.go	/^func (cl *ChunkList) lastChunk() *Chunk {$/;"	f	unknown:fzf.ChunkList
+lastX	src/tui/tcell.go	/^	lastX       int$/;"	m	struct:tui.TcellWindow
+lastY	src/tui/tcell.go	/^	lastY       int$/;"	m	struct:tui.TcellWindow
+left	src/tui/light.go	/^	left     int$/;"	m	struct:tui.LightWindow
+left	src/tui/tcell.go	/^	left        int$/;"	m	struct:tui.TcellWindow
+lines	src/history.go	/^	lines    []string$/;"	m	struct:fzf.History
+lines	src/terminal.go	/^	lines   int$/;"	m	struct:fzf.previewer
+link_fzf_in_path	install	/^link_fzf_in_path() {$/;"	f
+lists	src/merger.go	/^	lists   [][]Result$/;"	m	struct:fzf.Merger
+main	main.go	/^func main() {$/;"	f	package:main
+main	main.go	/^package main$/;"	p
+makeSpace	src/tui/light.go	/^func (r *LightRenderer) makeSpace() {$/;"	f	unknown:tui.LightRenderer
+margin	src/terminal.go	/^	margin     [4]sizeSpec$/;"	m	struct:fzf.Terminal
+matchChunk	src/pattern.go	/^func (p *Pattern) matchChunk(chunk *Chunk, space []Result, slab *util.Slab) []Result {$/;"	f	unknown:fzf.Pattern
+match_count	test/test_go.rb	/^          def match_count$/;"	f	method:until
+matches	src/matcher.go	/^	matches []Result$/;"	m	struct:fzf.partialResult
+maxDisplayWidthCalc	src/terminal.go	/^	maxDisplayWidthCalc = 1024$/;"	c	package:fzf
+maxHeightFunc	src/tui/light.go	/^	maxHeightFunc func(int) int$/;"	m	struct:tui.LightRenderer
+maxItems	src/terminal.go	/^func (t *Terminal) maxItems() int {$/;"	f	unknown:fzf.Terminal
+maxPartitions	src/constants.go	/^	maxPartitions           = 32$/;"	c	package:fzf
+maxSize	src/history.go	/^	maxSize  int$/;"	m	struct:fzf.History
+merged	src/merger.go	/^	merged  []Result$/;"	m	struct:fzf.Merger
+mergedGet	src/merger.go	/^func (mg *Merger) mergedGet(idx int) Result {$/;"	f	unknown:fzf.Merger
+merger	src/terminal.go	/^	merger     *Merger$/;"	m	struct:fzf.Terminal
+mergerCache	src/matcher.go	/^	mergerCache    map[string]*Merger$/;"	m	struct:fzf.Matcher
+mergerCacheMax	src/constants.go	/^	mergerCacheMax int = 100000$/;"	c	package:fzf
+minHeight	src/terminal.go	/^	minHeight = 4$/;"	c	package:fzf
+minItem	src/item.go	/^var minItem = Item{text: util.Chars{Index: -1}}$/;"	v	package:fzf
+minRank	src/result.go	/^func minRank() Result {$/;"	f	package:fzf
+minWidth	src/terminal.go	/^	minWidth  = 16$/;"	c	package:fzf
+modified	src/history.go	/^	modified map[int]string$/;"	m	struct:fzf.History
+mouse	src/tui/light.go	/^	mouse         bool$/;"	m	struct:tui.LightRenderer
+mouse	src/tui/tui.go	/^	mouse        bool$/;"	m	struct:tui.FullscreenRenderer
+mouseSequence	src/tui/light.go	/^func (r *LightRenderer) mouseSequence(sz *int) Event {$/;"	f	unknown:tui.LightRenderer
+move	src/terminal.go	/^func (t *Terminal) move(y int, x int, clear bool) {$/;"	f	unknown:fzf.Terminal
+move	src/tui/light.go	/^func (r *LightRenderer) move(y int, x int) {$/;"	f	unknown:tui.LightRenderer
+moveCursor	src/tui/tcell.go	/^	moveCursor  bool$/;"	m	struct:tui.TcellWindow
+multi	src/terminal.go	/^	multi      bool$/;"	m	struct:fzf.Terminal
+mutex	src/cache.go	/^	mutex sync.Mutex$/;"	m	struct:fzf.ChunkCache
+mutex	src/chunklist.go	/^	mutex  sync.Mutex$/;"	m	struct:fzf.ChunkList
+mutex	src/terminal.go	/^	mutex      sync.Mutex$/;"	m	struct:fzf.Terminal
+mutex	src/util/atomicbool.go	/^	mutex sync.Mutex$/;"	m	struct:util.AtomicBool
+newItem	src/terminal_test.go	/^func newItem(str string) *Item {$/;"	f	package:fzf
+newRange	src/tokenizer.go	/^func newRange(begin int, end int) Range {$/;"	f	package:fzf
+new_shell	test/test_go.rb	/^  def new_shell$/;"	f	class:TestBash
+new_shell	test/test_go.rb	/^  def new_shell$/;"	f	class:TestFish
+new_shell	test/test_go.rb	/^  def new_shell$/;"	f	class:TestZsh
+next	src/history.go	/^func (h *History) next() string {$/;"	f	unknown:fzf.History
+nextInt	src/options.go	/^func nextInt(args []string, i *int, message string) int {$/;"	f	package:fzf
+nextString	src/options.go	/^func nextString(args []string, i *int, message string) string {$/;"	f	package:fzf
+normalize	src/pattern.go	/^	normalize     bool$/;"	m	struct:fzf.Pattern
+normalizeRune	src/algo/algo.go	/^func normalizeRune(r rune) rune {$/;"	f	package:algo
+normalized	src/algo/normalize.go	/^var normalized map[rune]rune = map[rune]rune{$/;"	v	package:algo
+notifyOnCont	src/terminal_unix.go	/^func notifyOnCont(resizeChan chan<- os.Signal) {$/;"	f	package:fzf
+notifyOnCont	src/terminal_windows.go	/^func notifyOnCont(resizeChan chan<- os.Signal) {$/;"	f	package:fzf
+notifyOnResize	src/terminal_unix.go	/^func notifyOnResize(resizeChan chan<- os.Signal) {$/;"	f	package:fzf
+notifyOnResize	src/terminal_windows.go	/^func notifyOnResize(resizeChan chan<- os.Signal) {$/;"	f	package:fzf
+notifyStop	src/terminal_unix.go	/^func notifyStop(p *os.Process) {$/;"	f	package:fzf
+notifyStop	src/terminal_windows.go	/^func notifyStop(p *os.Process) {$/;"	f	package:fzf
+nth	src/pattern.go	/^	nth           []Range$/;"	m	struct:fzf.Pattern
+numLinesMax	src/terminal.go	/^func numLinesMax(str string, max int) int {$/;"	f	package:fzf
+numPartitionsMultiplier	src/constants.go	/^	numPartitionsMultiplier = 8$/;"	c	package:fzf
+offset	src/ansi.go	/^	offset [2]int32$/;"	m	struct:fzf.ansiOffset
+offset	src/result.go	/^	offset [2]int32$/;"	m	struct:fzf.colorOffset
+offset	src/terminal.go	/^	offset     int$/;"	m	struct:fzf.Terminal
+offset	src/terminal.go	/^	offset  int$/;"	m	struct:fzf.previewer
+offsetPollTries	src/tui/light.go	/^	offsetPollTries = 10$/;"	c	package:tui
+offsetRegexp	src/tui/light.go	/^var offsetRegexp *regexp.Regexp = regexp.MustCompile("\\x1b\\\\[([0-9]+);([0-9]+)R")$/;"	v	package:tui
+openTtyIn	src/tui/light.go	/^func openTtyIn() *os.File {$/;"	f	package:tui
+optString	src/options.go	/^func optString(arg string, prefixes ...string) (bool, string) {$/;"	f	package:fzf
+optionalNextString	src/options.go	/^func optionalNextString(args []string, i *int) string {$/;"	f	package:fzf
+optionalNumeric	src/options.go	/^func optionalNumeric(args []string, i *int) int {$/;"	f	package:fzf
+optionalRunes	src/util/chars.go	/^func (chars *Chars) optionalRunes() []rune {$/;"	f	unknown:util.Chars
+opts.sink	plugin/fzf.vim	/^    function! opts.sink(lines) abort$/;"	f
+optsFor	src/options_test.go	/^func optsFor(words ...string) *Options {$/;"	f	package:fzf
+origState	src/tui/light.go	/^	origState     *terminal.State$/;"	m	struct:tui.LightRenderer
+origText	src/item.go	/^	origText    *[]byte       \/\/ 8$/;"	m	struct:fzf.Item
+origin	src/tui/light.go	/^func (r *LightRenderer) origin() {$/;"	f	unknown:tui.LightRenderer
+output	src/terminal.go	/^func (t *Terminal) output() bool {$/;"	f	unknown:fzf.Terminal
+overflow	src/terminal.go	/^func (t *Terminal) overflow(runes []rune, max int) bool {$/;"	f	unknown:fzf.Terminal
+overflow32	src/util/chars.go	/^	overflow32 uint32 = 0x80808080$/;"	c	package:util
+overflow64	src/util/chars.go	/^	overflow64 uint64 = 0x8080808080808080$/;"	c	package:util
+override	src/history.go	/^func (h *History) override(str string) {$/;"	f	unknown:fzf.History
+parseAlgo	src/options.go	/^func parseAlgo(str string) algo.Algo {$/;"	f	package:fzf
+parseHeight	src/options.go	/^func parseHeight(str string) sizeSpec {$/;"	f	package:fzf
+parseKeyChords	src/options.go	/^func parseKeyChords(str string, message string) map[int]string {$/;"	f	package:fzf
+parseKeymap	src/options.go	/^func parseKeymap(keymap map[int][]action, str string) {$/;"	f	package:fzf
+parseMargin	src/options.go	/^func parseMargin(margin string) [4]sizeSpec {$/;"	f	package:fzf
+parseOptions	src/options.go	/^func parseOptions(opts *Options, allArgs []string) {$/;"	f	package:fzf
+parsePlaceholder	src/terminal.go	/^func parsePlaceholder(match string) (bool, string, placeholderFlags) {$/;"	f	package:fzf
+parsePreviewWindow	src/options.go	/^func parsePreviewWindow(opts *previewOpts, input string) {$/;"	f	package:fzf
+parseSize	src/options.go	/^func parseSize(str string, maxPercent float64, label string) sizeSpec {$/;"	f	package:fzf
+parseTerms	src/pattern.go	/^func parseTerms(fuzzy bool, caseMode Case, normalize bool, str string) []termSet {$/;"	f	package:fzf
+parseTheme	src/options.go	/^func parseTheme(defaultTheme *tui.ColorTheme, str string) *tui.ColorTheme {$/;"	f	package:fzf
+parseTiebreak	src/options.go	/^func parseTiebreak(str string) []criterion {$/;"	f	package:fzf
+parseToggleSort	src/options.go	/^func parseToggleSort(keymap map[int][]action, str string) {$/;"	f	package:fzf
+partialResult	src/matcher.go	/^type partialResult struct {$/;"	s	package:fzf
+partitions	src/matcher.go	/^	partitions     int$/;"	m	struct:fzf.Matcher
+paste	test/test_go.rb	/^  def paste(str)$/;"	f
+path	src/history.go	/^	path     string$/;"	m	struct:fzf.History
+pattern	src/matcher.go	/^	pattern *Pattern$/;"	m	struct:fzf.MatchRequest
+pattern	src/merger.go	/^	pattern *Pattern$/;"	m	struct:fzf.Merger
+patternBuilder	src/matcher.go	/^	patternBuilder func([]rune) *Pattern$/;"	m	struct:fzf.Matcher
+pborder	src/terminal.go	/^	pborder    tui.Window$/;"	m	struct:fzf.Terminal
+percent	src/options.go	/^	percent bool$/;"	m	struct:fzf.sizeSpec
+placeCursor	src/terminal.go	/^func (t *Terminal) placeCursor() {$/;"	f	unknown:fzf.Terminal
+placeholder	src/terminal.go	/^var placeholder *regexp.Regexp$/;"	v	package:fzf
+placeholderFlags	src/terminal.go	/^type placeholderFlags struct {$/;"	s	package:fzf
+plus	src/terminal.go	/^	plus          bool$/;"	m	struct:fzf.placeholderFlags
+points	src/result.go	/^	points [4]uint16$/;"	m	struct:fzf.Result
+posArray	src/algo/algo.go	/^func posArray(withPos bool, len int) *[]int {$/;"	f	package:algo
+posDown	src/options.go	/^	posDown$/;"	c	package:fzf
+posLeft	src/options.go	/^	posLeft$/;"	c	package:fzf
+posRight	src/options.go	/^	posRight$/;"	c	package:fzf
+posUp	src/options.go	/^	posUp windowPosition = iota$/;"	c	package:fzf
+position	src/options.go	/^	position windowPosition$/;"	m	struct:fzf.previewOpts
+postProcessOptions	src/options.go	/^func postProcessOptions(opts *Options) {$/;"	f	package:fzf
+posx	src/tui/light.go	/^	posx     int$/;"	m	struct:tui.LightWindow
+posy	src/tui/light.go	/^	posy     int$/;"	m	struct:tui.LightWindow
+prefixLength	src/tokenizer.go	/^	prefixLength int32$/;"	m	struct:fzf.Token
+prepare	test/test_go.rb	/^  def prepare$/;"	f
+preserveSpace	src/terminal.go	/^	preserveSpace bool$/;"	m	struct:fzf.placeholderFlags
+pressed	src/terminal.go	/^	pressed    string$/;"	m	struct:fzf.Terminal
+prevDownTime	src/tui/light.go	/^	prevDownTime  time.Time$/;"	m	struct:tui.LightRenderer
+prevDownTime	src/tui/tui.go	/^	prevDownTime time.Time$/;"	m	struct:tui.FullscreenRenderer
+prevLines	src/terminal.go	/^	prevLines  []itemLine$/;"	m	struct:fzf.Terminal
+preview	src/terminal.go	/^	preview    previewOpts$/;"	m	struct:fzf.Terminal
+previewBox	src/terminal.go	/^	previewBox *util.EventBox$/;"	m	struct:fzf.Terminal
+previewOpts	src/options.go	/^type previewOpts struct {$/;"	s	package:fzf
+previewer	src/terminal.go	/^	previewer  previewer$/;"	m	struct:fzf.Terminal
+previewer	src/terminal.go	/^type previewer struct {$/;"	s	package:fzf
+previous	src/history.go	/^func (h *History) previous() string {$/;"	f	unknown:fzf.History
+printAll	src/terminal.go	/^func (t *Terminal) printAll() {$/;"	f	unknown:fzf.Terminal
+printHeader	src/terminal.go	/^func (t *Terminal) printHeader() {$/;"	f	unknown:fzf.Terminal
+printHighlighted	src/terminal.go	/^func (t *Terminal) printHighlighted(result Result, attr tui.Attr, col1 tui.ColorPair, col2 tui.C/;"	f	unknown:fzf.Terminal
+printInfo	src/terminal.go	/^func (t *Terminal) printInfo() {$/;"	f	unknown:fzf.Terminal
+printItem	src/terminal.go	/^func (t *Terminal) printItem(result Result, line int, i int, current bool) {$/;"	f	unknown:fzf.Terminal
+printList	src/terminal.go	/^func (t *Terminal) printList() {$/;"	f	unknown:fzf.Terminal
+printPreview	src/terminal.go	/^func (t *Terminal) printPreview() {$/;"	f	unknown:fzf.Terminal
+printPrompt	src/terminal.go	/^func (t *Terminal) printPrompt() {$/;"	f	unknown:fzf.Terminal
+printQuery	src/terminal.go	/^	printQuery bool$/;"	m	struct:fzf.Terminal
+printString	src/tui/tcell.go	/^func (w *TcellWindow) printString(text string, pair ColorPair, a Attr) {$/;"	f	unknown:tui.TcellWindow
+printer	src/terminal.go	/^	printer    func(string)$/;"	m	struct:fzf.Terminal
+procFun	src/pattern.go	/^	procFun       map[termType]algo.Algo$/;"	m	struct:fzf.Pattern
+processTabs	src/terminal.go	/^func (t *Terminal) processTabs(runes []rune, prefixWidth int) (string, int) {$/;"	f	unknown:fzf.Terminal
+progress	src/terminal.go	/^	progress   int$/;"	m	struct:fzf.Terminal
+progressMinDuration	src/constants.go	/^	progressMinDuration     = 200 * time.Millisecond$/;"	c	package:fzf
+prompt	src/terminal.go	/^	prompt     string$/;"	m	struct:fzf.Terminal
+promptLen	src/terminal.go	/^	promptLen  int$/;"	m	struct:fzf.Terminal
+push	src/chunklist.go	/^func (c *Chunk) push(trans ItemBuilder, data []byte) bool {$/;"	f	unknown:fzf.Chunk
+pusher	src/reader.go	/^	pusher   func([]byte) bool$/;"	m	struct:fzf.Reader
+pwindow	src/terminal.go	/^	pwindow    tui.Window$/;"	m	struct:fzf.Terminal
+queryCache	src/cache.go	/^type queryCache map[string][]Result$/;"	t	package:fzf
+queryCacheMax	src/constants.go	/^	queryCacheMax int = chunkSize \/ 5$/;"	c	package:fzf
+queryLen	src/terminal.go	/^	queryLen int$/;"	m	struct:fzf.itemLine
+queued	src/tui/light.go	/^	queued        string$/;"	m	struct:tui.LightRenderer
+quoteEntry	src/terminal.go	/^func quoteEntry(entry string) string {$/;"	f	package:fzf
+quoteEntryCmd	src/terminal.go	/^func quoteEntryCmd(entry string) string {$/;"	f	package:fzf
+randResult	src/merger_test.go	/^func randResult() Result {$/;"	f	package:fzf
+rangeEllipsis	src/tokenizer.go	/^const rangeEllipsis = 0$/;"	c	package:fzf
+readFromCommand	src/reader.go	/^func (r *Reader) readFromCommand(shell string, cmd string) bool {$/;"	f	unknown:fzf.Reader
+readFromStdin	src/reader.go	/^func (r *Reader) readFromStdin() bool {$/;"	f	unknown:fzf.Reader
+readerBufferSize	src/constants.go	/^	readerBufferSize       = 64 * 1024$/;"	c	package:fzf
+readerPollIntervalMax	src/constants.go	/^	readerPollIntervalMax  = 50 * time.Millisecond$/;"	c	package:fzf
+readerPollIntervalMin	src/constants.go	/^	readerPollIntervalMin  = 10 * time.Millisecond$/;"	c	package:fzf
+readerPollIntervalStep	src/constants.go	/^	readerPollIntervalStep = 5 * time.Millisecond$/;"	c	package:fzf
+reading	src/terminal.go	/^	reading    bool$/;"	m	struct:fzf.Terminal
+readonce	test/test_go.rb	/^  def readonce$/;"	f	class:TestBase
+redraw	src/terminal.go	/^func (t *Terminal) redraw() {$/;"	f	unknown:fzf.Terminal
+refresh	src/terminal.go	/^func (t *Terminal) refresh() {$/;"	f	unknown:fzf.Terminal
+regex	src/tokenizer.go	/^	regex *regexp.Regexp$/;"	m	struct:fzf.Delimiter
+release	Makefile	/^release: target\/$(BINARY32) target\/$(BINARY64) target\/$(BINARYARM5) target\/$(BINARYARM6) tar/;"	t
+release	Makefile	/^release: target\/$(BINARY32) target\/$(BINARY64)$/;"	t
+release-all	Makefile	/^release-all: clean test$/;"	t
+remove	uninstall	/^remove() {$/;"	f
+remove_line	uninstall	/^remove_line() {$/;"	f
+renderer	src/tui/light.go	/^	renderer *LightRenderer$/;"	m	struct:tui.LightWindow
+repeat	src/tui/light.go	/^func repeat(s string, times int) string {$/;"	f	package:tui
+replacePlaceholder	src/terminal.go	/^func replacePlaceholder(template string, stripAnsi bool, delimiter Delimiter, forcePlus bool, qu/;"	f	package:fzf
+reqBox	src/matcher.go	/^	reqBox         *util.EventBox$/;"	m	struct:fzf.Matcher
+reqBox	src/terminal.go	/^	reqBox     *util.EventBox$/;"	m	struct:fzf.Terminal
+reqClose	src/terminal.go	/^	reqClose$/;"	c	package:fzf
+reqHeader	src/terminal.go	/^	reqHeader$/;"	c	package:fzf
+reqInfo	src/terminal.go	/^	reqInfo$/;"	c	package:fzf
+reqJump	src/terminal.go	/^	reqJump$/;"	c	package:fzf
+reqList	src/terminal.go	/^	reqList$/;"	c	package:fzf
+reqPreviewDisplay	src/terminal.go	/^	reqPreviewDisplay$/;"	c	package:fzf
+reqPreviewEnqueue	src/terminal.go	/^	reqPreviewEnqueue$/;"	c	package:fzf
+reqPreviewRefresh	src/terminal.go	/^	reqPreviewRefresh$/;"	c	package:fzf
+reqPrintQuery	src/terminal.go	/^	reqPrintQuery$/;"	c	package:fzf
+reqPrompt	src/terminal.go	/^	reqPrompt util.EventType = iota$/;"	c	package:fzf
+reqQuit	src/terminal.go	/^	reqQuit$/;"	c	package:fzf
+reqRedraw	src/terminal.go	/^	reqRedraw$/;"	c	package:fzf
+reqRefresh	src/terminal.go	/^	reqRefresh$/;"	c	package:fzf
+reqReinit	src/terminal.go	/^	reqReinit$/;"	c	package:fzf
+reqReset	src/matcher.go	/^	reqReset$/;"	c	package:fzf
+reqRetry	src/matcher.go	/^	reqRetry util.EventType = iota$/;"	c	package:fzf
+resizeWindows	src/terminal.go	/^func (t *Terminal) resizeWindows() {$/;"	f	unknown:fzf.Terminal
+result	src/terminal.go	/^	result   Result$/;"	m	struct:fzf.itemLine
+retries	test/test_go.rb	/^  def retries(times = 3)$/;"	f	module:TestShell
+reverse	src/terminal.go	/^	reverse    bool$/;"	m	struct:fzf.Terminal
+reverseStringArray	src/terminal.go	/^func reverseStringArray(input []string) []string {$/;"	f	package:fzf
+revision	main.go	/^var revision string$/;"	v	package:main
+rmcup	src/tui/light.go	/^func (r *LightRenderer) rmcup() {$/;"	f	unknown:tui.LightRenderer
+rubout	src/terminal.go	/^func (t *Terminal) rubout(pattern string) {$/;"	f	unknown:fzf.Terminal
+s:base_dir	plugin/fzf.vim	/^  let s:base_dir = expand('<sfile>:h:h')$/;"	v
+s:calc_size	plugin/fzf.vim	/^function! s:calc_size(max, val, dict)$/;"	f
+s:callback	plugin/fzf.vim	/^function! s:callback(dict, lines) abort$/;"	f
+s:cmd	plugin/fzf.vim	/^function! s:cmd(bang, ...) abort$/;"	f
+s:collect	plugin/fzf.vim	/^function! s:collect(temps) abort$/;"	f
+s:common_sink	plugin/fzf.vim	/^function! s:common_sink(action, lines) abort$/;"	f
+s:cpo_save	plugin/fzf.vim	/^let s:cpo_save = &cpo$/;"	v
+s:default_action	plugin/fzf.vim	/^let s:default_action = {$/;"	v
+s:default_layout	plugin/fzf.vim	/^let s:default_layout = { 'down': '~40%' }$/;"	v
+s:defaults	plugin/fzf.vim	/^function! s:defaults()$/;"	f
+s:dopopd	plugin/fzf.vim	/^function! s:dopopd()$/;"	f
+s:error	plugin/fzf.vim	/^function! s:error(msg)$/;"	f
+s:escape	plugin/fzf.vim	/^function! s:escape(path)$/;"	f
+s:evaluate_opts	plugin/fzf.vim	/^function! s:evaluate_opts(options)$/;"	f
+s:execute	plugin/fzf.vim	/^function! s:execute(dict, command, use_height, temps) abort$/;"	f
+s:execute_term	plugin/fzf.vim	/^function! s:execute_term(dict, command, temps) abort$/;"	f
+s:execute_tmux	plugin/fzf.vim	/^function! s:execute_tmux(dict, command, temps) abort$/;"	f
+s:exit_handler	plugin/fzf.vim	/^function! s:exit_handler(code, command, ...)$/;"	f
+s:fzf_call	plugin/fzf.vim	/^  function! s:fzf_call(fn, ...)$/;"	f
+s:fzf_exec	plugin/fzf.vim	/^function! s:fzf_exec()$/;"	f
+s:fzf_expand	plugin/fzf.vim	/^function! s:fzf_expand(fmt)$/;"	f
+s:fzf_fnamemodify	plugin/fzf.vim	/^function! s:fzf_fnamemodify(fname, mods)$/;"	f
+s:fzf_getcwd	plugin/fzf.vim	/^function! s:fzf_getcwd()$/;"	f
+s:fzf_go	plugin/fzf.vim	/^let s:fzf_go = s:base_dir.'\/bin\/fzf'$/;"	v
+s:fzf_tempname	plugin/fzf.vim	/^function! s:fzf_tempname()$/;"	f
+s:fzf_tmux	plugin/fzf.vim	/^function! s:fzf_tmux(dict)$/;"	f
+s:fzf_tmux	plugin/fzf.vim	/^let s:fzf_tmux = s:base_dir.'\/bin\/fzf-tmux'$/;"	v
+s:get_color	plugin/fzf.vim	/^function! s:get_color(attr, ...)$/;"	f
+s:getpos	plugin/fzf.vim	/^function! s:getpos()$/;"	f
+s:has_any	plugin/fzf.vim	/^function! s:has_any(dict, keys)$/;"	f
+s:install	plugin/fzf.vim	/^let s:install = s:base_dir.'\/install'$/;"	v
+s:installed	plugin/fzf.vim	/^let s:installed = 0$/;"	v
+s:is_win	plugin/fzf.vim	/^let s:is_win = has('win32') || has('win64')$/;"	v
+s:launcher	plugin/fzf.vim	/^  let s:launcher = '%s'$/;"	v
+s:launcher	plugin/fzf.vim	/^  let s:launcher = function('s:xterm_launcher')$/;"	v
+s:layout_keys	plugin/fzf.vim	/^let s:layout_keys = ['window', 'up', 'down', 'left', 'right']$/;"	v
+s:open	plugin/fzf.vim	/^function! s:open(cmd, target)$/;"	f
+s:present	plugin/fzf.vim	/^function! s:present(dict, ...)$/;"	f
+s:pushd	plugin/fzf.vim	/^function! s:pushd(dict)$/;"	f
+s:shellesc_cmd	plugin/fzf.vim	/^function! s:shellesc_cmd(arg)$/;"	f
+s:shortpath	plugin/fzf.vim	/^function! s:shortpath()$/;"	f
+s:split	plugin/fzf.vim	/^function! s:split(dict)$/;"	f
+s:splittable	plugin/fzf.vim	/^function! s:splittable(dict)$/;"	f
+s:term_marker	plugin/fzf.vim	/^  let s:term_marker = ";#FZF"$/;"	v
+s:term_marker	plugin/fzf.vim	/^  let s:term_marker = '&::FZF'$/;"	v
+s:tmux_enabled	plugin/fzf.vim	/^function! s:tmux_enabled()$/;"	f
+s:upgrade	plugin/fzf.vim	/^function! s:upgrade(dict)$/;"	f
+s:use_sh	plugin/fzf.vim	/^function! s:use_sh()$/;"	f
+s:validate_layout	plugin/fzf.vim	/^function! s:validate_layout(layout)$/;"	f
+s:warn	plugin/fzf.vim	/^function! s:warn(msg)$/;"	f
+s:wrap_cmds	plugin/fzf.vim	/^  function! s:wrap_cmds(cmds)$/;"	f
+s:xterm_launcher	plugin/fzf.vim	/^function! s:xterm_launcher()$/;"	f
+scan	src/matcher.go	/^func (m *Matcher) scan(request MatchRequest) (*Merger, bool) {$/;"	f	unknown:fzf.Matcher
+scoreGapExtention	src/algo/algo.go	/^	scoreGapExtention = -1$/;"	c	package:algo
+scoreGapStart	src/algo/algo.go	/^	scoreGapStart     = -3$/;"	c	package:algo
+scoreMatch	src/algo/algo.go	/^	scoreMatch        = 16$/;"	c	package:algo
+select git branches in horizontal split below (15 lines)	README.md	/^# select git branches in horizontal split below (15 lines)$/;"	c
+select multiple words in vertical split on the left (20% of screen width)	README.md	/^# select multiple words in vertical split on the left (20% of screen width)$/;"	c
+selectItem	src/terminal.go	/^func (t *Terminal) selectItem(item *Item) {$/;"	f	unknown:fzf.Terminal
+select_count	test/test_go.rb	/^          def select_count$/;"	f	method:until
+selected	src/terminal.go	/^	selected   map[int32]selectedItem$/;"	m	struct:fzf.Terminal
+selected	src/terminal.go	/^	selected bool$/;"	m	struct:fzf.itemLine
+selectedItem	src/terminal.go	/^type selectedItem struct {$/;"	s	package:fzf
+send_keys	test/test_go.rb	/^  def send_keys(*args)$/;"	f
+setBg	src/tui/light.go	/^func (w *LightWindow) setBg() {$/;"	f	unknown:tui.LightWindow
+set_var	test/test_go.rb	/^  def set_var(name, val)$/;"	f
+set_var	test/test_go.rb	/^  def set_var(name, val)$/;"	f	module:TestShell
+setup	test/test_go.rb	/^  def setup$/;"	f
+setup	test/test_go.rb	/^  def setup$/;"	f	class:TestBash
+setup	test/test_go.rb	/^  def setup$/;"	f	class:TestGoFZF
+setup	test/test_go.rb	/^  def setup$/;"	f	class:TestZsh
+setup	test/test_go.rb	/^  def setup$/;"	f	module:TestShell
+size	src/options.go	/^	size     sizeSpec$/;"	m	struct:fzf.previewOpts
+size	src/options.go	/^	size    float64$/;"	m	struct:fzf.sizeSpec
+sizeSpec	src/options.go	/^type sizeSpec struct {$/;"	s	package:fzf
+slab	src/matcher.go	/^	slab           []*util.Slab$/;"	m	struct:fzf.Matcher
+slab	src/pattern_test.go	/^var slab *util.Slab$/;"	v	package:fzf
+slab	src/terminal.go	/^	slab       *util.Slab$/;"	m	struct:fzf.Terminal
+slab16Size	src/constants.go	/^	slab16Size int = 100 * 1024 \/\/ 200KB * 32 = 12.8MB$/;"	c	package:fzf
+slab32Size	src/constants.go	/^	slab32Size int = 2048       \/\/ 8KB * 32 = 256KB$/;"	c	package:fzf
+slice	src/util/chars.go	/^	slice           []byte \/\/ or []rune$/;"	m	struct:util.Chars
+sliceChunks	src/matcher.go	/^func (m *Matcher) sliceChunks(chunks []*Chunk) [][]*Chunk {$/;"	f	unknown:fzf.Matcher
+smcup	src/tui/light.go	/^func (r *LightRenderer) smcup() {$/;"	f	unknown:tui.LightRenderer
+sort	src/matcher.go	/^	sort           bool$/;"	m	struct:fzf.Matcher
+sort	src/matcher.go	/^	sort    bool$/;"	m	struct:fzf.MatchRequest
+sort	src/terminal.go	/^	sort       bool$/;"	m	struct:fzf.Terminal
+sortCriteria	src/result.go	/^var sortCriteria []criterion$/;"	v	package:fzf
+sortSelected	src/terminal.go	/^func (t *Terminal) sortSelected() []selectedItem {$/;"	f	unknown:fzf.Terminal
+sorted	src/merger.go	/^	sorted  bool$/;"	m	struct:fzf.Merger
+spinnerDuration	src/constants.go	/^	spinnerDuration = 200 * time.Millisecond$/;"	c	package:fzf
+splitNth	src/options.go	/^func splitNth(str string) []Range {$/;"	f	package:fzf
+startChan	src/terminal.go	/^	startChan  chan bool$/;"	m	struct:fzf.Terminal
+startEventPoller	src/reader.go	/^func (r *Reader) startEventPoller() {$/;"	f	unknown:fzf.Reader
+start_with?	test/test_go.rb	/^  def start_with?(_str)$/;"	f	class:NilClass
+state	src/util/atomicbool.go	/^	state bool$/;"	m	struct:util.AtomicBool
+stderr	src/tui/light.go	/^func (r *LightRenderer) stderr(str string) {$/;"	f	unknown:tui.LightRenderer
+stderr	src/tui/light.go	/^func (w *LightWindow) stderr(str string) {$/;"	f	unknown:tui.LightWindow
+stderrInternal	src/tui/light.go	/^func (r *LightRenderer) stderrInternal(str string, allowNLCR bool) {$/;"	f	unknown:tui.LightRenderer
+stderrInternal	src/tui/light.go	/^func (w *LightWindow) stderrInternal(str string, allowNLCR bool) {$/;"	f	unknown:tui.LightWindow
+str	src/tokenizer.go	/^	str   *string$/;"	m	struct:fzf.Delimiter
+strLines	src/options.go	/^func strLines(str string) []string {$/;"	f	package:fzf
+strong	src/terminal.go	/^	strong     tui.Attr$/;"	m	struct:fzf.Terminal
+style	src/tui/tcell.go	/^func (p ColorPair) style() tcell.Style {$/;"	f	unknown:tui.ColorPair
+success	src/terminal.go	/^	success    bool$/;"	m	struct:fzf.Terminal
+suppress	src/terminal.go	/^	suppress   bool$/;"	m	struct:fzf.Terminal
+t	src/terminal.go	/^	t actionType$/;"	m	struct:fzf.action
+tabstop	src/terminal.go	/^	tabstop    int$/;"	m	struct:fzf.Terminal
+tabstop	src/tui/light.go	/^	tabstop       int$/;"	m	struct:tui.LightRenderer
+tabstop	src/tui/light.go	/^	tabstop  int$/;"	m	struct:tui.LightWindow
+tac	src/matcher.go	/^	tac            bool$/;"	m	struct:fzf.Matcher
+tac	src/merger.go	/^	tac     bool$/;"	m	struct:fzf.Merger
+target	Makefile	/^target:$/;"	t
+target/$(BINARY32)	Makefile	/^target\/$(BINARY32): $(SOURCES) vendor$/;"	t
+target/$(BINARY64)	Makefile	/^target\/$(BINARY64): $(SOURCES) vendor$/;"	t
+target/$(BINARYARM5)	Makefile	/^target\/$(BINARYARM5): $(SOURCES) vendor$/;"	t
+target/$(BINARYARM6)	Makefile	/^target\/$(BINARYARM6): $(SOURCES) vendor$/;"	t
+target/$(BINARYARM7)	Makefile	/^target\/$(BINARYARM7): $(SOURCES) vendor$/;"	t
+target/$(BINARYARM8)	Makefile	/^target\/$(BINARYARM8): $(SOURCES) vendor$/;"	t
+teardown	test/test_go.rb	/^  def teardown$/;"	f	class:TestGoFZF
+teardown	test/test_go.rb	/^  def teardown$/;"	f	module:TestShell
+tempname	test/test_go.rb	/^  def tempname$/;"	f	class:TestBase
+term	src/pattern.go	/^type term struct {$/;"	s	package:fzf
+termEqual	src/pattern.go	/^	termEqual$/;"	c	package:fzf
+termExact	src/pattern.go	/^	termExact$/;"	c	package:fzf
+termFuzzy	src/pattern.go	/^	termFuzzy termType = iota$/;"	c	package:fzf
+termPrefix	src/pattern.go	/^	termPrefix$/;"	c	package:fzf
+termSet	src/pattern.go	/^type termSet []term$/;"	t	package:fzf
+termSets	src/pattern.go	/^	termSets      []termSet$/;"	m	struct:fzf.Pattern
+termSuffix	src/pattern.go	/^	termSuffix$/;"	c	package:fzf
+termType	src/pattern.go	/^type termType int$/;"	t	package:fzf
+test	Makefile	/^test: $(SOURCES) vendor$/;"	t
+test_accept_non_empty	test/test_go.rb	/^  def test_accept_non_empty$/;"	f	class:TestGoFZF
+test_accept_non_empty_with_empty_list	test/test_go.rb	/^  def test_accept_non_empty_with_empty_list$/;"	f	class:TestGoFZF
+test_accept_non_empty_with_multi_selection	test/test_go.rb	/^  def test_accept_non_empty_with_multi_selection$/;"	f	class:TestGoFZF
+test_alt_c	test/test_go.rb	/^  def test_alt_c$/;"	f	module:TestShell
+test_alt_c_command	test/test_go.rb	/^  def test_alt_c_command$/;"	f	module:TestShell
+test_bind	test/test_go.rb	/^  def test_bind$/;"	f	class:TestGoFZF
+test_bind_print_query	test/test_go.rb	/^  def test_bind_print_query$/;"	f	class:TestGoFZF
+test_bind_replace_query	test/test_go.rb	/^  def test_bind_replace_query$/;"	f	class:TestGoFZF
+test_cancel	test/test_go.rb	/^  def test_cancel$/;"	f	class:TestGoFZF
+test_change_top	test/test_go.rb	/^  def test_change_top$/;"	f	class:TestGoFZF
+test_ctrl_r	test/test_go.rb	/^  def test_ctrl_r$/;"	f	module:TestShell
+test_ctrl_t	test/test_go.rb	/^  def test_ctrl_t$/;"	f	module:TestShell
+test_ctrl_t_unicode	test/test_go.rb	/^  def test_ctrl_t_unicode$/;"	f	module:TestShell
+test_custom_completion	test/test_go.rb	/^  def test_custom_completion$/;"	f	module:CompletionTest
+test_cycle	test/test_go.rb	/^  def test_cycle$/;"	f	class:TestGoFZF
+test_default_extended	test/test_go.rb	/^  def test_default_extended$/;"	f	class:TestGoFZF
+test_dir_completion	test/test_go.rb	/^  def test_dir_completion$/;"	f	module:CompletionTest
+test_dynamic_completion_loader	test/test_go.rb	/^  def test_dynamic_completion_loader$/;"	f	class:TestBash
+test_escaped_meta_characters	test/test_go.rb	/^  def test_escaped_meta_characters$/;"	f	class:TestGoFZF
+test_exact	test/test_go.rb	/^  def test_exact$/;"	f	class:TestGoFZF
+test_execute	test/test_go.rb	/^  def test_execute$/;"	f	class:TestGoFZF
+test_execute_multi	test/test_go.rb	/^  def test_execute_multi$/;"	f	class:TestGoFZF
+test_execute_plus_flag	test/test_go.rb	/^  def test_execute_plus_flag$/;"	f	class:TestGoFZF
+test_execute_shell	test/test_go.rb	/^  def test_execute_shell$/;"	f	class:TestGoFZF
+test_exit_0	test/test_go.rb	/^  def test_exit_0$/;"	f	class:TestGoFZF
+test_exit_0_exit_code	test/test_go.rb	/^  def test_exit_0_exit_code$/;"	f	class:TestGoFZF
+test_exitstatus_empty	test/test_go.rb	/^  def test_exitstatus_empty$/;"	f	class:TestGoFZF
+test_expect	test/test_go.rb	/^  def test_expect$/;"	f	class:TestGoFZF
+test_expect_print_query	test/test_go.rb	/^  def test_expect_print_query$/;"	f	class:TestGoFZF
+test_expect_print_query_select_1	test/test_go.rb	/^  def test_expect_print_query_select_1$/;"	f	class:TestGoFZF
+test_expect_printable_character_print_query	test/test_go.rb	/^  def test_expect_printable_character_print_query$/;"	f	class:TestGoFZF
+test_file_completion	test/test_go.rb	/^  def test_file_completion$/;"	f	module:CompletionTest
+test_file_completion_root	test/test_go.rb	/^  def test_file_completion_root$/;"	f	module:CompletionTest
+test_file_completion_unicode	test/test_go.rb	/^  def test_file_completion_unicode$/;"	f	module:CompletionTest
+test_file_word	test/test_go.rb	/^  def test_file_word$/;"	f	class:TestGoFZF
+test_filter_exitstatus	test/test_go.rb	/^  def test_filter_exitstatus$/;"	f	class:TestGoFZF
+test_fzf_default_command	test/test_go.rb	/^  def test_fzf_default_command$/;"	f	class:TestGoFZF
+test_fzf_default_command_failure	test/test_go.rb	/^  def test_fzf_default_command_failure$/;"	f	class:TestGoFZF
+test_header	test/test_go.rb	/^  def test_header$/;"	f	class:TestGoFZF
+test_header_and_header_lines	test/test_go.rb	/^  def test_header_and_header_lines$/;"	f	class:TestGoFZF
+test_header_and_header_lines_reverse	test/test_go.rb	/^  def test_header_and_header_lines_reverse$/;"	f	class:TestGoFZF
+test_header_lines	test/test_go.rb	/^  def test_header_lines$/;"	f	class:TestGoFZF
+test_header_lines_overflow	test/test_go.rb	/^  def test_header_lines_overflow$/;"	f	class:TestGoFZF
+test_header_lines_reverse	test/test_go.rb	/^  def test_header_lines_reverse$/;"	f	class:TestGoFZF
+test_header_lines_with_nth	test/test_go.rb	/^  def test_header_lines_with_nth$/;"	f	class:TestGoFZF
+test_header_reverse	test/test_go.rb	/^  def test_header_reverse$/;"	f	class:TestGoFZF
+test_history	test/test_go.rb	/^  def test_history$/;"	f	class:TestGoFZF
+test_hscroll_off	test/test_go.rb	/^  def test_hscroll_off$/;"	f	class:TestGoFZF
+test_invalid_cache	test/test_go.rb	/^  def test_invalid_cache$/;"	f	class:TestGoFZF
+test_invalid_cache_query_type	test/test_go.rb	/^  def test_invalid_cache_query_type$/;"	f	class:TestGoFZF
+test_invalid_option	test/test_go.rb	/^  def test_invalid_option$/;"	f	class:TestGoFZF
+test_jump	test/test_go.rb	/^  def test_jump$/;"	f	class:TestGoFZF
+test_jump_accept	test/test_go.rb	/^  def test_jump_accept$/;"	f	class:TestGoFZF
+test_key_bindings	test/test_go.rb	/^  def test_key_bindings$/;"	f	class:TestGoFZF
+test_long_line	test/test_go.rb	/^  def test_long_line$/;"	f	class:TestGoFZF
+test_margin	test/test_go.rb	/^  def test_margin$/;"	f	class:TestGoFZF
+test_margin_reverse	test/test_go.rb	/^  def test_margin_reverse$/;"	f	class:TestGoFZF
+test_multi_order	test/test_go.rb	/^  def test_multi_order$/;"	f	class:TestGoFZF
+test_no_clear	test/test_go.rb	/^  def test_no_clear$/;"	f	class:TestGoFZF
+test_or_operator	test/test_go.rb	/^  def test_or_operator$/;"	f	class:TestGoFZF
+test_partial_caching	test/test_go.rb	/^  def test_partial_caching$/;"	f	class:TestGoFZF
+test_preview	test/test_go.rb	/^  def test_preview$/;"	f	class:TestGoFZF
+test_preview_hidden	test/test_go.rb	/^  def test_preview_hidden$/;"	f	class:TestGoFZF
+test_preview_size_0	test/test_go.rb	/^  def test_preview_size_0$/;"	f	class:TestGoFZF
+test_preview_update_on_select	test/test_go.rb	/^  def test_preview_update_on_select$/;"	f	class:TestGoFZF
+test_process_completion	test/test_go.rb	/^  def test_process_completion$/;"	f	module:CompletionTest
+test_query_unicode	test/test_go.rb	/^  def test_query_unicode$/;"	f	class:TestGoFZF
+test_read0	test/test_go.rb	/^  def test_read0$/;"	f	class:TestGoFZF
+test_scroll	test/test_go.rb	/^  def test_scroll$/;"	f	class:TestGoFZF
+test_select_1	test/test_go.rb	/^  def test_select_1$/;"	f	class:TestGoFZF
+test_select_1_exit_0_fail	test/test_go.rb	/^  def test_select_1_exit_0_fail$/;"	f	class:TestGoFZF
+test_select_all_deselect_all_toggle_all	test/test_go.rb	/^  def test_select_all_deselect_all_toggle_all$/;"	f	class:TestGoFZF
+test_smart_case_for_each_term	test/test_go.rb	/^  def test_smart_case_for_each_term$/;"	f	class:TestGoFZF
+test_sync	test/test_go.rb	/^  def test_sync$/;"	f	class:TestGoFZF
+test_tabstop	test/test_go.rb	/^  def test_tabstop$/;"	f	class:TestGoFZF
+test_tac	test/test_go.rb	/^  def test_tac$/;"	f	class:TestGoFZF
+test_tac_nosort	test/test_go.rb	/^  def test_tac_nosort$/;"	f	class:TestGoFZF
+test_tac_sort	test/test_go.rb	/^  def test_tac_sort$/;"	f	class:TestGoFZF
+test_tiebreak	test/test_go.rb	/^  def test_tiebreak$/;"	f	class:TestGoFZF
+test_tiebreak_begin_algo_v2	test/test_go.rb	/^  def test_tiebreak_begin_algo_v2$/;"	f	class:TestGoFZF
+test_tiebreak_end	test/test_go.rb	/^  def test_tiebreak_end$/;"	f	class:TestGoFZF
+test_tiebreak_index_begin	test/test_go.rb	/^  def test_tiebreak_index_begin$/;"	f	class:TestGoFZF
+test_tiebreak_length_with_nth	test/test_go.rb	/^  def test_tiebreak_length_with_nth$/;"	f	class:TestGoFZF
+test_toggle_sort	test/test_go.rb	/^  def test_toggle_sort$/;"	f	class:TestGoFZF
+test_unicode_case	test/test_go.rb	/^  def test_unicode_case$/;"	f	class:TestGoFZF
+test_unset_completion	test/test_go.rb	/^  def test_unset_completion$/;"	f	module:CompletionTest
+test_vanilla	test/test_go.rb	/^  def test_vanilla$/;"	f	class:TestGoFZF
+test_with_nth	test/test_go.rb	/^  def test_with_nth$/;"	f	class:TestGoFZF
+test_with_nth_ansi	test/test_go.rb	/^  def test_with_nth_ansi$/;"	f	class:TestGoFZF
+test_with_nth_basic	test/test_go.rb	/^  def test_with_nth_basic$/;"	f	class:TestGoFZF
+test_with_nth_no_ansi	test/test_go.rb	/^  def test_with_nth_no_ansi$/;"	f	class:TestGoFZF
+text	src/item.go	/^	text        util.Chars    \/\/ 32 = 24 + 1 + 1 + 2 + 4$/;"	m	struct:fzf.Item
+text	src/pattern.go	/^	text          []rune$/;"	m	struct:fzf.Pattern
+text	src/pattern.go	/^	text          []rune$/;"	m	struct:fzf.term
+text	src/terminal.go	/^	text    string$/;"	m	struct:fzf.previewer
+text	src/tokenizer.go	/^	text         *util.Chars$/;"	m	struct:fzf.Token
+text	src/tui/light.go	/^	text         string$/;"	m	struct:tui.wrappedLine
+theme	src/terminal.go	/^	theme      *tui.ColorTheme$/;"	m	struct:fzf.Terminal
+theme	src/tui/light.go	/^	theme         *ColorTheme$/;"	m	struct:tui.LightRenderer
+theme	src/tui/tui.go	/^	theme        *ColorTheme$/;"	m	struct:tui.FullscreenRenderer
+toActions	src/terminal.go	/^func toActions(types ...actionType) []action {$/;"	f	package:fzf
+toggleItem	src/terminal.go	/^func (t *Terminal) toggleItem(item *Item) {$/;"	f	unknown:fzf.Terminal
+toggleSort	src/terminal.go	/^	toggleSort bool$/;"	m	struct:fzf.Terminal
+top	src/tui/light.go	/^	top      int$/;"	m	struct:tui.LightWindow
+top	src/tui/tcell.go	/^	top         int$/;"	m	struct:tui.TcellWindow
+trans	src/chunklist.go	/^	trans  ItemBuilder$/;"	m	struct:fzf.ChunkList
+transformInput	src/pattern.go	/^func (p *Pattern) transformInput(item *Item) []Token {$/;"	f	unknown:fzf.Pattern
+transformed	src/item.go	/^	transformed *[]Token      \/\/ 8$/;"	m	struct:fzf.Item
+trimLeft	src/terminal.go	/^func (t *Terminal) trimLeft(runes []rune, width int) ([]rune, int32) {$/;"	f	unknown:fzf.Terminal
+trimLength	src/util/chars.go	/^	trimLength      uint16$/;"	m	struct:util.Chars
+trimLengthKnown	src/util/chars.go	/^	trimLengthKnown bool$/;"	m	struct:util.Chars
+trimQuery	src/terminal.go	/^func trimQuery(query string) []rune {$/;"	f	package:fzf
+trimRight	src/terminal.go	/^func (t *Terminal) trimRight(runes []rune, width int) ([]rune, int) {$/;"	f	unknown:fzf.Terminal
+truncateQuery	src/terminal.go	/^func (t *Terminal) truncateQuery() {$/;"	f	unknown:fzf.Terminal
+trySkip	src/algo/algo.go	/^func trySkip(input *util.Chars, caseSensitive bool, b byte, from int) int {$/;"	f	package:algo
+try_curl	install	/^try_curl() {$/;"	f
+try_wget	install	/^try_wget() {$/;"	f
+ttyin	src/tui/light.go	/^	ttyin         *os.File$/;"	m	struct:tui.LightRenderer
+ttyname	src/tui/ttyname_unix.go	/^func ttyname() string {$/;"	f	package:tui
+ttyname	src/tui/ttyname_windows.go	/^func ttyname() string {$/;"	f	package:tui
+tui	src/terminal.go	/^	tui        tui.Renderer$/;"	m	struct:fzf.Terminal
+tui	src/tui/dummy.go	/^package tui$/;"	p
+tui	src/tui/light.go	/^package tui$/;"	p
+tui	src/tui/tcell.go	/^package tui$/;"	p
+tui	src/tui/ttyname_unix.go	/^package tui$/;"	p
+tui	src/tui/ttyname_windows.go	/^package tui$/;"	p
+tui	src/tui/tui.go	/^package tui$/;"	p
+tui	src/tui/tui_test.go	/^package tui$/;"	p
+typ	src/pattern.go	/^	typ           termType$/;"	m	struct:fzf.term
+unset_var	test/test_go.rb	/^  def unset_var(name)$/;"	f	module:TestShell
+unsets	test/test_go.rb	/^    def unsets$/;"	S	class:Shell
+until	test/test_go.rb	/^  def until(refresh = false, pane = 0)$/;"	f
+upOneLine	src/tui/light.go	/^	upOneLine     bool$/;"	m	struct:tui.LightRenderer
+updateTerminalSize	src/tui/light.go	/^func (r *LightRenderer) updateTerminalSize() {$/;"	f	unknown:tui.LightRenderer
+usage	src/options.go	/^const usage = `usage: fzf [options]$/;"	c	package:fzf
+usage: fzf-tmux [-u|-d [HEIGHT[%]]] [-l|-r [WIDTH[%]]] [--] [FZF OPTIONS]	README.md	/^# usage: fzf-tmux [-u|-d [HEIGHT[%]]] [-l|-r [WIDTH[%]]] [--] [FZF OPTIONS]$/;"	c
+util	src/util/atomicbool.go	/^package util$/;"	p
+util	src/util/atomicbool_test.go	/^package util$/;"	p
+util	src/util/chars.go	/^package util$/;"	p
+util	src/util/chars_test.go	/^package util$/;"	p
+util	src/util/eventbox.go	/^package util$/;"	p
+util	src/util/eventbox_test.go	/^package util$/;"	p
+util	src/util/slab.go	/^package util$/;"	p
+util	src/util/util.go	/^package util$/;"	p
+util	src/util/util_test.go	/^package util$/;"	p
+util	src/util/util_unix.go	/^package util$/;"	p
+util	src/util/util_windows.go	/^package util$/;"	p
+vendor	Makefile	/^vendor: $(GLIDE_YAML)$/;"	t
+version	src/constants.go	/^	version = "0.17.3"$/;"	c	package:fzf
+version	src/terminal.go	/^	version    int64$/;"	m	struct:fzf.Terminal
+vmove	src/terminal.go	/^func (t *Terminal) vmove(o int, allowCycle bool) {$/;"	f	unknown:fzf.Terminal
+vset	src/terminal.go	/^func (t *Terminal) vset(o int) bool {$/;"	f	unknown:fzf.Terminal
+wait	test/test_go.rb	/^def wait$/;"	f
+width	src/terminal.go	/^	width    int$/;"	m	struct:fzf.itemLine
+width	src/tui/light.go	/^	width         int$/;"	m	struct:tui.LightRenderer
+width	src/tui/light.go	/^	width    int$/;"	m	struct:tui.LightWindow
+width	src/tui/tcell.go	/^	width       int$/;"	m	struct:tui.TcellWindow
+window	src/terminal.go	/^	window     tui.Window$/;"	m	struct:fzf.Terminal
+windowPosition	src/options.go	/^type windowPosition int$/;"	t	package:fzf
+withIndex	src/result_test.go	/^func withIndex(i *Item, index int) *Item {$/;"	f	package:fzf
+withPrefixLengths	src/tokenizer.go	/^func withPrefixLengths(tokens []string, begin int) []Token {$/;"	f	package:fzf
+wordNext	src/terminal.go	/^	wordNext   string$/;"	m	struct:fzf.Terminal
+wordRubout	src/terminal.go	/^	wordRubout string$/;"	m	struct:fzf.Terminal
+wrap	src/options.go	/^	wrap     bool$/;"	m	struct:fzf.previewOpts
+wrapLine	src/tui/light.go	/^func wrapLine(input string, prefixLength int, max int, tabstop int) []wrappedLine {$/;"	f	package:tui
+wrappedLine	src/tui/light.go	/^type wrappedLine struct {$/;"	s	package:tui
+writelines	test/test_go.rb	/^  def writelines(path, lines)$/;"	f	class:TestBase
+x	src/tui/light.go	/^	x             int$/;"	m	struct:tui.LightRenderer
+y	src/tui/light.go	/^	y             int$/;"	m	struct:tui.LightRenderer
+yanked	src/terminal.go	/^	yanked     []rune$/;"	m	struct:fzf.Terminal
+yoffset	src/tui/light.go	/^	yoffset       int$/;"	m	struct:tui.LightRenderer
+zsh	test/test_go.rb	/^    def zsh$/;"	S	class:Shell
+{} is replaced to the single-quoted string of the focused line	README.md	/^# {} is replaced to the single-quoted string of the focused line$/;"	c

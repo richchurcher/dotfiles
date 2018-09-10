@@ -1,0 +1,81 @@
+general {
+        output_format = "i3bar"
+        colors = true
+        color_good = "#519F50"
+        color_degraded = "#B58900"
+        color_bad = "#DC322F"
+        interval = 5
+}
+
+order += "cpu_usage"
+order += "ipv6"
+order += "disk /"
+order += "disk /media"
+order += "disk /w"
+order += "ethernet _first_"
+order += "wireless _first_"
+order += "battery all"
+order += "tztime local"
+order += "tztime CA"
+order += "tztime CAN"
+
+cpu_usage {
+        format = " %usage" 
+        format_above_degraded_threshold = "%usage" 
+        format_above_threshold = "%usage" 
+}
+
+disk "/" {
+        format = "/: %percentage_used"
+        low_threshold = 10
+}
+
+disk "/media" {
+        format = "/media: %percentage_used"
+        low_threshold = 10
+}
+
+disk "/w" {
+        format = "/w: %percentage_used"
+        low_threshold = 10
+}
+
+ipv6 {
+        format_up = "%ipv6"
+        format_down = ""
+}
+
+ethernet _first_ {
+        format_up = "↑↓ %ip (%speed)"
+        format_down = "↑↓"
+}
+
+wireless _first_ {
+        format_up = " %ip (%quality at %essid)"
+        format_down = ""
+}
+
+battery all {
+        format = "%status %percentage"
+        integer_battery_capacity = true
+        low_threshold = 15
+        threshold_type = percentage
+        status_full = ""
+        status_bat = ""
+        status_chr = ""
+        status_unk = ""
+}
+
+tztime local {
+        format = "%Y-%m-%d %H:%M:%S"
+}
+
+tztime CA {
+        format = "CA %H:%M:%S"
+        timezone = "US/Pacific"
+}
+
+tztime CAN {
+        format = "CAN %H:%M:%S"
+        timezone = "Canada/Eastern"
+}
