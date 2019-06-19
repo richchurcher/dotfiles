@@ -77,5 +77,5 @@ tztime CA {
 
 tztime CAN {
         format = "CAN %H:%M:%S"
-        timezone = "Canada/Eastern"
+        timezone = "Canada/Central"
 }

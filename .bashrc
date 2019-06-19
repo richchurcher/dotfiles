@@ -10,7 +10,10 @@
 # GIT_PROMPT_THEME=Single_line_Solarized_Lamda
 source "${XDG_CONFIG_HOME}/bash-git-prompt/gitprompt.sh"
 
+set -o vi
+
 if [ $(tty) == "/dev/tty1" ]; then
   startx
   exit 0
 fi
+

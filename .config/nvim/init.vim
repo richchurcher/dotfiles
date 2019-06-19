@@ -1,5 +1,3 @@
-let g:ale_emit_conflict_warnings = 0
-
 " vim-markdown-composer
 function! BuildComposer(info)
   if a:info.status != 'unchanged' || a:info.force
@@ -16,6 +14,7 @@ call plug#begin('$XDG_DATA_HOME/nvim/plugged')
 " Always
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'edkolev/tmuxline.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'justinmk/vim-sneak'
 Plug 'justinmk/vim-dirvish'
@@ -24,25 +23,21 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'scrooloose/nerdcommenter'
+Plug 'junegunn/fzf', { 'dir': $XDG_CONFIG_HOME.'/fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-signify'
-Plug 'w0rp/ale'
-Plug 'neomake/neomake'
-Plug 'shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'sebastianmarkow/deoplete-rust'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
 Plug 'matze/vim-move'
 Plug 'ludovicchabant/vim-gutentags'
-Plug 'raghur/vim-ghost', { 'do': ':GhostInstall' }
-Plug 'rust-lang/rust.vim'
+Plug 'kassio/neoterm'
+Plug 'stefandtw/quickfix-reflector.vim'
+Plug 'neoclide/coc.nvim', { 'tag': '*', 'do': './install.sh' }
+Plug 'sheerun/vim-polyglot'
 
 " Useful at times
 " Plug 'guns/xterm-color-table.vim'
+" Plug 'raghur/vim-ghost', { 'do': ':GhostInstall' }
+" Plug 'wlangstroth/vim-racket', { 'for': ['racket', 'scheme'] }
 Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
-
-" In development
-" Plug '~/w/neocortex'
 
 call plug#end()
 
@@ -67,19 +62,19 @@ set scrolljump=5
 set scrolloff=3
 set nolist
 set clipboard+=unnamedplus
+set cursorline
+set updatetime=300
+set shortmess+=c
 
 " Formatting
 set background=dark
 filetype plugin indent on
 syntax on
-if filereadable(expand('$XDG_CONFIG_HOME/nvim/background'))
+if filereadable(expand($XDG_CONFIG_HOME).'/nvim/nvim_background')
   let base16colorspace=256
   set termguicolors
-  source $XDG_CONFIG_HOME/nvim/background
+  source $XDG_CONFIG_HOME/nvim/nvim_background
 endif
-let g:airline_powerline_fonts=1
-let g:solarized_base16=1
-let g:airline_theme='solarized'
 set nowrap
 set textwidth=100
 set wrapmargin=0
@@ -115,6 +110,7 @@ map <Leader>ff zR
 " Splits
 map <Leader>vs :vs<CR>
 map <leader>sp :sp<CR>
+set splitright
 
 " Move between windows
 nnoremap <C-h> <C-w>h
@@ -164,9 +160,6 @@ nnoremap <silent> <leader>dgm :diffget //3<CR>
 nnoremap <silent> <leader>ln :lnext<CR>
 nnoremap <silent> <leader>lp :lprevious<CR>
 
-" vim-go
-let g:go_fmt_command = "goimports"
-
 " vim-signify
 highlight clear SignColumn
 let g:signify_vcs_list               = [ 'git', 'hg' ]
@@ -177,68 +170,9 @@ let g:signify_sign_change            = 'Δ'
 let g:signify_sign_changedelete      = g:signify_sign_change
 
 " highlight lines in Sy and vimdiff etc.)
-
 highlight DiffAdd cterm=bold ctermbg=none ctermfg=34
 highlight DiffDelete cterm=bold ctermbg=none ctermfg=16
 highlight DiffChange cterm=bold ctermbg=none ctermfg=4
-
-" deoplete
-let g:deoplete#enable_at_startup = 1
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ deoplete#mappings#manual_complete()
-function! s:check_back_space() abort "{{{
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
-endfunction"}}}
-" Close the documentation window when completion is done
-autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
-" rust
-let g:deoplete#sources#rust#racer_binary = "/home/basie/.cargo/bin/racer"
-let g:deoplete#sources#rust#rust_source_path = "/home/basie/.config/rust/src/rust/"
-
-inoremap <expr><S-Tab>  pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! s:is_whitespace() "{{{
-  let col = col('.') - 1
-  return ! col || getline('.')[col - 1] =~? '\s'
-endfunction "}}}
-
-" javascript make/test
-highlight NeomakeErrorMsg ctermfg=1 ctermbg=18
-highlight NeomakeWarningMsg ctermfg=16 ctermbg=18
-let g:neomake_error_sign = {
-    \ 'text': '✖',
-    \ 'texthl': 'NeomakeErrorMsg'
-    \ }
-let g:neomake_warning_sign = {
-    \ 'text': '⚑',
-    \ 'texthl': 'NeomakeWarningMsg'
-    \ }
-let g:neomake_open_list = 2
-let g:neomake_javascript_jest_maker = {
-    \ 'exe': './node_modules/jest-cli/bin/jest.js',
-    \ 'args': [ '-c=./vim-jest.json', '--no-watchman' ],
-    \ 'errorformat':
-        \ '%f:%l:%c:%t:%m,' .
-        \ '%-G%.%#'
-    \ }
-let g:neomake_javascript_enabled_makers = ['jest']
-call neomake#configure#automake('w')
-
-" linting
-let g:ale_sign_error = '✖'
-let g:ale_sign_warning = '⚑'
-highlight ALEErrorSign ctermfg=1 ctermbg=18
-highlight ALEWarningSign ctermfg=16 ctermbg=18
-let g:ale_linters = {
-    \ 'javascript': ['eslint']
-    \ }
-let g:ale_fixers = {
-    \ 'javascript': ['eslint']
-    \ }
-let g:ale_fix_on_save = 1
 
 " nerdcommenter
 let g:NERDSpaceDelims = 1
@@ -258,16 +192,147 @@ if executable("rg")
     set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
     set grepformat=%f:%l:%c:%m,%f:%l:%m
 endif
+
+" FZF
+" Rg uses with_preview option (hit '?' to display)
+" Also, don't show results from tagfiles, .git, node_modules, lock files
 command! -bang -nargs=* Rg
-      \ call fzf#vim#grep(
-      \   'rg --column --line-number --no-heading --color=always --ignore-case '.shellescape(<q-args>), 1,
-      \   <bang>0 ? fzf#vim#with_preview('up:60%')
-      \           : fzf#vim#with_preview('right:50%:hidden', '?'),
-      \   <bang>0)
-nnoremap <leader>rg :Rg
+    \ call fzf#vim#grep(
+    \   'rg --column --line-number --no-heading --color=always --ignore-case --hidden --no-ignore --glob "!{.git,node_modules,tags,package-lock.json,yarn.lock}" '.shellescape(<q-args>), 1,
+    \   <bang>0 ? fzf#vim#with_preview('up:60%')
+    \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+    \   <bang>0)
+" Same, but search on word under cursor
+command! -bang -nargs=* Rr
+    \ call fzf#vim#grep(
+    \   'rg --column --line-number --no-heading --color=always --ignore-case --hidden --no-ignore --glob "!{.git,node_modules,tags,package-lock.json,yarn.lock}" '.shellescape(expand('<cword>')), 1,
+    \   <bang>0 ? fzf#vim#with_preview('up:60%')
+    \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+    \   <bang>0)
+" Git grep from FZF
+command! -bang -nargs=* GGrep
+    \ call fzf#vim#grep(
+    \   'git grep --line-number '.shellescape(<q-args>), 0,
+    \   { 'dir': systemlist('git rev-parse --show-toplevel')[0] }, <bang>0)
+" Files with preview
+command! -bang -nargs=? -complete=dir Files
+    \ call fzf#vim#files(
+    \   <q-args>,
+    \   fzf#vim#with_preview(),
+    \   <bang>0)
+nnoremap <leader>rg :Rg<space>
+nnoremap <leader>rr :Rr<CR>
 
 " markdown
 autocmd BufRead,BufNewFile *.md setlocal wrap linebreak tw=0
 
 " vim-gutentags
-let g:gutentags_ctags_exclude = ['node_modules', '.git'] 
+let g:gutentags_ctags_exclude = ['node_modules', '.git', 'package-lock.json', 'yarn.lock'] 
+
+" python
+let g:python_host_prog = expand($XDG_DATA_HOME).'/virtualenvs/nvimp2-sk9zInl9/bin/python'
+let g:python3_host_prog = expand($XDG_DATA_HOME).'/virtualenvs/nvimp3-VnFM7OAS/bin/python'
+
+" terminal
+noremap <leader>` :vertical Tnew<CR>
+tnoremap  <leader>` <C-\><C-N>
+let g:neoterm_autoinsert = 1
+
+" airline/tmuxline
+let g:airline_powerline_fonts=1
+let g:airline_theme='base16_vim'
+let g:airline_base16_monotone = 1
+let g:airline#extensions#tmuxline#enabled = 1
+let airline#extensions#tmuxline#snapshot_file = expand($XDG_CONFIG_HOME).'/tmux/tmux-status.conf'
+
+" coc.vim
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
+" Coc only does snippet and additional edit on confirm.
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" Use `[c` and `]c` to navigate diagnostics
+nmap <silent> [c <Plug>(coc-diagnostic-prev)
+nmap <silent> ]c <Plug>(coc-diagnostic-next)
+
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Use K to show documentation in preview window
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+" Highlight symbol under cursor on CursorHold
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Remap for rename current word
+nmap <leader>rn <Plug>(coc-rename)
+
+augroup mygroup
+  autocmd!
+  " Setup formatexpr specified filetype(s).
+  autocmd FileType typescript,typescript.tsx,json setl formatexpr=CocAction('formatSelected')
+  " Update signature help on jump placeholder
+  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+augroup end
+
+" Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
+
+" Remap for do codeAction of current line
+nmap <leader>ac  <Plug>(coc-codeaction)
+
+" Using CocList
+" Show all diagnostics
+nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+" Manage extensions
+nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
+" Show commands
+nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
+" Find symbol of current document
+nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
+" Search workspace symbols
+nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
+" Do default action for next item.
+nnoremap <silent> <space>j  :<C-u>CocNext<CR>
+" Do default action for previous item.
+nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
+" Resume latest coc list
+nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
+" highlight CocErrorLine term=NONE gui=NONE
+" highlight CocWarningLine term=NONE gui=NONE
+highlight CocErrorHighlight term=bold cterm=bold gui=bold
+highlight CocWarningHighlight term=bold cterm=bold gui=bold
+highlight CocInfoHighlight term=italic cterm=italic gui=italic
+highlight CocHintHighlight term=italic cterm=italic gui=italic
+
+nnoremap <silent> <leader>tsi :CocCommand tsserver.executeAutofix<CR>
+nnoremap <silent> <leader>tso :CocCommand tsserver.organizeImports<CR>
+nnoremap <silent> <leader>tsp :CocCommand prettier.formatFile<CR>
