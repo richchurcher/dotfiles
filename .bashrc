@@ -10,6 +10,9 @@
 # GIT_PROMPT_THEME=Single_line_Solarized_Lamda
 source "${XDG_CONFIG_HOME}/bash-git-prompt/gitprompt.sh"
 
+# bow to muscle memory and use Ctrl-P (FZF) from terminal
+bind '"\C-p":"fe\n"'
+
 set -o vi
 
 if [ $(tty) == "/dev/tty1" ]; then
