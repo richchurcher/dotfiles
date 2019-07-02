@@ -4,8 +4,8 @@ floating_modifier $mod
 
 bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
-bindsym $mod+d exec dmenu_run
-bindsym XF86WWW exec google-chrome-stable
+bindsym $mod+d exec dmenu_run -fn 'DejaVuSansMono Nerd Font:italic:pixelsize=18'
+bindsym XF86WWW exec chrome
 
 # change focus
 bindsym $mod+h focus left
@@ -147,6 +147,7 @@ bar {
                 urgent_workspace $base04 $base08 $base07
         }
         mode hide
+        hidden_state hide
 }
 
 # No title bars
