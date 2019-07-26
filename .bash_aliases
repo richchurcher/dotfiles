@@ -25,6 +25,9 @@ alias ping8='ping 8.8.8.8'
 alias vim='nvim'
 alias e='nvim'
 
+# Emacs
+alias emacs='emacs -nw'
+
 # Display
 alias dell='xrandr --output DP-0.2.8 --right-of DP-2'
 alias portrait='xrandr --output DP-0 --mode 3840x2160 --rotate left --above DP-2'
@@ -40,6 +43,14 @@ alias record=$'amixer set Capture 35% && \
   ffmpeg -s 1920x1080 \
   -f x11grab -thread_queue_size 512 -probesize 10MB -r 25 -i :0.0 \
   -f alsa -thread_queue_size 512 -ac 2 -i hw:0 \
+  -preset ultrafast \'output.mkv\''
+
+# With headset, landscape screen
+alias record4k=$'amixer set Capture 100% && \
+  ffmpeg -y \
+  -f alsa -thread_queue_size 512 -ac1 -i hw:1 \
+  -f x11grab -thread_queue_size 512 -probesize 10MB -framerate 30 -video_size 3840x2160 -i :0.0+0,0 \
+  -c:v libx264 -pix_fmt yuv420p -qp 0 \
   -preset ultrafast \'output.mkv\''
 
 # sqlite3
@@ -63,15 +74,17 @@ alias apollo='cd /w/lic/apollo-ui && nvm use'
 alias loffty='cd /w/loffty/ui && nvm use'
 alias lapi='cd /w/loffty/api && nvm use'
 alias lunchbunch='cd /w/lunchbunch/'
+alias hex='cd /w/hexjam/'
 
 # docker-compose
 alias dc='docker-compose'
 alias dcf='dc -f dev/docker-compose.yml'
 alias dcu='dcf run -d --service-ports -T --name loffty-api-dev-container api npm run api'
 alias dcd='dcf down'
-alias dcr='dcd && dcu'
+alias dcr='dcd && dcu && dcs'
 alias dct='docker exec -it loffty-api-dev-container npm run test:watch'
 alias dcc='docker exec -it loffty-api-dev-container bash'
+alias dcs='docker exec loffty-api-dev-container npm run db:seed'
 alias dcdeploy='dcf run --rm --no-deps api npm run deploy:accp'
 alias dldb='docker logs -f -t loffty-dynamodb'
 alias dlapi='docker logs -f -t loffty-api-dev-container'
