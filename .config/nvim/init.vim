@@ -30,13 +30,14 @@ Plug 'matze/vim-move'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'kassio/neoterm'
 Plug 'stefandtw/quickfix-reflector.vim'
-Plug 'neoclide/coc.nvim', { 'tag': '*', 'do': './install.sh' }
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'sheerun/vim-polyglot'
+Plug 'glacambre/firenvim'
 
 " Useful at times
 " Plug 'guns/xterm-color-table.vim'
 " Plug 'raghur/vim-ghost', { 'do': ':GhostInstall' }
-" Plug 'wlangstroth/vim-racket', { 'for': ['racket', 'scheme'] }
+Plug 'wlangstroth/vim-racket', { 'for': ['racket', 'scheme'] }
 Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
 
 call plug#end()
@@ -227,16 +228,19 @@ nnoremap <leader>rr :Rr<CR>
 autocmd BufRead,BufNewFile *.md setlocal wrap linebreak tw=0
 
 " vim-gutentags
-let g:gutentags_ctags_exclude = ['node_modules', '.git', 'package-lock.json', 'yarn.lock'] 
+let g:gutentags_ctags_exclude = ['node_modules', '.git', 'package-lock.json', 'yarn.lock', 'target', 'Cargo.lock'] 
 
 " python
 let g:python_host_prog = expand($XDG_DATA_HOME).'/virtualenvs/nvimp2-sk9zInl9/bin/python'
 let g:python3_host_prog = expand($XDG_DATA_HOME).'/virtualenvs/nvimp3-VnFM7OAS/bin/python'
 
 " terminal
-noremap <leader>` :vertical Tnew<CR>
+noremap <leader>` :below Tnew<CR>
 tnoremap  <leader>` <C-\><C-N>
 let g:neoterm_autoinsert = 1
+nnoremap <leader>tel :TREPLSendLine<CR>
+nnoremap <leader>tef :TREPLSendFile<CR>
+nnoremap <leader>tec :Tclear<CR>
 
 " airline/tmuxline
 let g:airline_powerline_fonts=1
@@ -265,6 +269,11 @@ inoremap <silent><expr> <c-space> coc#refresh()
 " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
 " Coc only does snippet and additional edit on confirm.
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+inoremap <expr><C-n> pumvisible() ? "\<Down>" : "\<C-n>"
+inoremap <expr><C-p> pumvisible() ? "\<Up>" : "\<C-p>"
+" inoremap <expr><Down> pumvisible() ? "\<C-n>" : "\<Down>"
+" inoremap <expr><Up> pumvisible() ? "\<C-p>" : "\<Up>"
 
 " Use `[c` and `]c` to navigate diagnostics
 nmap <silent> [c <Plug>(coc-diagnostic-prev)
@@ -329,10 +338,14 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 " highlight CocErrorLine term=NONE gui=NONE
 " highlight CocWarningLine term=NONE gui=NONE
 highlight CocErrorHighlight term=bold cterm=bold gui=bold
-highlight CocWarningHighlight term=bold cterm=bold gui=bold
+highlight CocWarningHighlight term=italic cterm=italic gui=italic
 highlight CocInfoHighlight term=italic cterm=italic gui=italic
 highlight CocHintHighlight term=italic cterm=italic gui=italic
 
 nnoremap <silent> <leader>tsi :CocCommand tsserver.executeAutofix<CR>
 nnoremap <silent> <leader>tso :CocCommand tsserver.organizeImports<CR>
 nnoremap <silent> <leader>tsp :CocCommand prettier.formatFile<CR>
+
+" typescript
+autocmd FileType typescript setlocal ts=4 sw=4 expandtab
+autocmd FileType typescript.tsx setlocal ts=4 sw=4 expandtab
