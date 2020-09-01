@@ -1,0 +1,23 @@
+export BROWSER=google-chrome
+export EDITOR=nvim
+export TERMINAL='alacritty'
+
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_BIN_HOME=$HOME/.local/bin
+export XDG_LIB_HOME=$HOME/.local/lib
+export XDG_CACHE_HOME=$HOME/.cache
+
+export ANDROID_HOME=${XDG_DATA_HOME}/android/sdk
+export BASE16_SHELL=${XDG_CONFIG_HOME}/base16-shell/
+export CARGO_HOME=${HOME}/.cargo/bin
+export FZF=${XDG_CONFIG_HOME}/fzf
+export FZF_DEFAULT_COMMAND='rg --files --follow --hidden --no-ignore --glob "!{.git,node_modules,tags,.shipit,.local}"'
+export LOCAL_BIN=${HOME}/.local/bin
+export NVM_DIR=${XDG_CONFIG_HOME}/nvm
+export PULUMI_HOME=${XDG_DATA_HOME}/pulumi
+export YARN_BIN=${HOME}/.yarn/bin
+export YARN_GLOBAL_BIN=${XDG_CONFIG_HOME}/yarn/global/node_modules/.bin
+
+export PATH="${FZF}/bin:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/emulator:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${CARGO_HOME}:${YARN_BIN}:${YARN_GLOBAL_BIN}:${PULUMI_HOME}/bin:${PATH}"
+

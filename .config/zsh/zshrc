@@ -1,0 +1,22 @@
+source "${XDG_CONFIG_HOME}/zsh/zshenv"
+
+export ZSH="${XDG_CONFIG_HOME}/zsh/oh-my-zsh"
+
+plugins=(
+  fzf
+  git
+  vi-mode
+)
+
+source $ZSH/oh-my-zsh.sh
+
+# Prompt
+eval "$(starship init zsh)"
+
+# nvm
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+# broot
+source /home/basie/.config/broot/launcher/bash/br
+
