@@ -22,6 +22,8 @@ window:
     columns: 80
     lines: 24
 
+  dynamic_title: true
+
   # Adds this many blank pixels of padding around the window
   # Units are physical pixels; this is not DPI aware.
   # (change requires restart)
@@ -32,9 +34,6 @@ window:
   # Window decorations
   # Setting this to false will result in window without borders and title bar.
   decorations: none
-
-# Display tabs using this many cells (changes require restart)
-tabspaces: 8
 
 # When true, bold text is drawn using the bright variant of colors.
 draw_bold_text_with_bright_colors: true
@@ -61,24 +60,24 @@ draw_bold_text_with_bright_colors: true
 font:
   # The normal (roman) font face to use.
   normal:
-    family: DejaVuSansMono Nerd Font # should be "Menlo" or something on macOS.
+    family: Hack Nerd Font # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     # style: Regular
 
   # The bold font face
   bold:
-    family: DejaVuSansMono Nerd Font # should be "Menlo" or something on macOS.
+    family: Hack Nerd Font # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     # style: Bold
 
   # The italic font face
   italic:
-    family: DejaVuSansMono Nerd Font # should be "Menlo" or something on macOS.
+    family: Hack Nerd Font # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     # style: Italic
 
   # Point size of the font
-  size: 10.0
+  size: 12.0
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
@@ -98,48 +97,84 @@ font:
   # false.
   use_thin_strokes: true
 
-# Base16 Materia 256 - alacritty color config
-# Defman21
-colors:
+
+# Base16 Zenburn - alacritty color config
+# elnawe
+# colors:
   # Default colors
-  primary:
-    background: '0x263238'
-    foreground: '0xcdd3de'
+  # primary:
+  #   background: '0x383838'
+  #   foreground: '0xdcdccc'
 
   # Colors the cursor will use if `custom_cursor_colors` is true
-  cursor:
-    text: '0x263238'
-    cursor: '0xcdd3de'
+  # cursor:
+  #   text: '0x383838'
+  #   cursor: '0xdcdccc'
 
   # Normal colors
-  normal:
-    black:   '0x263238'
-    red:     '0xec5f67'
-    green:   '0x8bd649'
-    yellow:  '0xffcc00'
-    blue:    '0x89ddff'
-    magenta: '0x82aaff'
-    cyan:    '0x80cbc4'
-    white:   '0xcdd3de'
-
+  # normal:
+  #   black:   '0x383838'
+  #   red:     '0xdca3a3'
+  #   green:   '0x5f7f5f'
+  #   yellow:  '0xe0cf9f'
+  #   blue:    '0x7cb8bb'
+  #   magenta: '0xdc8cc3'
+  #   cyan:    '0x93e0e3'
+  #   white:   '0xdcdccc'
+  #
   # Bright colors
-  bright:
-    black:   '0x707880'
-    red:     '0xec5f67'
-    green:   '0x8bd649'
-    yellow:  '0xffcc00'
-    blue:    '0x89ddff'
-    magenta: '0x82aaff'
-    cyan:    '0x80cbc4'
-    white:   '0xffffff'
-
-  indexed_colors:
-    - { index: 16, color: '0xea9560' }
-    - { index: 17, color: '0xec5f67' }
-    - { index: 18, color: '0x2c393f' }
-    - { index: 19, color: '0x37474f' }
-    - { index: 20, color: '0xc9ccd3' }
-    - { index: 21, color: '0xd5dbe5' }
+  # bright:
+  #   black:   '0x6f6f6f'
+  #   red:     '0xdfaf8f'
+  #   green:   '0x404040'
+  #   yellow:  '0x606060'
+  #   blue:    '0x808080'
+  #   magenta: '0xc0c0c0'
+  #   cyan:    '0x000000'
+  #   white:   '0xffffff'
+  #
+# # Base16 Materia 256 - alacritty color config
+# # Defman21
+# colors:
+#  # Default colors
+#  primary:
+#    background: '0x263238'
+#    foreground: '0xcdd3de'
+#
+#  # Colors the cursor will use if `custom_cursor_colors` is true
+#  cursor:
+#    text: '0x263238'
+#    cursor: '0xcdd3de'
+#
+#  # Normal colors
+#  normal:
+#    black:   '0x263238'
+#    red:     '0xec5f67'
+#    green:   '0x8bd649'
+#    yellow:  '0xffcc00'
+#    blue:    '0x89ddff'
+#    magenta: '0x82aaff'
+#    cyan:    '0x80cbc4'
+#    white:   '0xcdd3de'
+#
+#  # Bright colors
+#  bright:
+#    black:   '0x707880'
+#    red:     '0xec5f67'
+#    green:   '0x8bd649'
+#    yellow:  '0xffcc00'
+#    blue:    '0x89ddff'
+#    magenta: '0x82aaff'
+#    cyan:    '0x80cbc4'
+#    white:   '0xffffff'
+#
+#  indexed_colors:
+#    - { index: 16, color: '0xea9560' }
+#    - { index: 17, color: '0xec5f67' }
+#    - { index: 18, color: '0x2c393f' }
+#    - { index: 19, color: '0x37474f' }
+#    - { index: 20, color: '0xc9ccd3' }
+#    - { index: 21, color: '0xd5dbe5' }
 
 # # Colors (Tomorrow Night Bright)
 # colors:
@@ -186,6 +221,50 @@ colors:
 #     cyan:    '0x66cccc'
 #     white:   '0xdddddd'
 #
+
+# Base16 Solar Flare 256 - alacritty color config
+# Chuck Harmston (https://chuck.harmston.ch)
+colors:
+  # Default colors
+  primary:
+    background: '0x18262f'
+    foreground: '0xa6afb8'
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text: '0x18262f'
+    cursor: '0xa6afb8'
+
+  # Normal colors
+  normal:
+    black:   '0x18262f'
+    red:     '0xef5253'
+    green:   '0x7cc844'
+    yellow:  '0xe4b51c'
+    blue:    '0x33b5e1'
+    magenta: '0xa363d5'
+    cyan:    '0x52cbb0'
+    white:   '0xa6afb8'
+
+  # Bright colors
+  bright:
+    black:   '0x667581'
+    red:     '0xef5253'
+    green:   '0x7cc844'
+    yellow:  '0xe4b51c'
+    blue:    '0x33b5e1'
+    magenta: '0xa363d5'
+    cyan:    '0x52cbb0'
+    white:   '0xf5f7fa'
+
+  indexed_colors:
+    - { index: 16, color: '0xe66b2b' }
+    - { index: 17, color: '0xd73c9a' }
+    - { index: 18, color: '0x222e38' }
+    - { index: 19, color: '0x586875' }
+    - { index: 20, color: '0x85939e' }
+    - { index: 21, color: '0xe8e9ed' }
+
 # Visual Bell
 #
 # Any time the BEL code is received, Alacritty "rings" the visual bell. Once
@@ -208,9 +287,10 @@ colors:
 #
 # To completely disable the visual bell, set its duration to 0.
 #
-visual_bell:
-  animation: EaseOutExpo
-  duration: 0
+# visual_bell:
+#   animation: EaseOutExpo
+#   duration: 1
+#   color: '#ffffff'
 
 # Background opacity
 background_opacity: 1.0
@@ -243,16 +323,6 @@ mouse:
   triple_click: { threshold: 300 }
   hide_when_typing: false
 
-  # Faux Scrollback
-  #
-  # The `faux_scrollback_lines` setting controls the number
-  # of lines the terminal should scroll when the alternate
-  # screen buffer is active. This is used to allow mouse
-  # scrolling for applications like `man`.
-  #
-  # To disable this completely, set `faux_scrollback_lines` to 0.
-  faux_scrolling_lines: 1
-
 scrolling:
   # How many lines of scrollback to keep,
   # '0' will disable scrolling.
@@ -262,24 +332,9 @@ scrolling:
   # scrolled when scrollback is enabled (history > 0).
   multiplier: 3
 
-  # Faux Scrolling
-  #
-  # The `faux_multiplier` setting controls the number
-  # of lines the terminal should scroll when the alternate
-  # screen buffer is active. This is used to allow mouse
-  # scrolling for applications like `man`.
-  #
-  # To disable this completely, set `faux_multiplier` to 0.
-  faux_multiplier: 3
-
-  # Automatically scroll to the bottom when new text is written
-  # to the terminal.
-  auto_scroll: false
-
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
 
-dynamic_title: true
 
 
 # Style of the cursor
