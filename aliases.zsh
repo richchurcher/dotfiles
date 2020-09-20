@@ -24,7 +24,7 @@ alias portrait='xrandr --output DP-0 --mode 3840x2160 --rotate left --above DP-2
 alias landscape='xrandr --output DP-0.8 --mode 3840x2160 --right-of DP-2'
 alias thinkpad='xrandr --output DP-2 --mode 1920x1080 --panning 1920x1080'
 alias plandscape='xrandr --output DP-0.8 --mode 3840x2160 --above DP-2 --output DP-0.1 --mode 3840x2160 --rotate left --left-of DP-2'
-alias home='xrandr --output DP-0.8 --mode 3840x2160 --output DP-0.1 --mode 3840x2160 --rate 30 --rotate right --right-of DP-0.8 --output DP-2 --mode 1920x1080 --right-of DP-0.1'
+alias home='xrandr --output DP-0.8 --mode 3840x2160 --output DP-0.1 --mode 3840x2160 --rate 30 --rotate right --right-of DP-0.8 --output eDP-1-1 --mode 2560x1440 --right-of DP-0.1'
 alias generator='xrandr --output DP-4 --mode 1920x1080 --left-of DP-2'
 
 # Record
@@ -67,15 +67,14 @@ alias mute='amixer set Master 0'
 alias unmute='amixer set Master 100%'
 
 # places
-alias lunchbunch='cd /w/lunchbunch/'
-alias hex='cd /w/hexjam/'
-alias bsui='cd /w/bs/ui && nvm use'
-alias bsapi='cd /w/bs/api && nvm use'
-alias foo='cd /w/foo && nvm use'
-alias aoc='cd /w/advent-of-code-2019'
-alias blog='cd /w/blog'
-alias vly='cd /w/vly2 && nvm use'
-alias rt='cd /w/reno-tracker && nvm use && export AWS_PROFILE=renotracker'
+alias hex='cd ~/w/hexjam/'
+alias bsui='cd ~/w/bs/ui && nvm use'
+alias bsapi='cd ~/w/bs/api && nvm use'
+alias foo='cd ~/w/foo && nvm use'
+alias aoc='cd ~/w/advent-of-code-2019'
+alias blog='cd ~/w/blog'
+alias vly='cd ~/w/vly2 && nvm use'
+alias rt='cd ~/w/reno-tracker && nvm use && export AWS_PROFILE=renotracker'
 
 # docker-compose
 alias dc='docker-compose'
@@ -87,10 +86,8 @@ alias notmuch='notmuch --config="${XDG_CONFIG_HOME}"/notmuch/config'
 alias getmail='getmail -g "${XDG_CONFIG_HOME}"/getmail'
 alias alot='alot -n "${XDG_CONFIG_HOME}"/notmuch/config'
 
-# project-specific
+# databases
 alias bsdb='pgcli postgres://qstoolbox@localhost/qstoolbox_dev'
 alias bsdb-prod='pgcli postgres://qstoolbox@pg-1688156c.field-7958.aivencloud.com:10412/qstoolbox?ssl=true'
-alias rtdb='pgcli postgres://postgres:renotracker@localhost/renotracker_dev'
-
-# fbnohkqrctm0heym
+alias rtdb='pgcli postgres://renotracker:renotracker@localhost/renotracker'
 
