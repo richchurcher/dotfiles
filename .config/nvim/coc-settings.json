@@ -9,8 +9,10 @@
     "javascript",
     "javascriptreact",
     "json",
+    "rust",
     "typescript",
     "typescriptreact"
   ],
+  "sql.database": "postgresql",
   "tsserver.formatOnType": false
 }
