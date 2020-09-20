@@ -1,4 +1,4 @@
-source "${XDG_CONFIG_HOME}/zsh/zshenv"
+source "./zshenv"
 
 export ZSH="${XDG_CONFIG_HOME}/zsh/oh-my-zsh"
 
