@@ -15,7 +15,6 @@ call plug#begin('$XDG_DATA_HOME/nvim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'edkolev/tmuxline.vim'
-Plug 'chriskempson/base16-vim'
 Plug 'justinmk/vim-sneak'
 Plug 'justinmk/vim-dirvish'
 Plug 'xolox/vim-misc'
@@ -23,7 +22,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'scrooloose/nerdcommenter'
-Plug 'junegunn/fzf', { 'dir': $XDG_CONFIG_HOME.'/fzf', 'do': './install --all' }
+" Plug 'junegunn/fzf', { 'dir': $XDG_CONFIG_HOME.'/fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-signify'
 Plug 'matze/vim-move'
@@ -33,6 +32,9 @@ Plug 'stefandtw/quickfix-reflector.vim'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'sheerun/vim-polyglot'
 Plug 'glacambre/firenvim'
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'joshdick/onedark.vim'
+Plug 'arcticicestudio/nord-vim'
 
 " Useful at times
 " Plug 'guns/xterm-color-table.vim'
@@ -71,11 +73,12 @@ set shortmess+=c
 set background=dark
 filetype plugin indent on
 syntax on
-if filereadable(expand($XDG_CONFIG_HOME).'/nvim/nvim_background')
-  let base16colorspace=256
-  set termguicolors
-  source $XDG_CONFIG_HOME/nvim/nvim_background
-endif
+set termguicolors
+let g:nord_cursor_line_number_background = 1
+let g:nord_italic = 1
+let g:nord_italic_comments = 1
+let g:nord_underline = 1
+colorscheme nord
 set nowrap
 set textwidth=100
 set wrapmargin=0
@@ -195,34 +198,34 @@ if executable("rg")
 endif
 
 " FZF
-" Rg uses with_preview option (hit '?' to display)
-" Also, don't show results from tagfiles, .git, node_modules, lock files
-command! -bang -nargs=* Rg
-    \ call fzf#vim#grep(
-    \   'rg --column --line-number --no-heading --color=always --ignore-case --hidden --no-ignore --glob "!{.git,node_modules,tags,package-lock.json,yarn.lock}" '.shellescape(<q-args>), 1,
-    \   <bang>0 ? fzf#vim#with_preview('up:60%')
-    \           : fzf#vim#with_preview('right:50%:hidden', '?'),
-    \   <bang>0)
-" Same, but search on word under cursor
-command! -bang -nargs=* Rr
-    \ call fzf#vim#grep(
-    \   'rg --column --line-number --no-heading --color=always --ignore-case --hidden --no-ignore --glob "!{.git,node_modules,tags,package-lock.json,yarn.lock}" '.shellescape(expand('<cword>')), 1,
-    \   <bang>0 ? fzf#vim#with_preview('up:60%')
-    \           : fzf#vim#with_preview('right:50%:hidden', '?'),
-    \   <bang>0)
+let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.5, 'highlight': 'Ignore' } }
+" Delegate everything to rg
+function! RipgrepFzf(query, fullscreen)
+  let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case --hidden --no-ignore --glob "!{.git,node_modules,tags,package-lock.json,yarn.lock}" -- %s || true'
+  let initial_command = printf(command_fmt, shellescape(a:query))
+  let reload_command = printf(command_fmt, '{q}')
+  let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
+  call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
+endfunction
+" Grep for args
+command! -bang -nargs=* Rg call RipgrepFzf(<q-args>, <bang>0)
+" Search on word under cursor
+command! -bang -nargs=* Rr call RipgrepFzf(expand('<cword>'), <bang>0)
 " Git grep from FZF
 command! -bang -nargs=* GGrep
     \ call fzf#vim#grep(
     \   'git grep --line-number '.shellescape(<q-args>), 0,
-    \   { 'dir': systemlist('git rev-parse --show-toplevel')[0] }, <bang>0)
+    \   fzf#vim#with_preview({'dir': systemlist('git rev-parse --show-toplevel')[0]}), <bang>0)
 " Files with preview
 command! -bang -nargs=? -complete=dir Files
     \ call fzf#vim#files(
     \   <q-args>,
-    \   fzf#vim#with_preview(),
+    \   fzf#vim#with_preview({'options': ['--layout=reverse', '--info=inline']}),
     \   <bang>0)
 nnoremap <leader>rg :Rg<space>
 nnoremap <leader>rr :Rr<CR>
+nnoremap <leader>gg :GGrep<CR>
+nnoremap <leader>ff :Files<CR>
 
 " markdown
 autocmd BufRead,BufNewFile *.md setlocal wrap linebreak tw=0
@@ -244,7 +247,7 @@ nnoremap <leader>tec :Tclear<CR>
 
 " airline/tmuxline
 let g:airline_powerline_fonts=1
-let g:airline_theme='base16_vim'
+let g:airline_theme='nord'
 let g:airline_base16_monotone = 1
 let g:airline#extensions#tmuxline#enabled = 1
 let airline#extensions#tmuxline#snapshot_file = expand($XDG_CONFIG_HOME).'/tmux/tmux-status.conf'
@@ -257,6 +260,8 @@ inoremap <silent><expr> <TAB>
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+" hi link CocFloating markdown
 
 function! s:check_back_space() abort
   let col = col('.') - 1
@@ -349,3 +354,4 @@ nnoremap <silent> <leader>tsp :CocCommand prettier.formatFile<CR>
 " typescript
 autocmd FileType typescript setlocal ts=4 sw=4 expandtab
 autocmd FileType typescript.tsx setlocal ts=4 sw=4 expandtab
+autocmd BufRead,BufNewFile tsconfig.json set filetype=jsonc
