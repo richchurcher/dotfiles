@@ -100,6 +100,7 @@ nmap <Leader>sv :so $MYVIMRC<CR>
 nmap <Leader>r :redraw!<CR>
 map <Leader>p <C-^>
 map <Leader>. :bn<CR>
+map <Leader>, :bp<CR>
 map <Leader>bd :bd<CR>
 map <Leader>w :w<CR>
 map <Leader>q :q<CR>
@@ -157,7 +158,9 @@ nnoremap <silent> <leader>gl :Glog<CR>
 nnoremap <silent> <leader>gp :Git push<CR>
 nnoremap <silent> <leader>gw :Gwrite<CR>
 nnoremap <silent> <leader>du :diffupdate<CR>
+" Target branch ('t')
 nnoremap <silent> <leader>dgt :diffget //2<CR>
+" Merge branch ('m')
 nnoremap <silent> <leader>dgm :diffget //3<CR>
 
 " Location list
@@ -170,7 +173,7 @@ let g:signify_vcs_list               = [ 'git', 'hg' ]
 let g:signify_sign_add               = '+'
 let g:signify_sign_delete            = '_'
 let g:signify_sign_delete_first_line = '‾'
-let g:signify_sign_change            = 'Δ'
+let g:signify_sign_change            = ''
 let g:signify_sign_changedelete      = g:signify_sign_change
 
 " highlight lines in Sy and vimdiff etc.)
