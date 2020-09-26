@@ -1,18 +1,15 @@
 general {
         output_format = "i3bar"
         colors = true
-        color_good = "#519F50"
-        color_degraded = "#B58900"
-        color_bad = "#DC322F"
+        color_good = "#A3BE8C"
+        color_degraded = "#D08770"
+        color_bad = "#BF616A"
         interval = 5
 }
 
 order += "cpu_usage"
 order += "ipv6"
 order += "disk /"
-order += "disk /media"
-order += "disk /w"
-order += "ethernet _first_"
 order += "wireless _first_"
 order += "battery all"
 order += "tztime local"
@@ -30,24 +27,9 @@ disk "/" {
         low_threshold = 10
 }
 
-disk "/media" {
-        format = "/media: %percentage_used"
-        low_threshold = 10
-}
-
-disk "/w" {
-        format = "/w: %percentage_used"
-        low_threshold = 10
-}
-
 ipv6 {
         format_up = "%ipv6"
         format_down = ""
-}
-
-ethernet _first_ {
-        format_up = "↑↓ %ip (%speed)"
-        format_down = "↑↓"
 }
 
 wireless _first_ {
@@ -58,10 +40,11 @@ wireless _first_ {
 battery all {
         format = "%status %percentage"
         integer_battery_capacity = true
+        last_full_capacity = true
         low_threshold = 15
         threshold_type = percentage
-        status_full = ""
-        status_bat = ""
+        status_full = "" 
+        status_bat = ""
         status_chr = ""
         status_unk = ""
 }
