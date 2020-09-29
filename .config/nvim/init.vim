@@ -193,6 +193,9 @@ map f <Plug>Sneak_f
 map F <Plug>Sneak_F
 map t <Plug>Sneak_t
 map T <Plug>Sneak_T
+hi link Sneak IncSearch
+hi link SneakScope Visual
+hi link SneakLabel DiffChange
 
 " ripgrep
 if executable("rg")
@@ -251,9 +254,12 @@ nnoremap <leader>tec :Tclear<CR>
 " airline/tmuxline
 let g:airline_powerline_fonts=1
 let g:airline_theme='nord'
-let g:airline_base16_monotone = 1
 let g:airline#extensions#tmuxline#enabled = 1
 let airline#extensions#tmuxline#snapshot_file = expand($XDG_CONFIG_HOME).'/tmux/tmux-status.conf'
+let g:airline_section_c = '%{pathshorten(expand(''%:f''))}'
+let g:airline#extensions#default#section_truncate_width = {
+  \ 'c': 0,
+  \ }
 
 " coc.vim
 " Use tab for trigger completion with characters ahead and navigate.
