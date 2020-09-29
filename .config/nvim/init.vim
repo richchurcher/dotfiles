@@ -256,7 +256,8 @@ let g:airline_powerline_fonts=1
 let g:airline_theme='nord'
 let g:airline#extensions#tmuxline#enabled = 1
 let airline#extensions#tmuxline#snapshot_file = expand($XDG_CONFIG_HOME).'/tmux/tmux-status.conf'
-let g:airline_section_c = '%{pathshorten(expand(''%:f''))}'
+let g:airline_section_c = '%{pathshorten(expand(''%:f''))} %{coc#status()}'
+" Avoid collapsing filename section
 let g:airline#extensions#default#section_truncate_width = {
   \ 'c': 0,
   \ }
@@ -349,18 +350,15 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
-" highlight CocErrorLine term=NONE gui=NONE
-" highlight CocWarningLine term=NONE gui=NONE
 highlight CocErrorHighlight term=bold cterm=bold gui=bold
 highlight CocWarningHighlight term=italic cterm=italic gui=italic
 highlight CocInfoHighlight term=italic cterm=italic gui=italic
 highlight CocHintHighlight term=italic cterm=italic gui=italic
+highlight link CocErrorFloat typescriptDecorator
 
 nnoremap <silent> <leader>tsi :CocCommand tsserver.executeAutofix<CR>
 nnoremap <silent> <leader>tso :CocCommand tsserver.organizeImports<CR>
 nnoremap <silent> <leader>tsp :CocCommand prettier.formatFile<CR>
 
 " typescript
-autocmd FileType typescript setlocal ts=4 sw=4 expandtab
-autocmd FileType typescript.tsx setlocal ts=4 sw=4 expandtab
 autocmd BufRead,BufNewFile tsconfig.json set filetype=jsonc
