@@ -21,8 +21,6 @@ Plug 'xolox/vim-misc'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'scrooloose/nerdcommenter'
-" Plug 'junegunn/fzf', { 'dir': $XDG_CONFIG_HOME.'/fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-signify'
 Plug 'matze/vim-move'
@@ -35,6 +33,7 @@ Plug 'glacambre/firenvim'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'joshdick/onedark.vim'
 Plug 'arcticicestudio/nord-vim'
+Plug 'tpope/vim-commentary'
 
 " Useful at times
 " Plug 'guns/xterm-color-table.vim'
