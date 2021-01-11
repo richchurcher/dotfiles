@@ -1,2 +1,1 @@
-source .config/zsh/zshrc
-
+source ${XDG_CONFIG_HOME}/zsh/zshrc

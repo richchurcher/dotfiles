@@ -75,6 +75,9 @@ alias aoc='cd ~/w/advent-of-code-2019'
 alias blog='cd ~/w/blog'
 alias vly='cd ~/w/vly2 && nvm use'
 alias rt='cd ~/w/reno-tracker && nvm use && export AWS_PROFILE=renotracker'
+alias ef:dp='cd ~/w/ef/eventfinda/docker-prototype && export AWS_PROFILE=eventfinda'
+alias ef:e='cd ~/w/ef/ef-e2e && export AWS_PROFILE=eventfinda'
+alias ef:t='cd ~/w/ef/ef-infrastructure && export AWS_PROFILE=eventfinda-terraform'
 
 # docker-compose
 alias dc='docker-compose'
@@ -91,3 +94,14 @@ alias bsdb='pgcli postgres://qstoolbox@localhost/qstoolbox_dev'
 alias bsdb-prod='pgcli postgres://qstoolbox@pg-1688156c.field-7958.aivencloud.com:10412/qstoolbox?ssl=true'
 alias rtdb='pgcli postgres://renotracker:renotracker@localhost/renotracker'
 
+# terraform
+alias tf=terraform
+
+# eventfinda
+alias efdc='dc -f ~/w/ef/eventfinda/docker-prototype/docker-compose.yml --env-file ~/w/ef/eventfinda/docker-prototype/.env'
+alias efu='efdc up -d'
+alias efd='efdc down'
+alias efr='efdc restart'
+alias efra='efdc up -d --no-deps --force-recreate apache-php'
+alias efl='efdc logs -f'
+alias efm='efdc exec database mysql'

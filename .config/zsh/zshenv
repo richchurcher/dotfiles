@@ -1,17 +1,25 @@
-export BROWSER=google-chrome
+export BROWSER=google-chrome-stable
 export EDITOR=nvim
 export TERMINAL='alacritty'
 
-export ANDROID_HOME=${XDG_DATA_HOME}/android/sdk
-export BASE16_SHELL=${XDG_CONFIG_HOME}/base16-shell/
 export CARGO_HOME=${HOME}/.cargo/bin
 export FZF=${XDG_CONFIG_HOME}/fzf
 export FZF_DEFAULT_COMMAND='rg --files --follow --hidden --no-ignore --glob "!{.git,node_modules,tags,.shipit,.local}"'
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+    --color=fg:#e5e9f0,bg:#3b4252,hl:#81a1c1
+    --color=fg+:#e5e9f0,bg+:#3b4252,hl+:#81a1c1
+    --color=info:#eacb8a,prompt:#bf6069,pointer:#b48dac
+    --color=marker:#a3be8b,spinner:#b48dac,header:#a3be8b'
 export LOCAL_BIN=${HOME}/.local/bin
 export NVM_DIR=${XDG_CONFIG_HOME}/nvm
-export PULUMI_HOME=${XDG_DATA_HOME}/pulumi
 export YARN_BIN=${HOME}/.yarn/bin
 export YARN_GLOBAL_BIN=${XDG_CONFIG_HOME}/yarn/global/node_modules/.bin
+export CS140E_BIN=${HOME}/w/cs140e-20win/bin
 
-export PATH="${FZF}/bin:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/emulator:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${CARGO_HOME}:${YARN_BIN}:${YARN_GLOBAL_BIN}:${PULUMI_HOME}/bin:${PATH}"
-
+typeset -U path
+path=("${XDG_BIN_HOME}" "$path[@]")
+path=("${FZF}/bin" "$path[@]")
+path=("${CARGO_HOME}" "$path[@]")
+path=("${YARN_BIN}" "$path[@]")
+path=("${YARN_GLOBAL_BIN}" "$path[@]")
+path=("${CS140E_BIN}" "$path[@]")

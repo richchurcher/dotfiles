@@ -1,4 +1,4 @@
-source "./zshenv"
+source $XDG_CONFIG_HOME/zsh/zshenv
 
 export ZSH="${XDG_CONFIG_HOME}/zsh/oh-my-zsh"
 
@@ -19,4 +19,9 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 # broot
 source /home/basie/.config/broot/launcher/bash/br
+
+# X
+if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+  exec startx
+fi
 
