@@ -33,7 +33,7 @@ Plug 'glacambre/firenvim'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'joshdick/onedark.vim'
 Plug 'arcticicestudio/nord-vim'
-Plug 'tpope/vim-commentary'
+Plug 'preservim/nerdcommenter'
 
 " npm install of this is broken via CocInstall coc-ccls
 Plug 'Maxattax97/coc-ccls'
@@ -371,3 +371,11 @@ nnoremap <silent> <leader>tsp :CocCommand prettier.formatFile<CR>
 
 " typescript
 autocmd BufRead,BufNewFile tsconfig.json set filetype=jsonc
+
+" nerdcommenter
+let g:NERDSpaceDelims = 1
+let g:NERDDefaultAlign = 'left'
+let g:NERDCommentEmptyLines = 1
+" comment motions
+nnoremap <silent> <leader>c} V}:call NERDComment('x', 'toggle')<CR>
+nnoremap <silent> <leader>c{ V{:call NERDComment('x', 'toggle')<CR>
