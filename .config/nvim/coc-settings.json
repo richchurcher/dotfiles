@@ -1,8 +1,9 @@
 {
-  "diagnostic.errorSign": "✖",
-  "diagnostic.warningSign": "⚑",
-  "diagnostic.infoSign": "⚑",
-  "diagnostic.hintSign": "⚑",
+  "diagnostic.enableMessage": "jump",
+  "diagnostic.errorSign": "",
+  "diagnostic.warningSign": "",
+  "diagnostic.infoSign": "",
+  "diagnostic.hintSign": "ﯦ",
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
     "html",
@@ -13,6 +14,32 @@
     "typescript",
     "typescriptreact"
   ],
+  "languageserver": {
+    "ccls": {
+      "command": "ccls",
+      "filetypes": ["c", "cpp", "objc", "objcpp"],
+      "rootPatterns": [
+        ".ccls",
+        "compile_commands.json",
+        ".vim/",
+        ".git/",
+        ".hg/"
+      ],
+      "initializationOptions": {
+        "cache": {
+          "directory": "/tmp/ccls"
+        }
+      }
+    },
+    "intelephense": {
+      "command": "intelephense",
+      "args": ["--stdio"],
+      "filetypes": ["php"],
+      "initializationOptions": {
+        "storagePath": "/tmp/intelephense"
+      }
+    }
+  },
   "sql.database": "postgresql",
   "tsserver.formatOnType": false
 }

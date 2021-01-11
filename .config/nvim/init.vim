@@ -35,6 +35,9 @@ Plug 'joshdick/onedark.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'tpope/vim-commentary'
 
+" npm install of this is broken via CocInstall coc-ccls
+Plug 'Maxattax97/coc-ccls'
+
 " Useful at times
 " Plug 'guns/xterm-color-table.vim'
 " Plug 'raghur/vim-ghost', { 'do': ':GhostInstall' }
@@ -255,7 +258,14 @@ let g:airline_powerline_fonts=1
 let g:airline_theme='nord'
 let g:airline#extensions#tmuxline#enabled = 1
 let airline#extensions#tmuxline#snapshot_file = expand($XDG_CONFIG_HOME).'/tmux/tmux-status.conf'
-let g:airline_section_c = '%{pathshorten(expand(''%:f''))} %{coc#status()}'
+function! PathCondense()
+    if expand(':h') == '/'
+        return '/' . expand('%:t')
+    else
+        return pathshorten(expand('%:h')) . '/' . expand('%:t')
+    endif
+endfunction
+let g:airline_section_c='%{PathCondense()} %{coc#status()}'
 " Avoid collapsing filename section
 let g:airline#extensions#default#section_truncate_width = {
   \ 'c': 0,
