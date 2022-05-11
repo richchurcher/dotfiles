@@ -21,12 +21,12 @@ map("n", "<Leader>ei", "<cmd>:e " .. vim.env.MYVIMRC .. "<CR>")
 map("n", "<Leader>ep", "<cmd>:e " .. vim.env.XDG_CONFIG_HOME .. "/nvim/lua/plugins.lua<CR>")
 map("n", "<Leader>em", "<cmd>:e " .. vim.env.XDG_CONFIG_HOME .. "/nvim/lua/mappings.lua<CR>")
 map("n", "<Leader>eo", "<cmd>:e " .. vim.env.XDG_CONFIG_HOME .. "/nvim/lua/options.lua<CR>")
-map("n", "<Leader>si", "<cmd>:so " .. vim.env.MYVIMRC .. "<CR>")
 
 -- fzf
 map("n", "<C-p>", "<cmd>:FzfLua files<CR>")
 map("n", "<Leader>pl", "<cmd>:FzfLua lgrep_curbuf<CR>")
 map("n", "<Leader>pc", "<cmd>:FzfLua git_bcommits<CR>")
+map("n", "<Leader>pg", "<cmd>:FzfLua live_grep<CR>")
 
 -- windows
 map("n", "<C-h>", "<C-w>h")
@@ -102,3 +102,5 @@ map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
 map("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>")
 map("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>")
 map("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>")
+map("n", "]c", "<cmd>lua vim.diagnostic.goto_next()<CR>")
+map("n", "[c", "<cmd>lua vim.diagnostic.goto_prev()<CR>")
