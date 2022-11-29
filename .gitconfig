@@ -1,9 +1,0 @@
-[user]
-	email = rich.churcher@gmail.com
-	name = Rich Churcher
-[pull]
-	rebase = false
-[pager]
-	branch = false
-[safe]
-	directory = /opt/flutter
