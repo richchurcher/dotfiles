@@ -1,0 +1,18 @@
+{
+ "active_user": "basie@hachyderm.io",
+ "apps": {
+  "hachyderm.io": {
+   "base_url": "https://hachyderm.io",
+   "client_id": "Eo2bO09_ftclX7JWPf6M3p9Ges3VkH6oICsdJczu5NM",
+   "client_secret": "cm4HcfF57Srf-ofdLXHTvBdwk5JQp5aHy3oCIxOZLVc",
+   "instance": "hachyderm.io"
+  }
+ },
+ "users": {
+  "basie@hachyderm.io": {
+   "access_token": "aqn8j580IY4TVG6NfwXApWydV2FhXaCS53GeO17-cfM",
+   "instance": "hachyderm.io",
+   "username": "basie"
+  }
+ }
+}

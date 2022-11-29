@@ -1,8 +1,6 @@
-source $XDG_CONFIG_HOME/zsh/zshenv
-
-export ZSH="${XDG_CONFIG_HOME}/zsh/oh-my-zsh"
-
 plugins=(
+  aws
+  dotenv
   fzf
   git
   vi-mode
@@ -24,4 +22,3 @@ source /home/basie/.config/broot/launcher/bash/br
 if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
   exec startx
 fi
-

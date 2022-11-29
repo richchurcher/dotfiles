@@ -1,0 +1,57 @@
+# Derived from: https://github.com/gwarf/dotfiles/blob/main/.config/neomutt/bindings
+
+# Reset conflicts
+bind index,pager d noop
+bind index,pager g noop
+
+bind editor <Tab> complete-query
+
+# Needed to fix handling of space in dir names
+bind editor <space> noop
+bind pager gg top
+bind pager G bottom
+bind pager j next-line
+bind pager k previous-line
+bind pager i edit
+bind pager R group-reply
+bind pager <down> next-line
+bind pager <up> previous-line
+bind pager \cd half-down
+bind pager \ce next-line
+bind pager \cf next-page
+bind pager \cm next-line
+bind pager \cn half-down
+bind pager \cn next-page
+bind pager \cp half-up
+bind pager \cu half-up
+bind pager N next-unread
+bind index,pager F flag-message
+bind index,pager dd delete-message
+bind index,pager w sync-mailbox
+
+bind index gg first-entry
+bind index G last-entry
+bind index H current-top
+bind index M current-middle
+bind index L current-bottom
+bind index <pagedown> next-page
+bind index <pageup> previous-page
+bind index zt current-top
+bind index zz current-middle
+bind index zb current-bottom
+bind index { top-page
+bind index } bottom-page
+bind index N toggle-new
+bind index <Right> display-message
+
+bind index,pager \t  next-unread
+bind index,pager ,\t previous-unread
+
+macro index,pager gl <change-folder>? "Go to 'Label'"
+macro index,pager gi <change-folder>=INBOX<enter> "Go to inbox"
+
+# macros to invoke a profile
+# macro index <F8> ":source ~/.config/neomutt/profile.egi<enter><change-folder>!<enter>" "Load profile: egi"
+# macro index <F9> ":source ~/.config/neomutt/profile.perso<enter><change-folder>!<enter>" "Load profile: perso"
+
+# vim: set ft=muttrc:

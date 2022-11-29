@@ -5,14 +5,15 @@ local function map(mode, lhs, rhs, opts)
 end
 
 vim.g.mapleader = ","
+vim.g.maplocalleader = " "
 
 map("n", "<Leader>w", "<cmd>:w<CR>")
 map("i", "jk", "<Esc>")
 map("n", "<Leader>q", "<cmd>:q<CR>")
 
 -- Tab navigates completions
-map('i', '<S-Tab>', 'pumvisible() ? "\\<C-p>" : "\\<Tab>"', {expr = true})
-map('i', '<Tab>', 'pumvisible() ? "\\<C-n>" : "\\<Tab>"', {expr = true})
+map('i', '<S-Tab>', 'pumvisible() ? "\\<C-p>" : "\\<Tab>"', { expr = true })
+map('i', '<Tab>', 'pumvisible() ? "\\<C-n>" : "\\<Tab>"', { expr = true })
 
 map('n', '<Leader>n', '<cmd>:noh<CR>') -- clear search highlight
 
@@ -76,22 +77,16 @@ map("n", "<Leader>dgm", "<cmd>:diffget //3<CR>", { silent = true }) -- merge bra
 map("n", "<Leader>c}", "V}<cmd>:call NERDComment('x', 'toggle')<CR>", { silent = true })
 map("n", "<Leader>c{", "V{<cmd>:call NERDComment('x', 'toggle')<CR>", { silent = true })
 
--- sneak
-map("n", "f", "<Plug>Sneak_f")
-map("n", "F", "<Plug>Sneak_F")
-map("n", "t", "<Plug>Sneak_t")
-map("n", "T", "<Plug>Sneak_T")
-
 -- terminal
 map("n", "<Leader>`", "<cmd>:below Tnew<CR>")
-map("t",  "<Leader>`", "<C-\\><C-N>")
+map("t", "<Leader>`", "<C-\\><C-N>")
 map("n", "<Leader>tel", "<cmd>:TREPLSendLine<CR>")
 map("n", "<Leader>tef", "<cmd>:TREPLSendFile<CR>")
 map("n", "<Leader>tee", "<cmd>:TREPLSendSelection<CR>")
 map("n", "<Leader>tec", "<cmd>:Tclear<CR>")
 
 -- ripgrep
-map("n", "<Leader>rg", "<cmd>:Rg<space>")
+map("n", "<Leader>rg", "<cmd>:Rg<space><CR>")
 map("n", "<Leader>rr", "<cmd>:Rr<CR>")
 map("n", "<Leader>gg", "<cmd>:GGrep<CR>")
 map("n", "<Leader>ff", "<cmd>:Files<CR>")

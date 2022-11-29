@@ -13,8 +13,9 @@ order += "disk /"
 order += "wireless _first_"
 order += "battery all"
 order += "tztime local"
+order += "tztime UTC"
 order += "tztime CA"
-order += "tztime CAN"
+order += "tztime SL"
 
 cpu_usage {
         format = " %usage" 
@@ -53,12 +54,17 @@ tztime local {
         format = "%Y-%m-%d %H:%M:%S"
 }
 
+tztime UTC {
+        format = "UTC %H:%M"
+        timezone = "Etc/UTC"
+}
+
 tztime CA {
-        format = "CA %H:%M:%S"
+        format = "CA %H:%M"
         timezone = "US/Pacific"
 }
 
-tztime CAN {
-        format = "CAN %H:%M:%S"
-        timezone = "Canada/Central"
+tztime SL {
+        format = "SL %H:%M"
+        timezone = "Asia/Colombo"
 }

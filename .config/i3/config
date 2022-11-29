@@ -20,7 +20,7 @@ set $nord13 #EBCB8B
 set $nord14 #A3BE8C
 set $nord15 #B48EAD
 
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec "dmenu_run -fn 'Hack Nerd Font:italic:pixelsize=22' -nf '$nord6' -nb '$nord1' -sb '$nord3' -sf '$nord13' -p 'λ'"
 bindsym XF86WWW exec chrome
@@ -63,11 +63,9 @@ bindsym $mod+Shift+space floating toggle
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
-# size-limit floating windows
 floating_minimum_size 500 x 400
 floating_maximum_size 800 x 500
 
-# focus the parent container
 bindsym $mod+a focus parent
 
 # switch to workspace
@@ -101,7 +99,12 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exit
 
-# resize window (you can also use the mouse for that)
+# lock
+bindsym $mod+x exec "lock -i $XDG_DATA_HOME/img/nord-arch.png"
+
+# splits
+bindsym $mod+v split v, focus right, move left
+
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
         bindsym h resize shrink width 10 px or 10 ppt
@@ -137,5 +140,6 @@ bar {
         hidden_state hide
 }
 
-# No title bars
-default_border pixel
+# No title bars (switch back after bux fix)
+# default_border pixel
+for_window [class="^.*"] border pixel 1
