@@ -1,5 +1,7 @@
 require("nvim-treesitter.configs").setup({
   ensure_installed = {
+    "http",
+    "json",
     "norg",
   },
   sync_installed = true,
