@@ -1,0 +1,40 @@
+[ynab]
+access_token = "a2d92e9675f823fb3a07cbd3b75577f55508e5e3854071c205e11f38d63f7c9c"
+
+[bank]
+app_token = "app_token_cl2y70qyi000109kvdoll8iz4"
+user_token = "user_token_cl2y70qyi000209kvaxlt7bzf"
+
+[rich]
+budget_id = "8b5b9597-781c-4e41-a85d-c8bfd639c044"
+  [rich.accounts]
+    [rich.accounts.visa_business]
+    akahu_id = "acc_cl2y4h0sy000009lc1g8eg7zk"
+    ynab_id = "c33bd5ef-2538-4ff2-b1b9-004b6ae7ccc9"
+    [rich.accounts.visa_personal]
+    akahu_id = "acc_cl2y4h0uj000409lc92xt7atr"
+    ynab_id = "979d54a1-dc2b-4c34-bb5d-1d5bf6eb9b7b"
+
+[payee]
+  [payee.regex]
+  # Substitute id if regex (key) matches
+  c38cbfd8-83d9-a4be-7068-56bed9118fa9 = 'Countdown'
+  d70ed94e-f4f4-4d40-abf1-8162bb0bca9f = 'Jaycar'
+  103a6ce2-cfee-43d1-a715-f0fee433c3e6 = 'Vevo'
+  b4373724-6532-49fb-96e2-fd2fb783f5ae = 'Bite Me'
+  00248a77-ae05-41ac-b0dc-36eb4afc4499 = 'Titirangi Supervalue'
+  75ca42e8-82c4-4437-a8aa-9959306b707e = 'Woodlands Park'
+  1aad2429-6f36-4ac7-be79-5c01dfbef7e4 = 'Paypal \*Steam Games'
+  b21aaafa-6575-d038-1515-56bed906999c = 'Burger Fuel'
+  b5ef3758-b17e-405c-932b-48a9821642cf = 'Soy and Ginger'
+  145ba4c3-df0f-4da8-9216-33986c80d394 = 'Blockhouse Bay Vet'
+  fd4dc012-bad9-47ca-8955-a04bfd0b0780 = 'Amzn Digital\*'
+  d7a3c4c9-ae94-4b1b-83b1-f245b6b4611a = 'Audible Australia'
+  b48a80ee-ed55-48a6-9bb7-14a3b64758a4 = 'Wilson Parking' 
+  e9dd760d-2c2f-4c81-9f7f-904f7406744c = 'Deco Eatery'
+  cbeb343f-6150-4947-9b2b-30fe3427ea5b = 'Farro Fresh'
+  5625814f-92d3-4268-a026-199ff4da8a91 = 'Mexicali Fresh'
+  ab286613-4d68-da9e-dd2a-56bed908c3dc = 'Subway'
+  d03027e2-67c2-441e-89ff-663ee84d3ffb = 'Sozo Trading Trust'
+  6c4d7179-afa2-48b7-a4ca-c93a2637869b = 'Gull'
+  80c2768f-0270-4a89-ae44-a9a75f651517 = 'Bunnings'

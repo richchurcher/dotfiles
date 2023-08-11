@@ -1,4 +1,4 @@
-#https://github.com/junegunn/fzf/wiki/Examples#opening-files
+# fe - find and edit, including via tmux
 fe() {
   local files
   IFS=$'\n' files=($(fzf-tmux --query="$1" --multi --select-1 --exit-0))
@@ -30,3 +30,9 @@ fbr() {
   git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
 }
 
+# fcd - jump to a directory under ~
+fcd() {
+  local directory
+  directory=$(fd . ~ --type directory --hidden | fzf)
+  cd $(echo "$directory")
+}

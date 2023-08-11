@@ -1,0 +1,10 @@
+[tools]
+go = "latest"
+python = ['3.11.4', '2.7.18']
+node = "20.4.0"
+lua = "latest"
+dart = "latest"
+flutter = "latest"
+
+[settings]
+experimental = true

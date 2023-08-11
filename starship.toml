@@ -1,8 +1,0 @@
-add_newline = false
-
-[character]
-symbol = "λ"
-
-[aws.region_aliases]
-ap-southeast-2 = "au"
-

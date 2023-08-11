@@ -7,15 +7,17 @@
 # alias gp='git push'
 # alias gl='git log'
 
-# Wifi
+# Network
 alias ping8='ping 8.8.8.8'
+alias myip='dig +short txt ch whoami.cloudflare @1.0.0.1'
 
 # Vim
 alias vim='nvim'
 alias e='nvim'
 
 # Display
-alias home='xrandr --output eDP-1 --mode 2560x1440 --output DP-1-0 --mode 3840x2160 --right-of eDP-1 --rate 60 --output HDMI-1 --mode 3840x2160 --rotate left --right-of DP-1-0'
+alias home='xrandr --output eDP-1 --mode 2560x1440 --output DP-1-0 --mode 3840x2160 --left-of HDMI-1 --rate 60 --output HDMI-1 --mode 3840x2160 --rotate left --left-of eDP-1'
+alias kvm='ddcutil setvcp 0x60 0x1b -d 1'
 
 # Record
 # (note literal quote syntax)
@@ -56,8 +58,8 @@ smartresize() {
 alias mute='amixer set Master 0'
 alias unmute='amixer set Master 100%'
 
-# docker-compose
-alias dc='docker-compose'
+# docker compose
+alias dc='docker compose'
 alias dcu='dc up -d'
 alias dcd='dc down'
 
@@ -78,6 +80,5 @@ alias ls='exa --long --icons --git --sort=modified --reverse'
 # granted
 alias assume="source assume"
 
-# lookup public ip
-alias myip='dig +short txt ch whoami.cloudflare @1.0.0.1'
-
+# sensible block device list
+alias lsblk='lsblk -fe 1,7'
