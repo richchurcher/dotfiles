@@ -17,40 +17,23 @@ vim.cmd([[
 return require("packer").startup(function()
     use "wbthomason/packer.nvim"
 
-    use "cocopon/iceberg.vim"
-    use "drewtempelmeyer/palenight.vim"
+    use "edeneast/nightfox.nvim"
+    use "folke/neodev.nvim"
     use "ggandor/leap.nvim"
-    use "joshdick/onedark.vim"
-    use "justinmk/vim-dirvish"
     use "kassio/neoterm"
+    use 'lewis6991/gitsigns.nvim'
     use "matze/vim-move"
+    use "neovim/nvim-lspconfig"
     use "numToStr/Comment.nvim"
-    use "nvim-neorg/neorg"
-    use "puremourning/vimspector"
-    use "shaunsingh/nord.nvim"
-    use "stefandtw/quickfix-reflector.vim"
     use "tpope/vim-eunuch"
     use "tpope/vim-fugitive"
     use "tpope/vim-rhubarb"
     use "tpope/vim-surround"
     use "tpope/vim-unimpaired"
     use "vimpostor/vim-tpipeline"
-    use "xolox/vim-misc"
+    use "williamboman/mason.nvim"
+    use "williamboman/mason-lspconfig.nvim"
 
-    use { "ibhagwan/fzf-lua", requires = { "kyazdani42/nvim-web-devicons" } }
-
-    use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", }
-    -- use { "nvim-treesitter/playground" }
-
-    -- lsp/formatting
-    use {
-        "williamboman/mason.nvim",
-        "williamboman/mason-lspconfig.nvim",
-        "neovim/nvim-lspconfig"
-    }
-    -- use { "jose-elias-alvarez/null-ls.nvim", requires = { "nvim-lua/plenary.nvim" } }
-
-    -- autocomplete
     use {
         "hrsh7th/nvim-cmp",
         requires = {
@@ -62,22 +45,22 @@ return require("packer").startup(function()
             "quangnguyen30192/cmp-nvim-tags",
         }
     }
-
-    -- git
-    use {
-        'lewis6991/gitsigns.nvim',
-        config = function()
-            require('gitsigns').setup()
-        end
-    }
-
+    use { "ibhagwan/fzf-lua", requires = { "kyazdani42/nvim-web-devicons" } }
     use {
         "nvim-lualine/lualine.nvim",
         requires = { "kyazdani42/nvim-web-devicons", opt = true }
     }
-
+    use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", }
+    use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
     use {
         "rest-nvim/rest.nvim",
         requires = { "nvim-lua/plenary.nvim" },
     }
+
+    -- other good colo's
+    -- use "cocopon/iceberg.vim"
+    -- use "phha/zenburn.nvim"
+    -- use "rebelot/kanagawa.nvim"
+    -- use "sainnhe/everforest"
+    -- use "shaunsingh/nord.nvim"
 end)

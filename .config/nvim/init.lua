@@ -4,4 +4,4 @@ require("mappings")
 require("options")
 require("treesitter")
 
-vim.cmd "colorscheme nord"
+vim.cmd "colorscheme duskfox"
