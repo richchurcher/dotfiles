@@ -7,36 +7,40 @@
 -- installed. This is the dreaded "invalid node type" error. See:
 --
 --   https://github.com/nvim-treesitter/nvim-treesitter/issues/3092
-vim.cmd([[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
-  augroup end
-]])
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+    vim.fn.system({
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/folke/lazy.nvim.git",
+        "--branch=stable", -- latest stable release
+        lazypath,
+    })
+end
+vim.opt.rtp:prepend(lazypath)
 
-return require("packer").startup(function()
-    use "wbthomason/packer.nvim"
-
-    use "edeneast/nightfox.nvim"
-    use "folke/neodev.nvim"
-    use "ggandor/leap.nvim"
-    use "kassio/neoterm"
-    use 'lewis6991/gitsigns.nvim'
-    use "matze/vim-move"
-    use "neovim/nvim-lspconfig"
-    use "numToStr/Comment.nvim"
-    use "tpope/vim-eunuch"
-    use "tpope/vim-fugitive"
-    use "tpope/vim-rhubarb"
-    use "tpope/vim-surround"
-    use "tpope/vim-unimpaired"
-    use "vimpostor/vim-tpipeline"
-    use "williamboman/mason.nvim"
-    use "williamboman/mason-lspconfig.nvim"
-
-    use {
+require("lazy").setup({
+    "wbthomason/packer.nvim",
+    "edeneast/nightfox.nvim",
+    "folke/neodev.nvim",
+    "ggandor/leap.nvim",
+    "kassio/neoterm",
+    'lewis6991/gitsigns.nvim',
+    "matze/vim-move",
+    "neovim/nvim-lspconfig",
+    "numToStr/Comment.nvim",
+    "tpope/vim-eunuch",
+    "tpope/vim-fugitive",
+    "tpope/vim-rhubarb",
+    "tpope/vim-surround",
+    "tpope/vim-unimpaired",
+    "vimpostor/vim-tpipeline",
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    {
         "hrsh7th/nvim-cmp",
-        requires = {
+        dependencies = {
             "hrsh7th/cmp-buffer",
             "hrsh7th/cmp-nvim-lsp",
             "hrsh7th/cmp-path",
@@ -44,18 +48,36 @@ return require("packer").startup(function()
             "hrsh7th/vim-vsnip",
             "quangnguyen30192/cmp-nvim-tags",
         }
-    }
-    use { "ibhagwan/fzf-lua", requires = { "kyazdani42/nvim-web-devicons" } }
-    use {
+    },
+    {
+        "ibhagwan/fzf-lua",
+        dependencies = {
+            "kyazdani42/nvim-web-devicons",
+        },
+    },
+    {
         "nvim-lualine/lualine.nvim",
-        requires = { "kyazdani42/nvim-web-devicons", opt = true }
-    }
-    use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", }
-    use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
-    use {
+        dependencies = {
+            "kyazdani42/nvim-web-devicons",
+            opt = true,
+        },
+    },
+    {
+        "nvim-treesitter/nvim-treesitter",
+        build = ":TSUpdate",
+    },
+    {
+        "rcarriga/nvim-dap-ui",
+        dependencies = {
+            "mfussenegger/nvim-dap",
+        },
+    },
+    {
         "rest-nvim/rest.nvim",
-        requires = { "nvim-lua/plenary.nvim" },
-    }
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+        },
+    },
 
     -- other good colo's
     -- use "cocopon/iceberg.vim"
@@ -63,4 +85,4 @@ return require("packer").startup(function()
     -- use "rebelot/kanagawa.nvim"
     -- use "sainnhe/everforest"
     -- use "shaunsingh/nord.nvim"
-end)
+})

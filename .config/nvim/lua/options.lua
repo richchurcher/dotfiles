@@ -5,7 +5,7 @@ vim.o.clipboard = "unnamedplus"
 vim.o.cursorline = true
 vim.o.completeopt = "menu,menuone,noselect"
 vim.o.conceallevel = 2
-vim.o.noemoji = true
+vim.o.emoji = true
 vim.o.expandtab = true
 if vim.fn.executable("rg") == 1 then
     vim.o.grepprg = "rg --vimgrep --no-heading --smart-case"
@@ -84,7 +84,7 @@ require('Comment').setup()
 require("fzf-lua").setup {
     files = {
         fd_opts =
-        '-t f -H -I -E "{.git,node_modules,tags,dist,.wine,__pypackages__,_tmp,_postgres/data,.dartServer}"'
+        '-t f -H -I -E "{.git,node_modules,tags,dist,.wine,__pypackages__,_tmp,_postgres/data,.dartServer,build,.dart_tool,.idea}"'
     }
 }
 
