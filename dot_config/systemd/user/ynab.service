@@ -1,0 +1,10 @@
+[Unit]
+Description=Updates YNAB transactions from Akahu.
+Wants=ynab.timer
+
+[Service]
+Type=oneshot
+ExecStart=/home/basie/.local/share/cargo/bin/ynabber
+
+[Install]
+WantedBy=default.target

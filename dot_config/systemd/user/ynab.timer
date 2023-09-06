@@ -1,0 +1,11 @@
+[Unit]
+Description=Update YNAB transactions on a timer.
+Requires=ynab.service
+
+[Timer]
+# Every 4 hours
+OnCalendar=00/4:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

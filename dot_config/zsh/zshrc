@@ -1,0 +1,21 @@
+plugins=(
+  aws
+  dotenv
+  fzf
+  git
+  tmux
+  vi-mode
+)
+
+source $ZSH/oh-my-zsh.sh
+
+# Prompt
+eval "$(starship init zsh)"
+
+# broot
+source $XDG_CONFIG_HOME/broot/launcher/bash/br
+
+# sway
+if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+  exec sway
+fi

@@ -1,0 +1,263 @@
+default_flags = "ihp"
+modal = true
+
+###############################################################
+# Special paths
+# If some paths must be handled specially, uncomment (and change
+# this section as per the examples
+#
+# [special-paths]
+# "/media/slow-backup-disk" = "no-enter"
+# "/home/dys/useless" = "hide"
+# "/home/dys/my-link-I-want-to-explore" = "enter"
+
+###############################################################
+# Date/Time format
+# If you want to change the format for date/time, uncomment the
+# following line and change it according to
+# https://docs.rs/chrono/0.4.11/chrono/format/strftime/index.html
+#
+# date_time_format = "%Y/%m/%d %R"
+
+###############################################################
+# Whether to mark the selected line with a triangle
+#
+# show_selection_mark = true
+
+###############################################################
+# Column order
+# cols_order, if specified, must be a permutation of "gbpdscn"
+# where every char denotes a column:
+#  g : Git file info
+#  b : branch (shows the depth and parent in the tree)
+#  p : permissions (mode, user, group)
+#  d : last modification date
+#  s : size (with size bar when sorting)
+#  c : count, number of files in directories
+#  n : file name
+#
+# cols_order = "gbdscn"
+
+###############################################################
+# True Colors
+# If this parameter isn't set, broot tries to automatically
+# determine whether true colors (24 bits) are available.
+# As this process is unreliable, you may uncomment this setting
+# and set it to false or true if you notice the colors in
+# previewed images are too off.
+# true_colors = false
+
+###############################################################
+# Verbs and shortcuts
+# You can define your own commands which would be applied to
+# the selection.
+#
+# Exemple 1: launching `tail -n` on the selected file (leaving broot)
+# [[verbs]]
+# name = "tail_lines"
+# invocation = "tl {lines_count}"
+# execution = "tail -f -n {lines_count} {file}"
+#
+# Exemple 2: creating a new file without leaving broot
+# [[verbs]]
+# name = "touch"
+# invocation = "touch {new_file}"
+# execution = "touch {directory}/{new_file}"
+# leave_broot = false
+
+# If $EDITOR isn't set on your computer, you should either set it using
+#  something similar to
+#   export EDITOR=/usr/bin/nvim
+#  or just replace it with your editor of choice in the 'execution'
+#  pattern.
+#  If your editor is able to open a file on a specific line, use {line}
+#   so that you may jump directly at the right line from a preview.
+# Example:
+#  execution = "/usr/bin/nvim +{line} {file}"
+
+[[verbs]]
+invocation = "edit"
+key = "F2"
+shortcut = "e"
+execution = "$EDITOR +{line} {file}"
+leave_broot = false
+
+[[verbs]]
+invocation = "create {subpath}"
+execution = "$EDITOR {directory}/{subpath}"
+leave_broot = false
+
+[[verbs]]
+invocation = "git_diff"
+shortcut = "gd"
+leave_broot = false
+execution = "git difftool -y {file}"
+
+# If $PAGER isn't set on your computer, you should either set it
+#  or just replace it with your viewer of choice in the 'execution'
+#  pattern.
+# Example:
+#  execution = "less {file}"
+[[verbs]]
+name = "view"
+invocation = "view"
+execution = "$PAGER {file}"
+leave_broot = false
+
+# uncomment if you want to launch a terminal on ctrl-T
+# (on exit you'll be back in broot)
+# [[verbs]]
+# key = "ctrl-t"
+# execution = "$SHELL"
+# set_working_dir = true
+# leave_broot = false
+
+# A popular set of shorctuts for going up and down:
+#
+[[verbs]]
+key = "ctrl-j"
+execution = ":line_down"
+
+[[verbs]]
+key = "ctrl-k"
+execution = ":line_up"
+
+[[verbs]]
+key = "ctrl-d"
+execution = ":page_down"
+
+[[verbs]]
+key = "ctrl-u"
+execution = ":page_up"
+[[verbs]]
+key = "home"
+execution = ":select_first"
+[[verbs]]
+key = "end"
+execution = ":select_last"
+
+# If you develop using git, you might like to often switch
+# to the "git status" filter:
+# [[verbs]]
+# key = "ctrl-g"
+# execution = ":toggle_git_status"
+
+# You can reproduce the bindings of Norton Commander
+# on copying or moving to the other panel:
+#
+# [[verbs]]
+# key = "F5"
+# execution = ":copy_to_panel"
+#
+# [[verbs]]
+# key = "F6"
+# execution = ":move_to_panel"
+
+
+###############################################################
+# Skin
+# If you want to change the colors of broot,
+# uncomment the following bloc and start messing
+# with the various values.
+#
+
+## Nord https://www.nordtheme.com/docs/colors-and-palettes
+# Polar Night;
+# $nord0 #2E3440 rgb(46,52,64)
+# $nord1 #3B4252 rgb(59,66,82)
+# $nord2 #434C5E rgb(67,76,94)
+# $nord3 #4C566A rgb(76,86,106)
+# Snow Storm;
+# $nord4 #D8DEE9 rgb(216,222,233)
+# $nord5 #E5E9F0 rgb(229,233,240)
+# $nord6 #ECEFF4 rgb(236,239,244)
+# Frost;
+# $nord7 #8FBCBB rgb(143,188,187)
+# $nord8 #88C0D0 rgb(136,192,208)
+# $nord9 #81A1C1 rgb(129,161,193)
+# $nord10 #5E81AC rgb(94,129,172)
+# $nord11 #BF616A rgb(180,97,106)
+# Aurora:
+# $nord12 #D08770 rgb(208,135,112)
+# $nord13 #EBCB8B rgb(235,203,139)
+# $nord14 #A3BE8C rgb(163,190,140)
+# $nord15 #B48EAD rgb(180,142,173)
+
+[skin]
+default = "none none"
+tree = "rgb(76,86,106) none / rgb(67,76,94) none"                     # nord3 / nord2
+file = "rgb(229,233,240) none / rgb(216,222,233) none"                # nord5 / nord4
+directory = "rgb(136,192,208) none bold / rgb(143,188,187) none bold" # nord8 / nord7
+exe = "rgb(235,203,139) none"                                         # nord13
+link = "rgb(136,192,208) none italic"                                 # nord8
+pruning = "rgb(143,188,187) none italic"                              # nord7
+perm__ = "rgb(76,86,106) none"                                        # nord3
+perm_r = "rgb(94,129,172) none"                                       # nord10
+perm_w = "rgb(129,161,193) none"                                      # nord9
+perm_x = "rgb(208,135,112) none"                                      # nord12
+owner = "rgb(143,188,187) none"                                       # nord7
+group = "rgb(143,188,187) none"                                       # nord7
+count = "rgb(180,142,173) none"                                       # nord15
+dates = "rgb(163,190,140) none"                                       # nord14
+sparse = "rgb(235,203,139) none"                                      # nord13
+content_extract = "rgb(180,97,106) none"                              # nord11
+content_match = "rgb(180,97,106) none"                                # nord11
+git_branch = "rgb(180,142,173) none"                                  # nord15
+git_insertions = "rgb(163,190,140) none"                              # nord14
+git_deletions = "rgb(208,135,112) none"                               # nord12
+git_status_current = "rgb(76,86,106) none"                            # nord3
+git_status_modified = "rgb(143,188,187) none"                         # nord7
+git_status_new = "rgb(235,203,139) none"                              # nord13
+git_status_ignored = "rgb(67,76,94) none"                             # nord2
+git_status_conflicted = "rgb(180,97,106) none"                        # nord11
+git_status_other = "rgb(94,129,172) none"                             # nord10
+selected_line = "none rgb(67,76,94) / none rgb(67,76,94)"             # nord2
+char_match = "rgb(235,203,139) none"                                  # nord13
+file_error = "rgb(180,97,106) none"                                   # nord11
+flag_label = "rgb(76,86,106) none"                                    # nord3
+flag_value = "rgb(163,190,140) none bold"                             # nord14
+input = "rgb(236,239,244) none / rgb(236,239,244) rgb(216,222,233)"   # nord6 / nord4
+status_error = "rgb(76,86,106) rgb(180,97,106)"                       # nord3 nord11
+status_job = "rgb(162,190,140) rgb(76,86,106)"                        # nord14 nord3
+status_normal = "rgb(59,66,82) rgb(129,161,193) / rgb(129,161,193) rgb(129,161,193)" # nord0 nord9 / nord9 nord9
+status_italic = "rgb(46,52,64) rgb(129,161,193) italic / rgb(129,161,193) rgb(129,161,193)" # nord1 nord9
+status_bold = "rgb(46,52,64) rgb(129,161,193) bold / rgb(129,161,193) rgb(129,161,193)" # nord0 nord9 / nord9 nord9
+status_code = "rgb(59,66,82) rgb(136,192,208) / rgb(129,161,193) rgb(129,161,193)"
+status_ellipsis = "gray(19) gray(1) / gray(2) gray(2)"
+purpose_normal = "gray(20) gray(2)"
+purpose_italic = "ansi(178) gray(2)"
+purpose_bold = "ansi(178) gray(2) Bold"
+purpose_ellipsis = "gray(20) gray(2)"
+scrollbar_track = "gray(7) None / gray(4) None"
+scrollbar_thumb = "gray(22) None / gray(14) None"
+help_paragraph = "gray(20) None"
+help_bold = "ansi(208) None Bold"
+help_italic = "ansi(166) None"
+help_code = "gray(21) gray(3)"
+help_headers = "ansi(208) None"
+help_table_border = "ansi(239) None"
+preview = "gray(20) gray(1) / gray(18) gray(2)"
+preview_line_number = "gray(12) gray(3)"
+preview_match = "None ansi(29)"
+hex_null = "gray(11) None"
+hex_ascii_graphic = "gray(18) None"
+hex_ascii_whitespace = "ansi(143) None"
+hex_ascii_other = "ansi(215) None"
+hex_non_ascii = "ansi(167) None"
+
+# You may find explanations and other skins on
+#  https://dystroy.org/broot/skins
+# for example a skin suitable for white backgrounds
+
+
+###############################################################
+# File Extension Colors
+#
+# uncomment and modify the next section if you want to color
+# file name depending on their extension
+#
+# [ext-colors]
+# png = "rgb(255, 128, 75)"
+# rs = "yellow"
+
+

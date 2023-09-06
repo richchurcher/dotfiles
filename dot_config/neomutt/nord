@@ -1,0 +1,27 @@
+color normal     default default    # default colours
+color index		   color11 default ~N # new messages
+color index		   color3 default ~F  # flagged messages
+color index		   color3 default ~T  # tagged messages
+color index		   color1 default ~D  # deleted messages
+color body		   color2 default (https?|ftp)://[\-\.+,/%~_:?&=\#a-zA-Z0-9]+  # links
+color body		   color2 default [\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+          # email-addresses
+color attachment color12 default    # attachments
+color signature	 color12 default    # sigs
+color search		 color9 default     # highlight results
+
+color indicator	 default color6     # currently highlighted message
+color error		   color9 default     # error messages
+color status		 color13 color8     # status line
+color tree		   color12 default    # thread tree arrows
+color tilde		   color13 default    # blank line padding
+
+color hdrdefault color10 default    # default headers
+
+color quoted		 color9 default     # quote colours
+color quoted1		 color10 default
+color quoted2		 color11 default
+color quoted3		 color12 default
+color quoted4		 color13 default
+color quoted5		 color14 default
+
+# vim: set ft=muttrc:

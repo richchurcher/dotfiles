@@ -1,0 +1,117 @@
+source ~/.config/neomutt/nord
+source ~/.config/neomutt/bindings
+set mailcap_path = ~/.config/neomutt/mailcap
+set header_cache = ~/.cache/neomutt
+set message_cachedir = ~/.cache/neomutt
+
+set realname = "Rich Churcher"
+set from="rich.churcher@gmail.com"
+# alternates paedsrn@gmail.com
+
+set folder = imaps://imap.gmail.com:993
+set imap_check_subscribed = yes
+set imap_keepalive = 300
+set imap_list_subscribed = yes
+set imap_pass = "nvtrfqwuxljufobb"
+set imap_user = "rich.churcher@gmail.com"
+unset imap_passive
+
+set smtp_pass = "nvtrfqwuxljufobb"
+set smtp_url = "smtps://rich.churcher@gmail.com@smtp.gmail.com:465"
+set ssl_force_tls = yes
+
+unalias *
+alias Churcher.Rich Rich Churcher <rich.churcher@gmail.com>
+
+set spoolfile = +INBOX
+mailboxes "=INBOX" \
+  "=[Gmail]/Important" \
+  "=[Gmail]/Drafts" \
+  "=[Gmail]/Sent Mail" \
+  "=[Gmail]/Starred" \
+  "=[Gmail]/Trash" \
+  "=[Gmail]/Spam" \
+  "=Bucket" \
+  "=BuildSpider" \
+  "=Cogo" \
+  "=Eventfinda" \
+  "=Family"
+# Seems to create two copies of sent messages
+# set record = "+[Gmail]/Sent Mail"
+set postponed = "+[Gmail]/Drafts"
+set trash = "+[Gmail]/Trash"
+
+folder-hook Inbox 'set sort=threads sort_aux=reverse-last-date-received '
+folder-hook Sent 'set sort=reverse-date-sent'
+
+auto_view text/html
+set alias_format = "%4n %2f %t %-10a   %r"
+set editor = "nvim"
+set folder_format = "%3C %t %N %f"
+set history = 1000
+set history_file = "~/.config/neomutt/history"
+set index_format = "%4C %Z %{%b %d} %-20.19F (%?l?%4l&%4c?) %s"
+set mail_check = 90
+set pager_context = 5
+set pager_format = "──[%[%y.%m.%d %H:%M]]──[%.20F]─[%s]%*─%?H?─[%H] ?"
+set quote_regexp = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
+set reply_regexp = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
+set reflow_wrap = 76
+set save_history = 1000
+set send_charset = "utf-8"
+set shell = "/bin/zsh"
+set signature = "~/.config/neomutt/signature" 
+set sort = threads
+set sort_aux = reverse-last-date-received
+set status_chars  = " *%A"
+set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
+set timeout = 15
+spam "X-Spam-Score: ([0-9\\.]+).*" "SA: %1"
+
+set askcc
+set delete
+set edit_headers
+set envelope_from
+set fast_reply
+set fcc_attach
+set forward_decode
+set include
+set menu_scroll
+set mime_forward = ask-yes
+set mime_forward_rest = ask-yes
+set pager_index_lines = 10
+set pager_stop
+set quit
+set reflow_text
+set reverse_alias
+set smart_wrap
+set sort_re
+set text_flowed
+set tilde
+set uncollapse_jump
+
+unset confirm_append
+unset help
+unset mark_old
+unset markers
+unset sidebar_visible
+unset wait_key
+
+
+
+macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+macro attach,compose \cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+macro index,pager A "<save-message>+Archive<enter>" "move message to the archive"
+
+
+# -------------------------------------------------------------------------
+# Name: virtual-mailboxes
+# -------------------------------------------------------------------------
+
+# virtual-mailboxes "Eingang" "notmuch://?query=tag:inbox"
+# virtual-mailboxes "Linux" "notmuch://?query=tag:linux"
+# virtual-mailboxes "E-Mails von heute" "notmuch://?query=date:today"
+# virtual-mailboxes "E-Mails von gestern" "notmuch://?query=date:yesterday"
+# virtual-mailboxes "E-Mails von dieser Woche" "notmuch://?query=date:week.."
+# virtual-mailboxes "E-Mails von diesem Monat" "notmuch://?query=date:month.."
+
