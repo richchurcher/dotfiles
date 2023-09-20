@@ -1,79 +1,6 @@
 default_flags = "ihp"
 modal = true
-
-###############################################################
-# Special paths
-# If some paths must be handled specially, uncomment (and change
-# this section as per the examples
-#
-# [special-paths]
-# "/media/slow-backup-disk" = "no-enter"
-# "/home/dys/useless" = "hide"
-# "/home/dys/my-link-I-want-to-explore" = "enter"
-
-###############################################################
-# Date/Time format
-# If you want to change the format for date/time, uncomment the
-# following line and change it according to
-# https://docs.rs/chrono/0.4.11/chrono/format/strftime/index.html
-#
-# date_time_format = "%Y/%m/%d %R"
-
-###############################################################
-# Whether to mark the selected line with a triangle
-#
-# show_selection_mark = true
-
-###############################################################
-# Column order
-# cols_order, if specified, must be a permutation of "gbpdscn"
-# where every char denotes a column:
-#  g : Git file info
-#  b : branch (shows the depth and parent in the tree)
-#  p : permissions (mode, user, group)
-#  d : last modification date
-#  s : size (with size bar when sorting)
-#  c : count, number of files in directories
-#  n : file name
-#
-# cols_order = "gbdscn"
-
-###############################################################
-# True Colors
-# If this parameter isn't set, broot tries to automatically
-# determine whether true colors (24 bits) are available.
-# As this process is unreliable, you may uncomment this setting
-# and set it to false or true if you notice the colors in
-# previewed images are too off.
-# true_colors = false
-
-###############################################################
-# Verbs and shortcuts
-# You can define your own commands which would be applied to
-# the selection.
-#
-# Exemple 1: launching `tail -n` on the selected file (leaving broot)
-# [[verbs]]
-# name = "tail_lines"
-# invocation = "tl {lines_count}"
-# execution = "tail -f -n {lines_count} {file}"
-#
-# Exemple 2: creating a new file without leaving broot
-# [[verbs]]
-# name = "touch"
-# invocation = "touch {new_file}"
-# execution = "touch {directory}/{new_file}"
-# leave_broot = false
-
-# If $EDITOR isn't set on your computer, you should either set it using
-#  something similar to
-#   export EDITOR=/usr/bin/nvim
-#  or just replace it with your editor of choice in the 'execution'
-#  pattern.
-#  If your editor is able to open a file on a specific line, use {line}
-#   so that you may jump directly at the right line from a preview.
-# Example:
-#  execution = "/usr/bin/nvim +{line} {file}"
+syntax_theme = "SolarizedDark"
 
 [[verbs]]
 invocation = "edit"
@@ -93,34 +20,11 @@ shortcut = "gd"
 leave_broot = false
 execution = "git difftool -y {file}"
 
-# If $PAGER isn't set on your computer, you should either set it
-#  or just replace it with your viewer of choice in the 'execution'
-#  pattern.
-# Example:
-#  execution = "less {file}"
 [[verbs]]
 name = "view"
 invocation = "view"
 execution = "$PAGER {file}"
 leave_broot = false
-
-# uncomment if you want to launch a terminal on ctrl-T
-# (on exit you'll be back in broot)
-# [[verbs]]
-# key = "ctrl-t"
-# execution = "$SHELL"
-# set_working_dir = true
-# leave_broot = false
-
-# A popular set of shorctuts for going up and down:
-#
-[[verbs]]
-key = "ctrl-j"
-execution = ":line_down"
-
-[[verbs]]
-key = "ctrl-k"
-execution = ":line_up"
 
 [[verbs]]
 key = "ctrl-d"
@@ -129,59 +33,26 @@ execution = ":page_down"
 [[verbs]]
 key = "ctrl-u"
 execution = ":page_up"
+
 [[verbs]]
-key = "home"
+key = "g"
 execution = ":select_first"
+
 [[verbs]]
-key = "end"
+key = "G"
 execution = ":select_last"
 
-# If you develop using git, you might like to often switch
-# to the "git status" filter:
-# [[verbs]]
-# key = "ctrl-g"
-# execution = ":toggle_git_status"
+[[verbs]]
+key = "ctrl-g"
+execution = ":toggle_git_status"
 
-# You can reproduce the bindings of Norton Commander
-# on copying or moving to the other panel:
-#
-# [[verbs]]
-# key = "F5"
-# execution = ":copy_to_panel"
-#
-# [[verbs]]
-# key = "F6"
-# execution = ":move_to_panel"
+[[verbs]]
+key = "ctrl-l"
+execution = ":open_preview"
 
-
-###############################################################
-# Skin
-# If you want to change the colors of broot,
-# uncomment the following bloc and start messing
-# with the various values.
-#
-
-## Nord https://www.nordtheme.com/docs/colors-and-palettes
-# Polar Night;
-# $nord0 #2E3440 rgb(46,52,64)
-# $nord1 #3B4252 rgb(59,66,82)
-# $nord2 #434C5E rgb(67,76,94)
-# $nord3 #4C566A rgb(76,86,106)
-# Snow Storm;
-# $nord4 #D8DEE9 rgb(216,222,233)
-# $nord5 #E5E9F0 rgb(229,233,240)
-# $nord6 #ECEFF4 rgb(236,239,244)
-# Frost;
-# $nord7 #8FBCBB rgb(143,188,187)
-# $nord8 #88C0D0 rgb(136,192,208)
-# $nord9 #81A1C1 rgb(129,161,193)
-# $nord10 #5E81AC rgb(94,129,172)
-# $nord11 #BF616A rgb(180,97,106)
-# Aurora:
-# $nord12 #D08770 rgb(208,135,112)
-# $nord13 #EBCB8B rgb(235,203,139)
-# $nord14 #A3BE8C rgb(163,190,140)
-# $nord15 #B48EAD rgb(180,142,173)
+[[verbs]]
+key = "ctrl-h"
+execution = ":close_preview"
 
 [skin]
 default = "none none"
@@ -244,20 +115,4 @@ hex_ascii_graphic = "gray(18) None"
 hex_ascii_whitespace = "ansi(143) None"
 hex_ascii_other = "ansi(215) None"
 hex_non_ascii = "ansi(167) None"
-
-# You may find explanations and other skins on
-#  https://dystroy.org/broot/skins
-# for example a skin suitable for white backgrounds
-
-
-###############################################################
-# File Extension Colors
-#
-# uncomment and modify the next section if you want to color
-# file name depending on their extension
-#
-# [ext-colors]
-# png = "rgb(255, 128, 75)"
-# rs = "yellow"
-
 

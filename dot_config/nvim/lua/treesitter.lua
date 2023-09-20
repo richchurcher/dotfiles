@@ -60,8 +60,8 @@ require("nvim-treesitter.configs").setup({
     },
     sync_installed = true,
     highlight = {
+        additional_vim_regex_highlighting = false,
         enable = true,
-        additional_vim_regex_highlighting = { "js" },
     },
     indent = {
         enable = false,
@@ -74,10 +74,5 @@ require("nvim-treesitter.configs").setup({
             scope_incremental = "grc",
             node_decremental = "grm",
         },
-    },
-    rainbow = {
-        enable = true,
-        extended_mode = true,
-        max_file_lines = nil,
     },
 })

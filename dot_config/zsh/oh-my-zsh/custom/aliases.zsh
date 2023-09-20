@@ -85,3 +85,6 @@ alias lsblk='lsblk -fe 1,7'
 
 # wayland screenshots
 alias gsave='grim -g "$(slurp)" - | wl-copy'
+
+# show image in kitty
+alias icat="kitty +kitten icat"

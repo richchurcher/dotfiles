@@ -84,11 +84,11 @@ require("lazy").setup({
         dependencies = { "nvim-lua/plenary.nvim" },
     },
 
-    {
-        dev = true,
-        dir = "~/w/plugins/foo",
-        name = "foo",
-    }
+    -- {
+    --     dev = true,
+    --     dir = "~/w/plugins/foo",
+    --     name = "foo",
+    -- }
     -- other good colo's
     -- use "cocopon/iceberg.vim"
     -- use "phha/zenburn.nvim"

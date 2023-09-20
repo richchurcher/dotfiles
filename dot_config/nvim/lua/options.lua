@@ -50,9 +50,6 @@ vim.diagnostic.config({
     },
 })
 
--- configure sg.nvim
-
-
 local cmp = require("cmp")
 cmp.setup({
     snippet = {
@@ -196,7 +193,15 @@ require("neodev").setup({
     },
 })
 
+-- NOTE: bar
+-- TODO: foo
 require("nightfox").setup({
+    groups = {
+        all = {
+            ["@text.note"] = { fg = "white", bg = "none" },
+            ["@text.todo"] = { fg = "orange", bg = "none" },
+        }
+    },
     options = {
         styles = {
             comments = "italic",
@@ -241,7 +246,8 @@ end
 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
-local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
+-- local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 local on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then
@@ -254,6 +260,8 @@ local on_attach = function(client, bufnr)
             group = augroup,
         })
     end
+    -- LSP semantic tokens conflicts with Treesitter, turn it off:
+    client.server_capabilities.semanticTokensProvider = nil
 end
 
 local signs = { Error = "⛔", Warn = "⚠️", Hint = "💡", Info = "ℹ️ " }
@@ -268,6 +276,11 @@ lspconfig['dartls'].setup {
 }
 
 lspconfig['gopls'].setup {
+    capabilities = capabilities,
+    on_attach = on_attach,
+}
+
+lspconfig['jsonls'].setup {
     capabilities = capabilities,
     on_attach = on_attach,
 }

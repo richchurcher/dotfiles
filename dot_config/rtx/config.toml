@@ -1,12 +1,13 @@
 [tools]
-go = "1.21.0"
+go = "latest"
 python = ['3.11.4', '2.7.18']
-node = "20.4.0"
+node = "latest"
 lua = "latest"
 dart = "latest"
 flutter = "latest"
 actionlint = "latest"
 ruby = "latest"
+trivy = "latest"
 
 [settings]
 experimental = true
