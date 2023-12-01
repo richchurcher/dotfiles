@@ -7,6 +7,7 @@ vim.o.completeopt = "menu,menuone,noselect"
 vim.o.conceallevel = 2
 vim.o.emoji = true
 vim.o.expandtab = true
+vim.o.exrc = true
 if vim.fn.executable("rg") == 1 then
     vim.o.grepprg = "rg --vimgrep --no-heading --smart-case"
     vim.o.grepformat = "%f:%l:%c:%m,%f:%l:%m"
@@ -46,9 +47,14 @@ vim.g.tpipeline_preservebg = 1
 vim.diagnostic.config({
     virtual_text = false,
     float = {
-        max_width = 100,
+        max_width = 200,
     },
 })
+
+vim.fn.sign_define('DapBreakpoint', { text = '🔴', texthl = '', linehl = '', numhl = '' })
+vim.fn.sign_define('DapStopped', { text = '🟢', texthl = '', linehl = '', numhl = '' })
+vim.fn.sign_define('DapBreakpointRejected', { text = '⚡', texthl = '', linehl = '', numhl = '' })
+
 
 local cmp = require("cmp")
 cmp.setup({
@@ -66,6 +72,7 @@ cmp.setup({
     }),
     sources = cmp.config.sources({
         { name = 'buffer' },
+        { name = 'cody' },
         { name = "copilot" },
         { name = "neorg" },
         { name = 'nvim_lsp' },
@@ -81,30 +88,26 @@ cmp.setup.filetype('markdown', {
     sources = cmp.config.sources({}), {}
 })
 
+
+require('Comment').setup()
+
 require("copilot").setup({
     panel = { enabled = false },
     suggestion = { enabled = false },
 })
 require("copilot_cmp").setup()
 
--- Quickly have Copilot ignore a path
--- local augroup = vim.api.nvim_create_augroup("copilot-disable-patterns", { clear = true })
--- for _, pattern in ipairs({ "/dir-a/dir-x/*", "/dir-b/*" }) do
---     vim.api.nvim_create_autocmd("LspAttach", {
---         group = augroup,
---         pattern = pattern,
---         callback = function(args)
---             local client = vim.lsp.get_client_by_id(args.data.client_id)
---             if client.name == 'copilot' then
---                 vim.defer_fn(function()
---                     vim.cmd("silent Copilot detach")
---                 end, 0)
---             end
---         end,
---     })
--- end
-
-require('Comment').setup()
+local dap, dapui = require("dap"), require("dapui")
+require("flutter-tools").setup({
+    debugger = {
+        enabled = true,
+        exception_breakpoints = {},
+        run_via_dap = true,
+    },
+    dev_log = {
+        enabled = false,
+    }
+})
 
 require("fzf-lua").setup {
     files = {
@@ -113,7 +116,22 @@ require("fzf-lua").setup {
     }
 }
 
+dapui.setup()
+dap.listeners.after.event_initialized["dapui_config"] = function()
+    dapui.open()
+end
+dap.listeners.before.event_terminated["dapui_config"] = function()
+    dapui.close()
+end
+dap.listeners.before.event_exited["dapui_config"] = function()
+    dapui.close()
+end
+
+require('dap-go').setup()
+require('nvim-dap-virtual-text').setup()
 require("gitsigns").setup()
+
+require('leap').add_default_mappings()
 
 require("neorg").setup {
     load = {
@@ -135,8 +153,6 @@ require("neorg").setup {
         ["core.keybinds"] = {},
     },
 }
-
-require('leap').set_default_keymaps()
 
 local lspconfig = require("lspconfig")
 
@@ -176,7 +192,7 @@ require("mason-lspconfig").setup {
         "gopls",
         "lua_ls",
         "pylsp",
-        "rust_analyzer",
+        -- "rust_analyzer",
         "terraformls",
         "texlab",
         "tflint",
@@ -193,8 +209,6 @@ require("neodev").setup({
     },
 })
 
--- NOTE: bar
--- TODO: foo
 require("nightfox").setup({
     groups = {
         all = {
@@ -234,20 +248,60 @@ require('rest-nvim').setup {
     yank_dry_run = true,
 }
 
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-    underline = false,
-})
+-- dap.configurations.rust = {
+--     {
+--         name = 'Launch',
+--         type = 'lldb',
+--         request = 'launch',
+--         program = function()
+--             return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+--         end,
+--         cwd = '${workspaceFolder}',
+--         stopOnEntry = true,
+--         args = {},
+--
+--         -- 💀
+--         -- if you change `runInTerminal` to true, you might need to change the yama/ptrace_scope setting:
+--         --
+--         --    echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope
+--         --
+--         -- Otherwise you might get the following error:
+--         --
+--         --    Error on launch: Failed to attach to the target process
+--         --
+--         -- But you should be aware of the implications:
+--         -- https://www.kernel.org/doc/html/latest/admin-guide/LSM/Yama.html
+--         -- runInTerminal = false,
+--         initCommands = function()
+--             -- Find out where to look for the pretty printer Python module
+--             local rustc_sysroot = vim.fn.trim(vim.fn.system('rustc --print sysroot'))
+--
+--             local script_import = 'command script import "' .. rustc_sysroot .. '/lib/rustlib/etc/lldb_lookup.py"'
+--             local commands_file = rustc_sysroot .. '/lib/rustlib/etc/lldb_commands'
+--
+--             local commands = {}
+--             local file = io.open(commands_file, 'r')
+--             if file then
+--                 for line in file:lines() do
+--                     table.insert(commands, line)
+--                 end
+--                 file:close()
+--             end
+--             table.insert(commands, 1, script_import)
+--
+--             return commands
+--         end,
+--         -- ...,
+--     },
+-- }
+
+local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 local lsp_formatting = function(bufnr)
     vim.lsp.buf.format({
         bufnr = bufnr,
     })
 end
-
-local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
-
--- local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 local on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then
@@ -264,13 +318,32 @@ local on_attach = function(client, bufnr)
     client.server_capabilities.semanticTokensProvider = nil
 end
 
+
+vim.g.rustaceanvim = {
+    server = {
+        on_attach = on_attach,
+    },
+}
+
+require("sg").setup {
+    auth_strategy = { "nvim" },
+    on_attach = on_attach,
+}
+
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+    underline = false,
+})
+
+-- local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
 local signs = { Error = "⛔", Warn = "⚠️", Hint = "💡", Info = "ℹ️ " }
 for type, icon in pairs(signs) do
     local hl = "DiagnosticSign" .. type
     vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
 
-lspconfig['dartls'].setup {
+lspconfig['html'].setup {
     capabilities = capabilities,
     on_attach = on_attach,
 }
@@ -314,10 +387,10 @@ lspconfig['pylsp'].setup {
     }
 }
 
-lspconfig['rust_analyzer'].setup {
-    capabilities = capabilities,
-    on_attach = on_attach,
-}
+-- lspconfig['rust_analyzer'].setup {
+--     capabilities = capabilities,
+--     on_attach = on_attach,
+-- }
 
 lspconfig['terraformls'].setup {
     capabilities = capabilities,

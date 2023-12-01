@@ -1,12 +1,3 @@
--- Remember, if this breaks on MacOS: homebrew is installing parsers and
--- queries in:
---   /opt/homebrew/Cellar/neovim/0.8.3/lib/nvim/parser
---   /opt/homebrew/Cellar/neovim/0.8.3/share/nvim/runtime/queries
---
--- These should all be removed, and their nvim-treesitter counterparts
--- installed. This is the dreaded "invalid node type" error. See:
---
---   https://github.com/nvim-treesitter/nvim-treesitter/issues/3092
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
     vim.fn.system({
@@ -39,15 +30,23 @@ require("lazy").setup({
     "williamboman/mason.nvim",
     "zbirenbaum/copilot.lua",
     {
+        'akinsho/flutter-tools.nvim',
+        config = true,
+        dependencies = {
+            'stevearc/dressing.nvim',
+        },
+        lazy = false,
+    },
+    {
         "hrsh7th/nvim-cmp",
         dependencies = {
-            "zbirenbaum/copilot-cmp",
             "hrsh7th/cmp-buffer",
             "hrsh7th/cmp-nvim-lsp",
             "hrsh7th/cmp-path",
             "hrsh7th/cmp-vsnip",
             "hrsh7th/vim-vsnip",
             "quangnguyen30192/cmp-nvim-tags",
+            "zbirenbaum/copilot-cmp",
         }
     },
     {
@@ -62,6 +61,15 @@ require("lazy").setup({
             "kyazdani42/nvim-web-devicons",
         },
     },
+    -- Remember, if this breaks on MacOS: homebrew is installing parsers and
+    -- queries in:
+    --   /opt/homebrew/Cellar/neovim/0.8.3/lib/nvim/parser
+    --   /opt/homebrew/Cellar/neovim/0.8.3/share/nvim/runtime/queries
+    --
+    -- These should all be removed, and their nvim-treesitter counterparts
+    -- installed. This is the dreaded "invalid node type" error. See:
+    --
+    --   https://github.com/nvim-treesitter/nvim-treesitter/issues/3092
     {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
@@ -72,6 +80,8 @@ require("lazy").setup({
             "mfussenegger/nvim-dap",
         },
     },
+    "leoluz/nvim-dap-go",
+    "theHamsta/nvim-dap-virtual-text",
     {
         "rest-nvim/rest.nvim",
         dependencies = {
@@ -81,6 +91,15 @@ require("lazy").setup({
     {
         "nvim-neorg/neorg",
         build = ":Neorg sync-parsers",
+        dependencies = { "nvim-lua/plenary.nvim" },
+    },
+    {
+        -- dev = true,
+        'mrcjkb/rustaceanvim',
+        ft = { 'rust' },
+    },
+    {
+        "sourcegraph/sg.nvim",
         dependencies = { "nvim-lua/plenary.nvim" },
     },
 
@@ -95,4 +114,10 @@ require("lazy").setup({
     -- use "rebelot/kanagawa.nvim"
     -- use "sainnhe/everforest"
     -- use "shaunsingh/nord.nvim"
+}, {
+    dev = {
+        path = "~/w",
+        patterns = {},
+        fallback = false,
+    },
 })
