@@ -9,3 +9,11 @@ Ongoing:
 ```shell
 chezmoi update -v
 ```
+
+Pushes to remote use:
+
+```
+chezmoi add <thing>
+chezmoi cd
+# normal git commands go here
+```
